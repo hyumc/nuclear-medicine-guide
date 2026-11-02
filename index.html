@@ -222,10 +222,61 @@
 .density-choices{margin:19px 0 24px}
 .density-detail{scroll-margin-top:110px}
 .density-detail-back{display:flex;justify-content:flex-end;margin-bottom:18px}
-</style></head><body>
-<header class="top"><div class="wrap"><a aria-label="검사 안내 첫 화면으로 이동" class="brand" href="#home-menu"><img alt="한양대학교의료원" class="hospital-logo" src="assets/hyumc-logo-clear.png"/></a><nav aria-label="빠른 이동" class="nav"><a class="homebtn" href="#home-menu">전체 검사 보기</a><a href="#gamma">감마카메라 검사</a><a href="#pet">PET-CT 검사</a><a href="#density">골밀도 검사</a><a href="#therapy">옥소치료</a></nav></div></header>
+
+/* Accessibility controls and multilingual patient summaries */
+.a11y-toolbar{border-top:1px solid #dfeaf2;background:#f9fcff}
+.a11y-toolbar-inner{display:flex;align-items:center;justify-content:flex-end;gap:14px;flex-wrap:wrap;min-height:52px;padding-top:7px;padding-bottom:7px}
+.a11y-label{font-size:12px;color:#526b7f;font-weight:750}
+.a11y-group{display:flex;align-items:center;gap:5px;flex-wrap:wrap}
+.a11y-btn{border:1px solid #bed5e5;border-radius:9px;padding:7px 11px;min-height:38px;background:white;color:#154466;font-size:13px;font-weight:750;white-space:nowrap}
+.a11y-btn:hover{background:#eaf5fd}.a11y-btn[aria-pressed="true"]{background:#125e93;color:#fff;border-color:#125e93}
+.a11y-btn:focus-visible,.intl-exam a:focus-visible,.intl-original:focus-visible{outline:3px solid #e2a242;outline-offset:2px}
+html{scroll-padding-top:160px}
+body[data-ui-lang]:not([data-ui-lang="ko"]) #ko-main,body[data-ui-lang]:not([data-ui-lang="ko"]) #ko-footer,body[data-ui-lang]:not([data-ui-lang="ko"]) .nav{display:none!important}
+body[data-ui-lang="ko"] #intl-root{display:none!important}
+#intl-root[hidden],.intl-main[hidden]{display:none!important}
+.intl-main{padding-bottom:85px}.intl-hero{padding:28px 30px;background:linear-gradient(120deg,#113657,#1972a9);color:white;border-radius:18px;margin:10px 0 22px}
+.intl-hero small{font-size:12px;opacity:.86;letter-spacing:.08em}.intl-hero h1{font-size:clamp(24px,3vw,34px);line-height:1.35;margin:12px 0}.intl-hero p{font-size:16px;margin:0;max-width:900px}
+.intl-section-nav{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:0 0 28px}
+.intl-section-nav a,.intl-regions a{padding:13px 11px;border-radius:12px;background:#fff;border:1px solid #d8e7f1;color:#104a73;font-weight:700;text-align:center;line-height:1.4;overflow-wrap:anywhere}
+.intl-section-nav a:hover,.intl-regions a:hover{background:#eaf5fd}
+.intl-section{margin:22px 0 34px;background:#fff;border:1px solid #d9e6ef;border-radius:18px;padding:25px 26px;scroll-margin-top:158px}
+.intl-section h2{font-size:24px;color:#153d5d;margin:0 0 15px;line-height:1.4}
+.intl-lead{font-weight:650;color:#254d69}
+.intl-regions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:16px 0}
+.intl-region{margin:20px 0 40px;padding-top:12px;border-top:2px solid #e6f0f6;scroll-margin-top:156px}
+.intl-region h3{color:#174c71;font-size:21px;margin:8px 0 17px}
+.intl-region h3 small{font-size:14px;color:#56738a;margin-left:8px}
+.intl-exam{border:1px solid #dbe9f3;background:#fcfeff;border-radius:15px;padding:20px;margin:16px 0;scroll-margin-top:158px}
+.intl-exam-title{display:flex;gap:11px;align-items:center;margin:0 0 15px}.intl-index{border-radius:50%;background:#dff0fa;color:#105f93;display:grid;place-items:center;min-width:36px;height:36px;font-size:13px;font-weight:800}
+.intl-exam h4{font-size:19px;line-height:1.45;color:#143e5c;margin:0;overflow-wrap:anywhere}
+.intl-row{border-top:1px solid #e6eff5;padding-top:11px;margin-top:11px}.intl-row strong{display:block;color:#1a5881;font-size:14px}.intl-row p{font-size:15px;margin:3px 0 1px;line-height:1.68}
+.intl-time{background:#e9f6fd;border-radius:11px;padding:11px 14px;margin:13px 0 8px;display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap}
+.intl-time strong{color:#116294}.intl-time span{font-weight:700;color:#133954}
+.intl-picture{display:block;border:1px solid #d9e7f0;background:#fff;border-radius:10px;padding:0;overflow:hidden;width:100%;max-width:380px;margin:12px 0;text-align:left}
+.intl-picture img{display:block;width:100%;height:180px;object-fit:contain;background:#f8fbfd}.intl-picture span{display:block;font-size:12px;color:#315d7c;padding:9px 12px;overflow-wrap:anywhere}
+.intl-photo-grid,.intl-pictures{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.intl-photo-grid .intl-picture,.intl-pictures .intl-picture{margin:0;max-width:none}
+.intl-original{border:1px solid #c7ddec;background:#eef7fc;color:#165f8c;padding:8px 11px;border-radius:9px;font-weight:700;margin-top:6px;text-align:left}
+.intl-notice{background:#edf7fc;padding:15px;border-radius:13px}.intl-notice p{margin:8px 0;font-size:16px}
+.intl-info{font-weight:700;color:#426a85}.intl-disclaimer{border-left:4px solid #eeaf5e;background:#fff7eb;border-radius:7px;padding:14px 18px;font-size:14px;color:#67502f;line-height:1.7}
+.intl-external{text-decoration:underline;color:#155f8c}
+/* Text size mode scales calculated font sizes; image and layout dimensions are unchanged. */
+body[data-font-size="large"]{overflow-wrap:anywhere}
+body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice strong{white-space:normal}
+@media(max-width:760px){.a11y-toolbar-inner{justify-content:center;gap:6px 10px;padding:8px 12px}.a11y-label{display:none}.a11y-btn{padding:8px 9px;font-size:12px;min-height:40px}.a11y-group{justify-content:center}.intl-section-nav{grid-template-columns:repeat(2,minmax(0,1fr))}.intl-hero{padding:20px}.intl-section{padding:17px 14px;margin:15px 0 23px}.intl-regions{grid-template-columns:repeat(2,minmax(0,1fr))}.intl-exam{padding:14px 12px}.intl-exam h4{font-size:17px}.intl-photo-grid,.intl-pictures{grid-template-columns:1fr}.intl-picture img{height:180px}.intl-exam-title{align-items:flex-start}.intl-section h2{font-size:21px}}
+</style></head><body data-ui-lang="ko" data-font-size="normal">
+<header class="top"><div class="wrap"><a aria-label="검사 안내 첫 화면으로 이동" class="brand" href="#home-menu"><img alt="한양대학교의료원" class="hospital-logo" src="assets/hyumc-logo-clear.png"/></a><nav aria-label="빠른 이동" class="nav"><a class="homebtn" href="#home-menu">전체 검사 보기</a><a href="#gamma">감마카메라 검사</a><a href="#pet">PET-CT 검사</a><a href="#density">골밀도 검사</a><a href="#therapy">옥소치료</a></nav></div><div class="a11y-toolbar" aria-label="언어 및 글자 크기 설정"><div class="wrap a11y-toolbar-inner">
+ <span class="a11y-label">LANGUAGE / 언어</span><div class="a11y-group" role="group" aria-label="Language selection">
+ <button type="button" class="a11y-btn" data-locale="ko" aria-pressed="true" lang="ko">한국어</button>
+ <button type="button" class="a11y-btn" data-locale="en" aria-pressed="false" lang="en">English</button>
+ <button type="button" class="a11y-btn" data-locale="ru" aria-pressed="false" lang="ru">Русский</button>
+ <button type="button" class="a11y-btn" data-locale="mn" aria-pressed="false" lang="mn">Монгол</button>
+ </div><div class="a11y-group" role="group" aria-label="글자 크기 / Text size">
+ <button type="button" class="a11y-btn" data-font="normal" aria-pressed="true">A− 글자 작게</button>
+ <button type="button" class="a11y-btn" data-font="large" aria-pressed="false">A+ 글자 크게</button>
+ </div></div></div></header>
 <section class="hero" id="home"><div class="wrap"><div class="eyebrow">NUCLEAR MEDICINE · PATIENT GUIDE</div><h1>핵의학과 검사 및 치료 안내</h1><p>검사 종류를 선택하면 준비사항, 검사 과정, 소요시간과 주의사항을 한눈에 확인할 수 있습니다.</p></div></section>
-<main class="wrap main"><div class="notice"><strong>환자 안내</strong> · 검사 소요시간과 준비사항은 환자의 상태와 예약 상황에 따라 달라질 수 있습니다. 담당 의료진의 개별 안내를 우선해 주세요.</div>
+<main class="wrap main" id="ko-main"><div class="notice"><strong>환자 안내</strong> · 검사 소요시간과 준비사항은 환자의 상태와 예약 상황에 따라 달라질 수 있습니다. 담당 의료진의 개별 안내를 우선해 주세요.</div>
 <section aria-label="접수 및 검사 종류 선택" id="home-menu"><div class="support-heading"><h3>검사실·접수 안내</h3><p>검사 전에 외래·입원 접수 방법과 오시는 길을 먼저 확인하세요. 검사장비도 미리 살펴보실 수 있습니다.</p></div>
 <div aria-label="검사장비 및 접수 안내" class="support-cards">
 <a class="support-card" data-category="reception" href="#reception"><span aria-hidden="true" class="support-card-icon">📍</span><span><strong>접수·오시는 길</strong><small>외래: 수납 후 순번표 발급 · 입원: 바로 접수 · 오시는 길</small></span><span aria-hidden="true" class="support-arrow">→</span></a>
@@ -920,7 +971,844 @@
 </section>
 </div>
 </main>
-<footer class="foot"><div class="wrap foot-inner"><img alt="한양대학교의료원 로고" src="assets/hyumc-logo-clear.png"/><div class="foot-txt"><strong>한양대학교병원 핵의학과 · 검사 및 치료 안내</strong></div></div></footer>
+<div id="intl-root" hidden>
+<main class="wrap main intl-main" id="intl-main-en" lang="en" hidden>
+<div class="intl-hero" id="intl-en-home"><small>HANYANG UNIVERSITY HOSPITAL</small><h1>Nuclear Medicine | Patient Examination &amp; Treatment Guide</h1><p>Find your appointment and review preparation, waiting time, test steps and example images.</p></div>
+<nav class="intl-section-nav"><a href="#intl-en-reception">📍 Reception &amp; Directions</a><a href="#intl-en-gamma">🩻 Gamma Camera Scans</a><a href="#intl-en-pet">🔬 PET-CT Scans</a><a href="#intl-en-density">📊 Bone Density &amp; Body Composition</a><a href="#intl-en-therapy">🏥 Radioiodine Therapy</a><a href="#intl-en-equip">📷 Equipment</a></nav>
+<section class="intl-section" id="intl-en-reception"><h2>📍 Reception &amp; Directions</h2><p class="intl-lead">Hanyang University Hospital · Main Building, Floor 2, Nuclear Medicine<br/>222-1 Wangsimni-ro, Seongdong-gu, Seoul</p><div class="intl-notice"><p>🎫 Outpatient: Pay first, then take a queue ticket from the nuclear medicine kiosk.</p><p>🏥 Inpatient: Go directly to nuclear medicine reception; no kiosk ticket is needed.</p></div><div class="intl-pictures"><button class="intl-picture" type="button" data-image="assets/hyumc-hospital-parking-map-20261102.png" data-caption="Hospital access map" aria-label="Hospital access map"><img loading="lazy" src="assets/hyumc-hospital-parking-map-20261102.png" alt="Hospital access map"/><span>Hospital access map ↗</span></button><button class="intl-picture" type="button" data-image="assets/nuclear-department-floorplan-20261102-final.png" data-caption="Main Building Floor 2: Nuclear Medicine entrance &amp; reception" aria-label="Main Building Floor 2: Nuclear Medicine entrance &amp; reception"><img loading="lazy" src="assets/nuclear-department-floorplan-20261102-final.png" alt="Main Building Floor 2: Nuclear Medicine entrance &amp; reception"/><span>Main Building Floor 2: Nuclear Medicine entrance &amp; reception ↗</span></button></div><p><a class="intl-external" href="https://seoul.hyumc.com/hospital/locationList.do" target="_blank" rel="noopener noreferrer">Hanyang University Hospital · Location ↗</a></p><p>☎ 02-2290-9260 · 02-2290-9261</p></section>
+<section class="intl-section" id="intl-en-gamma"><h2>🩻 Gamma Camera Scans</h2><p>Select a body region · 17</p>
+<div class="intl-regions">
+<a href="#intl-en-head">Head &amp; Neck</a>
+<a href="#intl-en-chest">Chest</a>
+<a href="#intl-en-abdomen">Abdomen &amp; Digestive</a>
+<a href="#intl-en-kidney">Kidney &amp; Urinary</a>
+<a href="#intl-en-limbs">Arms &amp; Legs</a>
+<a href="#intl-en-whole">Whole Body / Bone</a>
+</div>
+<section class="intl-region" id="intl-en-head"><h3>Head &amp; Neck <small>4</small></h3>
+<article class="intl-exam" id="intl-en-brain">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Brain Perfusion SPECT</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Evaluates blood flow to the brain in cerebrovascular and related neurological conditions.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Follow instructions regarding caffeine, alcohol and medicines; do not stop medication yourself.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV injection, short wait, then brain SPECT imaging.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Usually about 30 min; DIAMOX exam about 1 hour.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/brain-spect.jpg" data-caption="Brain Perfusion SPECT" aria-label="Brain Perfusion SPECT"><img loading="lazy" src="assets/brain-spect.jpg" alt="Brain Perfusion SPECT"/><span>Brain Perfusion SPECT ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-brain">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-salivary">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Salivary Gland Scan</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Checks salivary gland function and may help evaluate Sjögren syndrome.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Check any preparation instructions with the department.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV injection with continuous imaging; salivary glands may be stimulated with vitamin C.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>About 1 hour.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/salivary-gland.jpg" data-caption="Salivary Gland Scan" aria-label="Salivary Gland Scan"><img loading="lazy" src="assets/salivary-gland.jpg" alt="Salivary Gland Scan"/><span>Salivary Gland Scan ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-salivary">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-thyroid">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Thyroid Scan &amp; Uptake</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Evaluates thyroid tracer distribution and uptake to assess thyroid function and nodules.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Usually no fasting. Tell staff about thyroid medicines and pregnancy/breastfeeding.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>First injection → wait 15 min → uptake measurement (~5 min); second injection → wait 20 min → scan (~5 min).</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>About 1 hour total.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/thyroid-scan-uptake.jpg" data-caption="Thyroid Scan &amp; Uptake" aria-label="Thyroid Scan &amp; Uptake"><img loading="lazy" src="assets/thyroid-scan-uptake.jpg" alt="Thyroid Scan &amp; Uptake"/><span>Thyroid Scan &amp; Uptake ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-thyroid">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-para">
+      <div class="intl-exam-title"><span class="intl-index">04</span><h4>Parathyroid Scan / SPECT-CT</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Locates overactive parathyroid tissue and supports surgical planning.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Usually no fasting. Report medicines, prior neck/chest surgery and pregnancy/breastfeeding.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV injection → early scan after ~10 min → delayed scan after ~2 hours; SPECT/CT may be included.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Approximately 3 hours total; each scan ~30 min.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-parathyroid.jpg" data-caption="Parathyroid Scan / SPECT-CT" aria-label="Parathyroid Scan / SPECT-CT"><img loading="lazy" src="assets/other-parathyroid.jpg" alt="Parathyroid Scan / SPECT-CT"/><span>Parathyroid Scan / SPECT-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-para">Full Korean guide ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-en-chest"><h3>Chest <small>4</small></h3>
+<article class="intl-exam" id="intl-en-myocardial">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Myocardial Perfusion SPECT</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Checks blood supply to heart muscle; helps assess coronary artery disease.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Fasting is required; follow your exact appointment instructions. Avoid caffeine as instructed. Review heart/diabetes medicines with staff.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>Stress/rest imaging is performed in stages; a gap between the two scans may be required.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>First scan ~30 min; second ~20 min, with waiting between.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/myocardial-spect.jpg" data-caption="Myocardial Perfusion SPECT" aria-label="Myocardial Perfusion SPECT"><img loading="lazy" src="assets/myocardial-spect.jpg" alt="Myocardial Perfusion SPECT"/><span>Myocardial Perfusion SPECT ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-myocardial">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-muga">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Cardiac Blood Pool Scan (MUGA)</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Measures pumping function and left ventricular ejection fraction.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Usually no special preparation. Tell staff about chemotherapy scheduling.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>First injection → wait about 20 min → second injection and heart imaging.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>About 1 hour total; imaging ~20 min.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/muga.jpg" data-caption="Cardiac Blood Pool Scan (MUGA)" aria-label="Cardiac Blood Pool Scan (MUGA)"><img loading="lazy" src="assets/muga.jpg" alt="Cardiac Blood Pool Scan (MUGA)"/><span>Cardiac Blood Pool Scan (MUGA) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-muga">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-lung">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Lung Ventilation/Perfusion Scan with SPECT</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Compares lung airflow and blood flow to evaluate pulmonary embolism and lung function.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>No fasting. Inform staff if pregnant, breastfeeding, coughing significantly or using inhalers.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>Inhale Technegas through a mouthpiece → IV injection for perfusion → immediate SPECT imaging.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Approximately 30–40 min; no prolonged waiting.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/lung-technegas-ventilation.png" data-caption="Lung Ventilation/Perfusion Scan with SPECT" aria-label="Lung Ventilation/Perfusion Scan with SPECT"><img loading="lazy" src="assets/lung-technegas-ventilation.png" alt="Lung Ventilation/Perfusion Scan with SPECT"/><span>Lung Ventilation/Perfusion Scan with SPECT ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-lung">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-bsgi">
+      <div class="intl-exam-title"><span class="intl-index">04</span><h4>Breast-Specific Gamma Imaging (BSGI)</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Evaluates functional changes in breast tissue using a radiotracer.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>No fasting. Report pregnancy/breastfeeding; ask about timing in your menstrual cycle.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV tracer injection → wait ~10 min → breast imaging.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Imaging about 30–40 min.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/bsgi-breast.jpg" data-caption="Breast-Specific Gamma Imaging (BSGI)" aria-label="Breast-Specific Gamma Imaging (BSGI)"><img loading="lazy" src="assets/bsgi-breast.jpg" alt="Breast-Specific Gamma Imaging (BSGI)"/><span>Breast-Specific Gamma Imaging (BSGI) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-bsgi">Full Korean guide ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-en-abdomen"><h3>Abdomen &amp; Digestive <small>3</small></h3>
+<article class="intl-exam" id="intl-en-hepatobiliary">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Hepatobiliary Scan</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Tracks bile flow through the liver, gallbladder and bile ducts.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Adults with a gallbladder usually fast for about 6 hours, including liquids and gum. Children and post-surgical patients follow individual instructions.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV tracer → abdominal imaging starting ~5 min later; delayed or fatty-meal images may be required.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>About 2–3 hours; may take longer.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-hepatobiliary.jpg" data-caption="Hepatobiliary Scan" aria-label="Hepatobiliary Scan"><img loading="lazy" src="assets/other-hepatobiliary.jpg" alt="Hepatobiliary Scan"/><span>Hepatobiliary Scan ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-hepato">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-gastric">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Gastric Emptying Time (G.E.T.)</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Measures how quickly food leaves the stomach.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Fast for at least 4 hours; no food, drinks, water, gum, coffee or smoking. Report food allergies and medicines.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>Eat the provided radiolabeled egg/rice meal → imaging every 15 minutes (9 times over 2 hours).</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>About 2 h 30 min; sometimes up to 4 hours.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-gastric-emptying.jpg" data-caption="Gastric Emptying Time (G.E.T.)" aria-label="Gastric Emptying Time (G.E.T.)"><img loading="lazy" src="assets/other-gastric-emptying.jpg" alt="Gastric Emptying Time (G.E.T.)"/><span>Gastric Emptying Time (G.E.T.) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-get">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-bleeding">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Gastrointestinal Bleeding Scan</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Looks for active or intermittent bleeding in the digestive tract.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Fasting is not always needed; follow treatment instructions. Tell staff about medicines, transfusions and pregnancy/breastfeeding.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>Blood is drawn, red cells are labeled and reinjected; abdominal imaging starts immediately.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>About 1 h preparation + 1 h imaging; delayed scans may be needed.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-gi-bleeding.jpg" data-caption="Gastrointestinal Bleeding Scan" aria-label="Gastrointestinal Bleeding Scan"><img loading="lazy" src="assets/other-gi-bleeding.jpg" alt="Gastrointestinal Bleeding Scan"/><span>Gastrointestinal Bleeding Scan ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-gibleed">Full Korean guide ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-en-kidney"><h3>Kidney &amp; Urinary <small>3</small></h3>
+<article class="intl-exam" id="intl-en-mag3">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Diuretic Renal Scan (MAG3)</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Measures kidney drainage and checks for urinary obstruction.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>No fasting. Drink about 500 mL water 30 min beforehand unless fluid-restricted. Follow instructions about bladder catheter if applicable.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV tracer and simultaneous dynamic renal imaging; sometimes a diuretic is used.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Imaging about 60 min.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/mag3-renal.jpg" data-caption="Diuretic Renal Scan (MAG3)" aria-label="Diuretic Renal Scan (MAG3)"><img loading="lazy" src="assets/mag3-renal.jpg" alt="Diuretic Renal Scan (MAG3)"/><span>Diuretic Renal Scan (MAG3) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-mag3">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-gfr">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Glomerular Filtration Rate Test (GFR)</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Measures how well the kidneys filter blood.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>No fasting. Drink about 500 mL water 30 min before unless fluid-restricted.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV tracer and dynamic measurement of kidney function.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Imaging about 30 min, plus preparation.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/gfr-renal.jpg" data-caption="Glomerular Filtration Rate Test (GFR)" aria-label="Glomerular Filtration Rate Test (GFR)"><img loading="lazy" src="assets/gfr-renal.jpg" alt="Glomerular Filtration Rate Test (GFR)"/><span>Glomerular Filtration Rate Test (GFR) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-gfr">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-dmsa">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Renal Cortical Scan (DMSA)</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Checks for kidney cortical scars and compares relative kidney function.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Usually no fasting. If sedation is planned, follow strict fasting instructions.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV injection → wait 2–3 hours → kidney images from several angles.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>About 3–4 hours total; imaging 20–30 min.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-dmsa.jpg" data-caption="Renal Cortical Scan (DMSA)" aria-label="Renal Cortical Scan (DMSA)"><img loading="lazy" src="assets/other-dmsa.jpg" alt="Renal Cortical Scan (DMSA)"/><span>Renal Cortical Scan (DMSA) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-dmsa">Full Korean guide ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-en-limbs"><h3>Arms &amp; Legs <small>2</small></h3>
+<article class="intl-exam" id="intl-en-lymph">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Extremity Lymphoscintigraphy</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Evaluates lymphatic drainage in swollen arms or legs.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>No fasting. Tell staff about pregnancy/breastfeeding, mobility difficulties and surgery history.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>Small injections between fingers or toes → immediate and repeated imaging after movement/walking.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>About 2–4 hours; delayed imaging sometimes needed.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-lymphoscintigraphy.jpg" data-caption="Extremity Lymphoscintigraphy" aria-label="Extremity Lymphoscintigraphy"><img loading="lazy" src="assets/other-lymphoscintigraphy.jpg" alt="Extremity Lymphoscintigraphy"/><span>Extremity Lymphoscintigraphy ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-lymph">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-raynaud">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Raynaud / Peripheral Blood Flow Scan</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Checks blood-flow changes in hands or feet after cold stimulation.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Usually no fasting. Tell staff about vasodilators, pregnancy/breastfeeding and painful ulcers.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>Baseline study: IV injection, wait 20 min, scan 20 min; cold test: injection, wait 15 min, cold water ~5 min, scan ~20 min.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>About 1 h 30 min plus preparation.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-raynaud.jpg" data-caption="Raynaud / Peripheral Blood Flow Scan" aria-label="Raynaud / Peripheral Blood Flow Scan"><img loading="lazy" src="assets/other-raynaud.jpg" alt="Raynaud / Peripheral Blood Flow Scan"/><span>Raynaud / Peripheral Blood Flow Scan ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-raynaud">Full Korean guide ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-en-whole"><h3>Whole Body / Bone <small>1</small></h3>
+<article class="intl-exam" id="intl-en-bone">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Whole-Body Bone Scan &amp; SPECT</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Checks bone abnormalities, infection, fractures and possible cancer spread.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>No fasting. Inform staff about pregnancy/breastfeeding and medicines. Drink water if allowed.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV injection → wait about 3–4 h, drink water → urinate shortly before imaging → whole-body and SPECT scans.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Waiting 3–4 h; imaging about 30–40 min.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/bone-wholebody.png" data-caption="Whole-Body Bone Scan &amp; SPECT" aria-label="Whole-Body Bone Scan &amp; SPECT"><img loading="lazy" src="assets/bone-wholebody.png" alt="Whole-Body Bone Scan &amp; SPECT"/><span>Whole-Body Bone Scan &amp; SPECT ↗</span></button>
+      <button class="intl-original" type="button" data-original="gamma-bone">Full Korean guide ↗</button>
+    </article>
+</section>
+</section>
+<section class="intl-section" id="intl-en-pet"><h2>🔬 PET-CT Scans</h2><p>Select a test to view patient instructions · 5</p>
+<article class="intl-exam" id="intl-en-fdg">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>FDG PET-CT</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Whole-body imaging (sometimes including the head) for oncology and other indicated conditions.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Fast for at least 8 hours. Ask staff how to manage diabetes medicine/insulin. Avoid strenuous exercise as instructed.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV FDG injection → rest quietly in the uptake room for about 60 min → PET-CT scan.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Total approximately 1 h 30 min–2 h.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/pet-fdg-2.jpg" data-caption="FDG PET-CT" aria-label="FDG PET-CT"><img loading="lazy" src="assets/pet-fdg-2.jpg" alt="FDG PET-CT"/><span>FDG PET-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-fdg">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-psma73">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>PSMA-7.3 PET-CT</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Targeted imaging for prostate cancer evaluation.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Light fasting may be recommended; confirm exact requirements. Report medicines and pregnancy/breastfeeding if relevant.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV PSMA-7.3 → wait ~60 min → urinate → PET-CT.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Waiting ~60 min; imaging ~20 min.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/pet-psma73-2.jpg" data-caption="PSMA-7.3 PET-CT" aria-label="PSMA-7.3 PET-CT"><img loading="lazy" src="assets/pet-psma73-2.jpg" alt="PSMA-7.3 PET-CT"/><span>PSMA-7.3 PET-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-psma73">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-psma1007">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>PSMA-1007 PET-CT</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Targeted PET-CT for prostate cancer assessment.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Fast for 4 hours. Review medicines with staff.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV PSMA-1007 → wait ~90 min → urinate → PET-CT.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Waiting ~90 min; imaging 20–30 min.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/pet-psma1007-2.jpg" data-caption="PSMA-1007 PET-CT" aria-label="PSMA-1007 PET-CT"><img loading="lazy" src="assets/pet-psma1007-2.jpg" alt="PSMA-1007 PET-CT"/><span>PSMA-1007 PET-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-psma1007">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-fpcit">
+      <div class="intl-exam-title"><span class="intl-index">04</span><h4>FP-CIT Brain PET-CT</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Assesses dopamine transporter function to assist in evaluation of parkinsonian disorders.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>Usually no fasting. Discuss medicines, caffeine and alcohol with the department.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV injection → first brain scan ~10 min later → second scan ~2 hours after injection.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Two scans; each ~10 min, separated by waiting.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/brain-image1.jpg" data-caption="FP-CIT Brain PET-CT" aria-label="FP-CIT Brain PET-CT"><img loading="lazy" src="assets/brain-image1.jpg" alt="FP-CIT Brain PET-CT"/><span>FP-CIT Brain PET-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-fpcit">Full Korean guide ↗</button>
+    </article>
+<article class="intl-exam" id="intl-en-florbetaben">
+      <div class="intl-exam-title"><span class="intl-index">05</span><h4>Neuraceq Brain PET-CT</h4></div>
+      <div class="intl-row"><strong>Purpose</strong><p>Amyloid brain imaging to assist assessment of Alzheimer-related pathology.</p></div>
+      <div class="intl-row"><strong>Before the test</strong><p>No fasting usually required. Check medicines and preparation instructions.</p></div>
+      <div class="intl-row"><strong>How the test is performed</strong><p>IV Florbetaben (Neuraceq) → wait ~90 min → brain PET-CT.</p></div>
+      <div class="intl-time"><strong>Time required</strong> <span>Waiting ~90 min; imaging ~10 min.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/brain-image2.jpg" data-caption="Neuraceq Brain PET-CT" aria-label="Neuraceq Brain PET-CT"><img loading="lazy" src="assets/brain-image2.jpg" alt="Neuraceq Brain PET-CT"/><span>Neuraceq Brain PET-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-florbetaben">Full Korean guide ↗</button>
+    </article>
+</section>
+<section class="intl-section" id="intl-en-density"><h2>📊 Bone Density &amp; Body Composition</h2>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">01</span><h4>Bone Density Scan (DEXA)</h4></div><div class="intl-row"><strong>Purpose</strong><p>Evaluates bone mineral density and helps assess osteoporosis.</p></div><div class="intl-row"><strong>Before the test</strong><p>Usually no fasting. Remove metal objects around the examination area. Let staff know about pregnancy or recent contrast studies.</p></div><div class="intl-row"><strong>How the test is performed</strong><p>Lie on the table and remain still for imaging of spine and hip.</p></div><div class="intl-time"><strong>Time required</strong><span>About 5–15 min.</span></div><button class="intl-picture" type="button" data-image="assets/dexa-spine.png" data-caption="Bone Density Scan (DEXA)" aria-label="Bone Density Scan (DEXA)"><img loading="lazy" src="assets/dexa-spine.png" alt="Bone Density Scan (DEXA)"/><span>Bone Density Scan (DEXA) ↗</span></button><button class="intl-original" type="button" data-original="dexa-guide">Full Korean guide ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">02</span><h4>Body Composition (DXA)</h4></div><div class="intl-row"><strong>Purpose</strong><p>Measures body fat and lean mass.</p></div><div class="intl-row"><strong>Before the test</strong><p>Follow your booked exam instructions regarding food and exercise; report pregnancy.</p></div><div class="intl-row"><strong>How the test is performed</strong><p>Lie still during the whole-body body-composition scan.</p></div><div class="intl-time"><strong>Time required</strong><span>Imaging ~5–10 min; allow extra preparation time.</span></div><button class="intl-picture" type="button" data-image="assets/body-composition.jpg" data-caption="Body Composition (DXA)" aria-label="Body Composition (DXA)"><img loading="lazy" src="assets/body-composition.jpg" alt="Body Composition (DXA)"/><span>Body Composition (DXA) ↗</span></button><button class="intl-original" type="button" data-original="body-guide">Full Korean guide ↗</button></article>
+</section>
+<section class="intl-section" id="intl-en-therapy"><h2>🏥 Radioiodine Therapy</h2>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">01</span><h4>Therapy overview</h4></div><p>Radioiodine (I-131) therapy is used for selected thyroid diseases. The treatment team will explain preparation, thyroid medication, low-iodine diet and radiation safety. Your own prescription and dates take precedence.</p>
+<button class="intl-original" data-original="therapy-education" type="button">Full Korean guide ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">02</span><h4>Low-iodine diet</h4></div><p>Low-iodine diet: follow the start date and permitted/restricted food list issued by your treating team. Avoid iodine-rich seaweed and products specifically restricted by your dietitian; ingredients can change.</p>
+<p class="intl-info">Low-iodine food examples · 14</p><div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-01.webp" data-caption="Low-iodine food examples 1" aria-label="Low-iodine food examples 1"><img loading="lazy" src="assets/low-iodine-photo-01.webp" alt="Low-iodine food examples 1"/><span>Low-iodine food examples 1 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-02.webp" data-caption="Low-iodine food examples 2" aria-label="Low-iodine food examples 2"><img loading="lazy" src="assets/low-iodine-photo-02.webp" alt="Low-iodine food examples 2"/><span>Low-iodine food examples 2 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-03.webp" data-caption="Low-iodine food examples 3" aria-label="Low-iodine food examples 3"><img loading="lazy" src="assets/low-iodine-photo-03.webp" alt="Low-iodine food examples 3"/><span>Low-iodine food examples 3 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-04.webp" data-caption="Low-iodine food examples 4" aria-label="Low-iodine food examples 4"><img loading="lazy" src="assets/low-iodine-photo-04.webp" alt="Low-iodine food examples 4"/><span>Low-iodine food examples 4 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-05.webp" data-caption="Low-iodine food examples 5" aria-label="Low-iodine food examples 5"><img loading="lazy" src="assets/low-iodine-photo-05.webp" alt="Low-iodine food examples 5"/><span>Low-iodine food examples 5 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-06.webp" data-caption="Low-iodine food examples 6" aria-label="Low-iodine food examples 6"><img loading="lazy" src="assets/low-iodine-photo-06.webp" alt="Low-iodine food examples 6"/><span>Low-iodine food examples 6 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-07.webp" data-caption="Low-iodine food examples 7" aria-label="Low-iodine food examples 7"><img loading="lazy" src="assets/low-iodine-photo-07.webp" alt="Low-iodine food examples 7"/><span>Low-iodine food examples 7 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-08.webp" data-caption="Low-iodine food examples 8" aria-label="Low-iodine food examples 8"><img loading="lazy" src="assets/low-iodine-photo-08.webp" alt="Low-iodine food examples 8"/><span>Low-iodine food examples 8 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-09.webp" data-caption="Low-iodine food examples 9" aria-label="Low-iodine food examples 9"><img loading="lazy" src="assets/low-iodine-photo-09.webp" alt="Low-iodine food examples 9"/><span>Low-iodine food examples 9 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-10.webp" data-caption="Low-iodine food examples 10" aria-label="Low-iodine food examples 10"><img loading="lazy" src="assets/low-iodine-photo-10.webp" alt="Low-iodine food examples 10"/><span>Low-iodine food examples 10 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-11.webp" data-caption="Low-iodine food examples 11" aria-label="Low-iodine food examples 11"><img loading="lazy" src="assets/low-iodine-photo-11.webp" alt="Low-iodine food examples 11"/><span>Low-iodine food examples 11 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-12.webp" data-caption="Low-iodine food examples 12" aria-label="Low-iodine food examples 12"><img loading="lazy" src="assets/low-iodine-photo-12.webp" alt="Low-iodine food examples 12"/><span>Low-iodine food examples 12 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-13.webp" data-caption="Low-iodine food examples 13" aria-label="Low-iodine food examples 13"><img loading="lazy" src="assets/low-iodine-photo-13.webp" alt="Low-iodine food examples 13"/><span>Low-iodine food examples 13 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-14.webp" data-caption="Low-iodine food examples 14" aria-label="Low-iodine food examples 14"><img loading="lazy" src="assets/low-iodine-photo-14.webp" alt="Low-iodine food examples 14"/><span>Low-iodine food examples 14 ↗</span></button>
+</div>
+<button class="intl-original" data-original="therapy-diet" type="button">Full Korean guide ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">03</span><h4>Inpatient stay</h4></div><p>Your hospital admission and isolation-room instructions include arrival procedures, facilities, meals, hygiene and contacting nursing staff. Hospital unit: East Building, 7th floor; by the elevator, the nurse station is to the left and the radioiodine admission rooms are to the right.</p>
+<p class="intl-info">Reference images and facility photos</p><div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-06-photo-03.webp" data-caption="Reference images and facility photos" aria-label="Reference images and facility photos"><img loading="lazy" src="assets/inpatient-slide-06-photo-03.webp" alt="Reference images and facility photos"/><span>Reference images and facility photos ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-07-photo-03.webp" data-caption="Reference images and facility photos" aria-label="Reference images and facility photos"><img loading="lazy" src="assets/inpatient-slide-07-photo-03.webp" alt="Reference images and facility photos"/><span>Reference images and facility photos ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-11-photo-03.webp" data-caption="Reference images and facility photos" aria-label="Reference images and facility photos"><img loading="lazy" src="assets/inpatient-slide-11-photo-03.webp" alt="Reference images and facility photos"/><span>Reference images and facility photos ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-12-photo-02.webp" data-caption="Reference images and facility photos" aria-label="Reference images and facility photos"><img loading="lazy" src="assets/inpatient-slide-12-photo-02.webp" alt="Reference images and facility photos"/><span>Reference images and facility photos ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-15-photo-04.webp" data-caption="Reference images and facility photos" aria-label="Reference images and facility photos"><img loading="lazy" src="assets/inpatient-slide-15-photo-04.webp" alt="Reference images and facility photos"/><span>Reference images and facility photos ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-16-photo-06.webp" data-caption="Reference images and facility photos" aria-label="Reference images and facility photos"><img loading="lazy" src="assets/inpatient-slide-16-photo-06.webp" alt="Reference images and facility photos"/><span>Reference images and facility photos ↗</span></button>
+</div>
+<button class="intl-original" data-original="therapy-inpatient" type="button">Full Korean guide ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">04</span><h4>Post-treatment imaging</h4></div><p>Discharge-day image: 8:30 AM; use the restroom about 5 minutes before scanning; imaging about 30 minutes. Around day 7: morning appointment time will be provided; use the restroom 5 minutes before scanning; imaging about 1 hour. SPECT images may be taken as instructed.</p>
+<div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/iodine-discharge-day.png" data-caption="Post-treatment imaging" aria-label="Post-treatment imaging"><img loading="lazy" src="assets/iodine-discharge-day.png" alt="Post-treatment imaging"/><span>Post-treatment imaging ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/iodine-day7.png" data-caption="Post-treatment imaging" aria-label="Post-treatment imaging"><img loading="lazy" src="assets/iodine-day7.png" alt="Post-treatment imaging"/><span>Post-treatment imaging ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/iodine-spectct.png" data-caption="Post-treatment imaging" aria-label="Post-treatment imaging"><img loading="lazy" src="assets/iodine-spectct.png" alt="Post-treatment imaging"/><span>Post-treatment imaging ↗</span></button>
+</div>
+<button class="intl-original" data-original="therapy-scans" type="button">Full Korean guide ↗</button></article>
+</section>
+<section class="intl-section" id="intl-en-equip"><h2>📷 Equipment</h2><p>Actual equipment photos. The scanner used may differ depending on your appointment.</p><div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/equipment-petct.webp" data-caption="PET-CT · Siemens Biograph Vision 600" aria-label="PET-CT · Siemens Biograph Vision 600"><img loading="lazy" src="assets/equipment-petct.webp" alt="PET-CT · Siemens Biograph Vision 600"/><span>PET-CT · Siemens Biograph Vision 600 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-gamma1.webp" data-caption="Gamma Camera 1 · GE NM/CT 870 DR" aria-label="Gamma Camera 1 · GE NM/CT 870 DR"><img loading="lazy" src="assets/equipment-gamma1.webp" alt="Gamma Camera 1 · GE NM/CT 870 DR"/><span>Gamma Camera 1 · GE NM/CT 870 DR ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-gamma2.webp" data-caption="Gamma Camera 2 · Siemens Symbia EVO Excel" aria-label="Gamma Camera 2 · Siemens Symbia EVO Excel"><img loading="lazy" src="assets/equipment-gamma2.webp" alt="Gamma Camera 2 · Siemens Symbia EVO Excel"/><span>Gamma Camera 2 · Siemens Symbia EVO Excel ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-gamma3.webp" data-caption="Gamma Camera 3 · Siemens Symbia T16" aria-label="Gamma Camera 3 · Siemens Symbia T16"><img loading="lazy" src="assets/equipment-gamma3.webp" alt="Gamma Camera 3 · Siemens Symbia T16"/><span>Gamma Camera 3 · Siemens Symbia T16 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-dexa1.webp" data-caption="Bone Density 1 · GE Prodigy Fuga" aria-label="Bone Density 1 · GE Prodigy Fuga"><img loading="lazy" src="assets/equipment-dexa1.webp" alt="Bone Density 1 · GE Prodigy Fuga"/><span>Bone Density 1 · GE Prodigy Fuga ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-hologic.jpg" data-caption="Bone Density 2 · Hologic Horizon W" aria-label="Bone Density 2 · Hologic Horizon W"><img loading="lazy" src="assets/equipment-hologic.jpg" alt="Bone Density 2 · Hologic Horizon W"/><span>Bone Density 2 · Hologic Horizon W ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-dilon.jpg" data-caption="Breast Gamma Camera · Dilon 6800" aria-label="Breast Gamma Camera · Dilon 6800"><img loading="lazy" src="assets/equipment-dilon.jpg" alt="Breast Gamma Camera · Dilon 6800"/><span>Breast Gamma Camera · Dilon 6800 ↗</span></button>
+</div></section>
+<div class="intl-disclaimer">Your individual appointment and medical team instructions take priority. Never stop medication without medical advice. Inform staff about pregnancy or breastfeeding.<br/>Translation for patient convenience. Please confirm clinical instructions with the care team. Photos may contain Korean labels.</div></main><main class="wrap main intl-main" id="intl-main-ru" lang="ru" hidden>
+<div class="intl-hero" id="intl-ru-home"><small>HANYANG UNIVERSITY HOSPITAL</small><h1>Ядерная медицина | Информация для пациентов</h1><p>Выберите исследование, чтобы узнать подготовку, ожидание, этапы и длительность.</p></div>
+<nav class="intl-section-nav"><a href="#intl-ru-reception">📍 Регистрация и как добраться</a><a href="#intl-ru-gamma">🩻 Гамма-камера</a><a href="#intl-ru-pet">🔬 ПЭТ-КТ</a><a href="#intl-ru-density">📊 Денситометрия и состав тела</a><a href="#intl-ru-therapy">🏥 Радиойодтерапия</a><a href="#intl-ru-equip">📷 Оборудование</a></nav>
+<section class="intl-section" id="intl-ru-reception"><h2>📍 Регистрация и как добраться</h2><p class="intl-lead">Университетская больница Ханян · Главное здание, 2-й этаж, ядерная медицина<br/>Сеул, Сондон-гу, Вансипни-ро 222-1</p><div class="intl-notice"><p>🎫 Амбулаторным пациентам: сначала оплатите, затем возьмите талон в киоске ядерной медицины.</p><p>🏥 Стационарным пациентам: сразу обратитесь на стойку регистрации; киоск не нужен.</p></div><div class="intl-pictures"><button class="intl-picture" type="button" data-image="assets/hyumc-hospital-parking-map-20261102.png" data-caption="Схема территории больницы" aria-label="Схема территории больницы"><img loading="lazy" src="assets/hyumc-hospital-parking-map-20261102.png" alt="Схема территории больницы"/><span>Схема территории больницы ↗</span></button><button class="intl-picture" type="button" data-image="assets/nuclear-department-floorplan-20261102-final.png" data-caption="Главное здание, 2 этаж: вход и регистрация ядерной медицины" aria-label="Главное здание, 2 этаж: вход и регистрация ядерной медицины"><img loading="lazy" src="assets/nuclear-department-floorplan-20261102-final.png" alt="Главное здание, 2 этаж: вход и регистрация ядерной медицины"/><span>Главное здание, 2 этаж: вход и регистрация ядерной медицины ↗</span></button></div><p><a class="intl-external" href="https://seoul.hyumc.com/hospital/locationList.do" target="_blank" rel="noopener noreferrer">Hanyang University Hospital · Location ↗</a></p><p>☎ 02-2290-9260 · 02-2290-9261</p></section>
+<section class="intl-section" id="intl-ru-gamma"><h2>🩻 Гамма-камера</h2><p>Выберите область тела · 17</p>
+<div class="intl-regions">
+<a href="#intl-ru-head">Голова и шея</a>
+<a href="#intl-ru-chest">Грудная клетка</a>
+<a href="#intl-ru-abdomen">Живот и пищеварение</a>
+<a href="#intl-ru-kidney">Почки и мочевыводящая система</a>
+<a href="#intl-ru-limbs">Руки и ноги</a>
+<a href="#intl-ru-whole">Всё тело / кости</a>
+</div>
+<section class="intl-region" id="intl-ru-head"><h3>Голова и шея <small>4</small></h3>
+<article class="intl-exam" id="intl-ru-brain">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>ОФЭКТ перфузии головного мозга</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Оценивает кровоснабжение мозга при сосудистых и неврологических заболеваниях.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Уточните ограничения на кофеин, алкоголь и лекарства; не отменяйте препараты самостоятельно.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Внутривенная инъекция, ожидание, затем томография мозга.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Обычно около 30 мин; с Диамоксом — около 1 часа.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/brain-spect.jpg" data-caption="ОФЭКТ перфузии головного мозга" aria-label="ОФЭКТ перфузии головного мозга"><img loading="lazy" src="assets/brain-spect.jpg" alt="ОФЭКТ перфузии головного мозга"/><span>ОФЭКТ перфузии головного мозга ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-brain">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-salivary">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Сцинтиграфия слюнных желёз</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Оценивает функцию слюнных желёз, в том числе при синдроме Шегрена.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Уточните подготовку в отделении.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Внутривенная инъекция и последовательная съёмка; возможно стимулирование витамином C.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Около 1 часа.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/salivary-gland.jpg" data-caption="Сцинтиграфия слюнных желёз" aria-label="Сцинтиграфия слюнных желёз"><img loading="lazy" src="assets/salivary-gland.jpg" alt="Сцинтиграфия слюнных желёз"/><span>Сцинтиграфия слюнных желёз ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-salivary">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-thyroid">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Сканирование щитовидной железы и измерение захвата</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Оценивает накопление радиофармпрепарата, функцию железы и узлы.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Обычно натощак не требуется. Сообщите о лекарствах для щитовидной железы, беременности и кормлении.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>1-я инъекция → 15 мин ожидания → измерение (~5 мин); 2-я инъекция → 20 мин → скан (~5 мин).</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Всего около 1 часа.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/thyroid-scan-uptake.jpg" data-caption="Сканирование щитовидной железы и измерение захвата" aria-label="Сканирование щитовидной железы и измерение захвата"><img loading="lazy" src="assets/thyroid-scan-uptake.jpg" alt="Сканирование щитовидной железы и измерение захвата"/><span>Сканирование щитовидной железы и измерение захвата ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-thyroid">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-para">
+      <div class="intl-exam-title"><span class="intl-index">04</span><h4>Сцинтиграфия паращитовидных желёз / ОФЭКТ-КТ</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Помогает найти гиперфункционирующую паращитовидную ткань перед операцией.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Обычно голодание не нужно. Сообщите о лекарствах, операциях и беременности/кормлении.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Инъекция → ранняя съёмка через ~10 мин → отсроченная через ~2 ч; возможна ОФЭКТ/КТ.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Всего ~3 ч; каждая съёмка ~30 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-parathyroid.jpg" data-caption="Сцинтиграфия паращитовидных желёз / ОФЭКТ-КТ" aria-label="Сцинтиграфия паращитовидных желёз / ОФЭКТ-КТ"><img loading="lazy" src="assets/other-parathyroid.jpg" alt="Сцинтиграфия паращитовидных желёз / ОФЭКТ-КТ"/><span>Сцинтиграфия паращитовидных желёз / ОФЭКТ-КТ ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-para">Полная версия на корейском ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-ru-chest"><h3>Грудная клетка <small>4</small></h3>
+<article class="intl-exam" id="intl-ru-myocardial">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Перфузионная ОФЭКТ миокарда</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Оценивает кровоснабжение сердечной мышцы и коронарную болезнь.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Требуется голодание по инструкции. Ограничьте кофеин; уточните приём сердечных и диабетических лекарств.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Нагрузочная и покойная части исследования с перерывом.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Первый этап ~30 мин, второй ~20 мин, плюс ожидание.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/myocardial-spect.jpg" data-caption="Перфузионная ОФЭКТ миокарда" aria-label="Перфузионная ОФЭКТ миокарда"><img loading="lazy" src="assets/myocardial-spect.jpg" alt="Перфузионная ОФЭКТ миокарда"/><span>Перфузионная ОФЭКТ миокарда ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-myocardial">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-muga">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Радионуклидная вентрикулография (MUGA)</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Измеряет сократительную функцию сердца и фракцию выброса.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Обычно специальная подготовка не нужна. Сообщите о химиотерапии.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Первая инъекция → около 20 мин ожидания → вторая инъекция и съёмка.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Около 1 часа, съёмка ~20 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/muga.jpg" data-caption="Радионуклидная вентрикулография (MUGA)" aria-label="Радионуклидная вентрикулография (MUGA)"><img loading="lazy" src="assets/muga.jpg" alt="Радионуклидная вентрикулография (MUGA)"/><span>Радионуклидная вентрикулография (MUGA) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-muga">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-lung">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Вентиляционно-перфузионная сцинтиграфия лёгких / ОФЭКТ</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Сравнивает вентиляцию и кровоток для оценки тромбоэмболии лёгочной артерии.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Натощак не требуется. Сообщите о беременности, кормлении, сильном кашле, ингаляторах.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Вдыхание Technegas через мундштук → внутривенная инъекция → немедленная ОФЭКТ.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Около 30–40 мин без длительного ожидания.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/lung-technegas-ventilation.png" data-caption="Вентиляционно-перфузионная сцинтиграфия лёгких / ОФЭКТ" aria-label="Вентиляционно-перфузионная сцинтиграфия лёгких / ОФЭКТ"><img loading="lazy" src="assets/lung-technegas-ventilation.png" alt="Вентиляционно-перфузионная сцинтиграфия лёгких / ОФЭКТ"/><span>Вентиляционно-перфузионная сцинтиграфия лёгких / ОФЭКТ ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-lung">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-bsgi">
+      <div class="intl-exam-title"><span class="intl-index">04</span><h4>Сцинтиграфия молочных желёз (BSGI)</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Оценивает функциональные изменения ткани молочной железы.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Голодание не требуется. Сообщите о беременности/кормлении, уточните день цикла.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Инъекция → ожидание ~10 мин → съёмка молочных желёз.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Съёмка около 30–40 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/bsgi-breast.jpg" data-caption="Сцинтиграфия молочных желёз (BSGI)" aria-label="Сцинтиграфия молочных желёз (BSGI)"><img loading="lazy" src="assets/bsgi-breast.jpg" alt="Сцинтиграфия молочных желёз (BSGI)"/><span>Сцинтиграфия молочных желёз (BSGI) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-bsgi">Полная версия на корейском ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-ru-abdomen"><h3>Живот и пищеварение <small>3</small></h3>
+<article class="intl-exam" id="intl-ru-hepatobiliary">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Гепатобилиарная сцинтиграфия</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Прослеживает отток желчи через печень, желчный пузырь и протоки.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Взрослым с желчным пузырём обычно голодать ~6 часов, включая питьё и жвачку; остальным — индивидуально.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Инъекция → снимки живота примерно через 5 мин; возможна отсроченная съёмка или проба с пищей.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Около 2–3 часов или дольше.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-hepatobiliary.jpg" data-caption="Гепатобилиарная сцинтиграфия" aria-label="Гепатобилиарная сцинтиграфия"><img loading="lazy" src="assets/other-hepatobiliary.jpg" alt="Гепатобилиарная сцинтиграфия"/><span>Гепатобилиарная сцинтиграфия ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-hepato">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-gastric">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Исследование опорожнения желудка (G.E.T.)</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Измеряет скорость выхода пищи из желудка.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Голодать не менее 4 ч: без еды, воды, напитков, жвачки, кофе и курения. Сообщите об аллергии.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Съесть специальное блюдо с меткой → снимки каждые 15 мин (9 раз за 2 часа).</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Около 2 ч 30 мин; иногда до 4 часов.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-gastric-emptying.jpg" data-caption="Исследование опорожнения желудка (G.E.T.)" aria-label="Исследование опорожнения желудка (G.E.T.)"><img loading="lazy" src="assets/other-gastric-emptying.jpg" alt="Исследование опорожнения желудка (G.E.T.)"/><span>Исследование опорожнения желудка (G.E.T.) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-get">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-bleeding">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Сцинтиграфия желудочно-кишечного кровотечения</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Ищет активное или периодическое кровотечение ЖКТ.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Голодание не всегда нужно. Сообщите о лекарствах, переливаниях и беременности/кормлении.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Забор крови → маркировка эритроцитов → обратное введение → немедленная съёмка живота.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Подготовка ~1 ч + съёмка ~1 ч; возможны поздние снимки.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-gi-bleeding.jpg" data-caption="Сцинтиграфия желудочно-кишечного кровотечения" aria-label="Сцинтиграфия желудочно-кишечного кровотечения"><img loading="lazy" src="assets/other-gi-bleeding.jpg" alt="Сцинтиграфия желудочно-кишечного кровотечения"/><span>Сцинтиграфия желудочно-кишечного кровотечения ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-gibleed">Полная версия на корейском ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-ru-kidney"><h3>Почки и мочевыводящая система <small>3</small></h3>
+<article class="intl-exam" id="intl-ru-mag3">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Диуретическая сцинтиграфия почек (MAG3)</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Оценивает отток мочи и возможную обструкцию.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Голодание не требуется. Выпейте ~500 мл воды за 30 мин, если нет ограничения жидкости; уточните катетеризацию.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Инъекция препарата с одновременной динамической съёмкой; возможен диуретик.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Съёмка около 60 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/mag3-renal.jpg" data-caption="Диуретическая сцинтиграфия почек (MAG3)" aria-label="Диуретическая сцинтиграфия почек (MAG3)"><img loading="lazy" src="assets/mag3-renal.jpg" alt="Диуретическая сцинтиграфия почек (MAG3)"/><span>Диуретическая сцинтиграфия почек (MAG3) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-mag3">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-gfr">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Измерение скорости клубочковой фильтрации (GFR)</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Оценивает способность почек фильтровать кровь.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Голодание не нужно. Если нет ограничения жидкости, выпейте ~500 мл воды за 30 мин.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Внутривенная инъекция и динамическое измерение функции почек.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Съёмка около 30 мин плюс подготовка.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/gfr-renal.jpg" data-caption="Измерение скорости клубочковой фильтрации (GFR)" aria-label="Измерение скорости клубочковой фильтрации (GFR)"><img loading="lazy" src="assets/gfr-renal.jpg" alt="Измерение скорости клубочковой фильтрации (GFR)"/><span>Измерение скорости клубочковой фильтрации (GFR) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-gfr">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-dmsa">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Сцинтиграфия коркового слоя почек (DMSA)</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Выявляет рубцы почек и сравнивает функцию обеих почек.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Обычно не требуется голодание. Если планируется седация, следуйте её инструкции.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Инъекция → ожидание 2–3 ч → снимки почек с разных направлений.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Всего ~3–4 ч; съёмка 20–30 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-dmsa.jpg" data-caption="Сцинтиграфия коркового слоя почек (DMSA)" aria-label="Сцинтиграфия коркового слоя почек (DMSA)"><img loading="lazy" src="assets/other-dmsa.jpg" alt="Сцинтиграфия коркового слоя почек (DMSA)"/><span>Сцинтиграфия коркового слоя почек (DMSA) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-dmsa">Полная версия на корейском ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-ru-limbs"><h3>Руки и ноги <small>2</small></h3>
+<article class="intl-exam" id="intl-ru-lymph">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Лимфосцинтиграфия конечностей</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Оценивает лимфоотток при отёках рук и ног.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Голодание не нужно. Сообщите о беременности/кормлении, трудности ходьбы и операциях.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Малые инъекции между пальцами рук/ног → ранние и повторные снимки после движения.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Около 2–4 ч; иногда отсроченные снимки.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-lymphoscintigraphy.jpg" data-caption="Лимфосцинтиграфия конечностей" aria-label="Лимфосцинтиграфия конечностей"><img loading="lazy" src="assets/other-lymphoscintigraphy.jpg" alt="Лимфосцинтиграфия конечностей"/><span>Лимфосцинтиграфия конечностей ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-lymph">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-raynaud">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Сцинтиграфия при синдроме Рейно</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Оценивает кровоток кистей или стоп после холодовой пробы.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Обычно голодание не нужно. Сообщите о сосудистых лекарствах, беременности и язвах.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Базовая проба: инъекция, 20 мин ожидания, 20 мин съёмки; холодовая: 15 мин, вода ~5 мин, съёмка ~20 мин.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Около 1 ч 30 мин плюс подготовка.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-raynaud.jpg" data-caption="Сцинтиграфия при синдроме Рейно" aria-label="Сцинтиграфия при синдроме Рейно"><img loading="lazy" src="assets/other-raynaud.jpg" alt="Сцинтиграфия при синдроме Рейно"/><span>Сцинтиграфия при синдроме Рейно ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-raynaud">Полная версия на корейском ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-ru-whole"><h3>Всё тело / кости <small>1</small></h3>
+<article class="intl-exam" id="intl-ru-bone">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Сцинтиграфия костей всего тела и ОФЭКТ</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Выявляет изменения костей, воспаление, переломы и возможные метастазы.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Голодание не нужно. Сообщите о беременности/кормлении и лекарствах. Пейте воду, если разрешено.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Инъекция → ожидание 3–4 ч, питьё воды → мочеиспускание перед съёмкой → сканирование.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Ожидание 3–4 ч, съёмка 30–40 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/bone-wholebody.png" data-caption="Сцинтиграфия костей всего тела и ОФЭКТ" aria-label="Сцинтиграфия костей всего тела и ОФЭКТ"><img loading="lazy" src="assets/bone-wholebody.png" alt="Сцинтиграфия костей всего тела и ОФЭКТ"/><span>Сцинтиграфия костей всего тела и ОФЭКТ ↗</span></button>
+      <button class="intl-original" type="button" data-original="gamma-bone">Полная версия на корейском ↗</button>
+    </article>
+</section>
+</section>
+<section class="intl-section" id="intl-ru-pet"><h2>🔬 ПЭТ-КТ</h2><p>Выберите исследование для просмотра информации · 5</p>
+<article class="intl-exam" id="intl-ru-fdg">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>FDG PET-КТ</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Исследование всего тела (иногда включая голову) при онкологических и других показаниях.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Голодать не менее 8 часов. При диабете уточните приём препаратов/инсулина. Избегайте нагрузок по инструкции.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Внутривенное введение FDG → спокойный отдых ~60 мин → ПЭТ-КТ.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Всего примерно 1 ч 30 мин–2 ч.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/pet-fdg-2.jpg" data-caption="FDG PET-КТ" aria-label="FDG PET-КТ"><img loading="lazy" src="assets/pet-fdg-2.jpg" alt="FDG PET-КТ"/><span>FDG PET-КТ ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-fdg">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-psma73">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>PSMA-7.3 ПЭТ-КТ</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Прицельная диагностика рака предстательной железы.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Возможна рекомендация лёгкого голодания; уточните в отделении. Сообщите о лекарствах.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Введение PSMA-7.3 → ожидание ~60 мин → мочеиспускание → ПЭТ-КТ.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Ожидание ~60 мин, съёмка ~20 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/pet-psma73-2.jpg" data-caption="PSMA-7.3 ПЭТ-КТ" aria-label="PSMA-7.3 ПЭТ-КТ"><img loading="lazy" src="assets/pet-psma73-2.jpg" alt="PSMA-7.3 ПЭТ-КТ"/><span>PSMA-7.3 ПЭТ-КТ ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-psma73">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-psma1007">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>PSMA-1007 ПЭТ-КТ</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Прицельная диагностика рака предстательной железы.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Голодать 4 часа. Уточните приём лекарств.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Введение PSMA-1007 → ожидание ~90 мин → мочеиспускание → ПЭТ-КТ.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Ожидание ~90 мин, съёмка 20–30 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/pet-psma1007-2.jpg" data-caption="PSMA-1007 ПЭТ-КТ" aria-label="PSMA-1007 ПЭТ-КТ"><img loading="lazy" src="assets/pet-psma1007-2.jpg" alt="PSMA-1007 ПЭТ-КТ"/><span>PSMA-1007 ПЭТ-КТ ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-psma1007">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-fpcit">
+      <div class="intl-exam-title"><span class="intl-index">04</span><h4>FP-CIT ПЭТ-КТ головного мозга</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Оценивает дофаминовые транспортеры при паркинсонизме.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Обычно натощак не требуется. Уточните лекарства, кофеин и алкоголь.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Инъекция → первый снимок через ~10 мин → второй примерно через 2 часа.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Два исследования по ~10 мин с ожиданием между ними.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/brain-image1.jpg" data-caption="FP-CIT ПЭТ-КТ головного мозга" aria-label="FP-CIT ПЭТ-КТ головного мозга"><img loading="lazy" src="assets/brain-image1.jpg" alt="FP-CIT ПЭТ-КТ головного мозга"/><span>FP-CIT ПЭТ-КТ головного мозга ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-fpcit">Полная версия на корейском ↗</button>
+    </article>
+<article class="intl-exam" id="intl-ru-florbetaben">
+      <div class="intl-exam-title"><span class="intl-index">05</span><h4>Neuraceq ПЭТ-КТ головного мозга</h4></div>
+      <div class="intl-row"><strong>Цель</strong><p>Амилоидная визуализация мозга при оценке болезни Альцгеймера.</p></div>
+      <div class="intl-row"><strong>Подготовка</strong><p>Обычно голодание не нужно. Уточните лекарства и подготовку.</p></div>
+      <div class="intl-row"><strong>Как проводится исследование</strong><p>Введение флорбетабена (Neuraceq) → ожидание ~90 мин → ПЭТ-КТ мозга.</p></div>
+      <div class="intl-time"><strong>Продолжительность</strong> <span>Ожидание ~90 мин; съёмка ~10 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/brain-image2.jpg" data-caption="Neuraceq ПЭТ-КТ головного мозга" aria-label="Neuraceq ПЭТ-КТ головного мозга"><img loading="lazy" src="assets/brain-image2.jpg" alt="Neuraceq ПЭТ-КТ головного мозга"/><span>Neuraceq ПЭТ-КТ головного мозга ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-florbetaben">Полная версия на корейском ↗</button>
+    </article>
+</section>
+<section class="intl-section" id="intl-ru-density"><h2>📊 Денситометрия и состав тела</h2>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">01</span><h4>Денситометрия костей (DEXA)</h4></div><div class="intl-row"><strong>Цель</strong><p>Измеряет плотность костной ткани для оценки остеопороза.</p></div><div class="intl-row"><strong>Подготовка</strong><p>Обычно голодание не нужно. Снимите металлические предметы, сообщите о беременности или недавнем контрастном исследовании.</p></div><div class="intl-row"><strong>Как проводится исследование</strong><p>Лежите неподвижно во время снимков позвоночника и бедра.</p></div><div class="intl-time"><strong>Продолжительность</strong><span>Около 5–15 мин.</span></div><button class="intl-picture" type="button" data-image="assets/dexa-spine.png" data-caption="Денситометрия костей (DEXA)" aria-label="Денситометрия костей (DEXA)"><img loading="lazy" src="assets/dexa-spine.png" alt="Денситометрия костей (DEXA)"/><span>Денситометрия костей (DEXA) ↗</span></button><button class="intl-original" type="button" data-original="dexa-guide">Полная версия на корейском ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">02</span><h4>Анализ состава тела (DXA)</h4></div><div class="intl-row"><strong>Цель</strong><p>Измеряет жировую и безжировую массу тела.</p></div><div class="intl-row"><strong>Подготовка</strong><p>Соблюдайте указания по питанию и нагрузкам; сообщите о беременности.</p></div><div class="intl-row"><strong>Как проводится исследование</strong><p>Лежите неподвижно при сканировании всего тела.</p></div><div class="intl-time"><strong>Продолжительность</strong><span>Съёмка ~5–10 мин плюс подготовка.</span></div><button class="intl-picture" type="button" data-image="assets/body-composition.jpg" data-caption="Анализ состава тела (DXA)" aria-label="Анализ состава тела (DXA)"><img loading="lazy" src="assets/body-composition.jpg" alt="Анализ состава тела (DXA)"/><span>Анализ состава тела (DXA) ↗</span></button><button class="intl-original" type="button" data-original="body-guide">Полная версия на корейском ↗</button></article>
+</section>
+<section class="intl-section" id="intl-ru-therapy"><h2>🏥 Радиойодтерапия</h2>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">01</span><h4>Общая информация</h4></div><p>Терапия радиоактивным йодом (I-131) применяется при некоторых заболеваниях щитовидной железы. Лечащая команда разъяснит подготовку, лекарства, диету и радиационную безопасность.</p>
+<button class="intl-original" data-original="therapy-education" type="button">Полная версия на корейском ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">02</span><h4>Низкойодная диета</h4></div><p>Низкойодная диета: соблюдайте сроки и список продуктов, выданные лечащей командой. Исключите богатые йодом водоросли и продукты, запрещённые диетологом; состав продуктов может меняться.</p>
+<p class="intl-info">Примеры низкойодной диеты · 14</p><div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-01.webp" data-caption="Примеры низкойодной диеты 1" aria-label="Примеры низкойодной диеты 1"><img loading="lazy" src="assets/low-iodine-photo-01.webp" alt="Примеры низкойодной диеты 1"/><span>Примеры низкойодной диеты 1 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-02.webp" data-caption="Примеры низкойодной диеты 2" aria-label="Примеры низкойодной диеты 2"><img loading="lazy" src="assets/low-iodine-photo-02.webp" alt="Примеры низкойодной диеты 2"/><span>Примеры низкойодной диеты 2 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-03.webp" data-caption="Примеры низкойодной диеты 3" aria-label="Примеры низкойодной диеты 3"><img loading="lazy" src="assets/low-iodine-photo-03.webp" alt="Примеры низкойодной диеты 3"/><span>Примеры низкойодной диеты 3 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-04.webp" data-caption="Примеры низкойодной диеты 4" aria-label="Примеры низкойодной диеты 4"><img loading="lazy" src="assets/low-iodine-photo-04.webp" alt="Примеры низкойодной диеты 4"/><span>Примеры низкойодной диеты 4 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-05.webp" data-caption="Примеры низкойодной диеты 5" aria-label="Примеры низкойодной диеты 5"><img loading="lazy" src="assets/low-iodine-photo-05.webp" alt="Примеры низкойодной диеты 5"/><span>Примеры низкойодной диеты 5 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-06.webp" data-caption="Примеры низкойодной диеты 6" aria-label="Примеры низкойодной диеты 6"><img loading="lazy" src="assets/low-iodine-photo-06.webp" alt="Примеры низкойодной диеты 6"/><span>Примеры низкойодной диеты 6 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-07.webp" data-caption="Примеры низкойодной диеты 7" aria-label="Примеры низкойодной диеты 7"><img loading="lazy" src="assets/low-iodine-photo-07.webp" alt="Примеры низкойодной диеты 7"/><span>Примеры низкойодной диеты 7 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-08.webp" data-caption="Примеры низкойодной диеты 8" aria-label="Примеры низкойодной диеты 8"><img loading="lazy" src="assets/low-iodine-photo-08.webp" alt="Примеры низкойодной диеты 8"/><span>Примеры низкойодной диеты 8 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-09.webp" data-caption="Примеры низкойодной диеты 9" aria-label="Примеры низкойодной диеты 9"><img loading="lazy" src="assets/low-iodine-photo-09.webp" alt="Примеры низкойодной диеты 9"/><span>Примеры низкойодной диеты 9 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-10.webp" data-caption="Примеры низкойодной диеты 10" aria-label="Примеры низкойодной диеты 10"><img loading="lazy" src="assets/low-iodine-photo-10.webp" alt="Примеры низкойодной диеты 10"/><span>Примеры низкойодной диеты 10 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-11.webp" data-caption="Примеры низкойодной диеты 11" aria-label="Примеры низкойодной диеты 11"><img loading="lazy" src="assets/low-iodine-photo-11.webp" alt="Примеры низкойодной диеты 11"/><span>Примеры низкойодной диеты 11 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-12.webp" data-caption="Примеры низкойодной диеты 12" aria-label="Примеры низкойодной диеты 12"><img loading="lazy" src="assets/low-iodine-photo-12.webp" alt="Примеры низкойодной диеты 12"/><span>Примеры низкойодной диеты 12 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-13.webp" data-caption="Примеры низкойодной диеты 13" aria-label="Примеры низкойодной диеты 13"><img loading="lazy" src="assets/low-iodine-photo-13.webp" alt="Примеры низкойодной диеты 13"/><span>Примеры низкойодной диеты 13 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-14.webp" data-caption="Примеры низкойодной диеты 14" aria-label="Примеры низкойодной диеты 14"><img loading="lazy" src="assets/low-iodine-photo-14.webp" alt="Примеры низкойодной диеты 14"/><span>Примеры низкойодной диеты 14 ↗</span></button>
+</div>
+<button class="intl-original" data-original="therapy-diet" type="button">Полная версия на корейском ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">03</span><h4>Пребывание в стационаре</h4></div><p>Перед госпитализацией вы получите правила изоляционной палаты, приёма пищи, гигиены и связи с медсёстрами. Отделение: Восточное здание, 7-й этаж; у лифта пост медсестёр слева, палаты радиойодтерапии справа.</p>
+<p class="intl-info">Примеры снимков и фото помещений</p><div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-06-photo-03.webp" data-caption="Примеры снимков и фото помещений" aria-label="Примеры снимков и фото помещений"><img loading="lazy" src="assets/inpatient-slide-06-photo-03.webp" alt="Примеры снимков и фото помещений"/><span>Примеры снимков и фото помещений ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-07-photo-03.webp" data-caption="Примеры снимков и фото помещений" aria-label="Примеры снимков и фото помещений"><img loading="lazy" src="assets/inpatient-slide-07-photo-03.webp" alt="Примеры снимков и фото помещений"/><span>Примеры снимков и фото помещений ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-11-photo-03.webp" data-caption="Примеры снимков и фото помещений" aria-label="Примеры снимков и фото помещений"><img loading="lazy" src="assets/inpatient-slide-11-photo-03.webp" alt="Примеры снимков и фото помещений"/><span>Примеры снимков и фото помещений ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-12-photo-02.webp" data-caption="Примеры снимков и фото помещений" aria-label="Примеры снимков и фото помещений"><img loading="lazy" src="assets/inpatient-slide-12-photo-02.webp" alt="Примеры снимков и фото помещений"/><span>Примеры снимков и фото помещений ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-15-photo-04.webp" data-caption="Примеры снимков и фото помещений" aria-label="Примеры снимков и фото помещений"><img loading="lazy" src="assets/inpatient-slide-15-photo-04.webp" alt="Примеры снимков и фото помещений"/><span>Примеры снимков и фото помещений ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-16-photo-06.webp" data-caption="Примеры снимков и фото помещений" aria-label="Примеры снимков и фото помещений"><img loading="lazy" src="assets/inpatient-slide-16-photo-06.webp" alt="Примеры снимков и фото помещений"/><span>Примеры снимков и фото помещений ↗</span></button>
+</div>
+<button class="intl-original" data-original="therapy-inpatient" type="button">Полная версия на корейском ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">04</span><h4>Снимки после лечения</h4></div><p>В день выписки: снимок в 8:30 утра, посетите туалет за 5 мин, длительность ~30 мин. Примерно на 7-й день: утреннее время сообщат отдельно; посетите туалет за 5 мин, снимок ~1 ч. По указанию возможна ОФЭКТ.</p>
+<div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/iodine-discharge-day.png" data-caption="Снимки после лечения" aria-label="Снимки после лечения"><img loading="lazy" src="assets/iodine-discharge-day.png" alt="Снимки после лечения"/><span>Снимки после лечения ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/iodine-day7.png" data-caption="Снимки после лечения" aria-label="Снимки после лечения"><img loading="lazy" src="assets/iodine-day7.png" alt="Снимки после лечения"/><span>Снимки после лечения ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/iodine-spectct.png" data-caption="Снимки после лечения" aria-label="Снимки после лечения"><img loading="lazy" src="assets/iodine-spectct.png" alt="Снимки после лечения"/><span>Снимки после лечения ↗</span></button>
+</div>
+<button class="intl-original" data-original="therapy-scans" type="button">Полная версия на корейском ↗</button></article>
+</section>
+<section class="intl-section" id="intl-ru-equip"><h2>📷 Оборудование</h2><p>Фотографии оборудования. Конкретный аппарат зависит от записи.</p><div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/equipment-petct.webp" data-caption="PET-CT · Siemens Biograph Vision 600" aria-label="PET-CT · Siemens Biograph Vision 600"><img loading="lazy" src="assets/equipment-petct.webp" alt="PET-CT · Siemens Biograph Vision 600"/><span>PET-CT · Siemens Biograph Vision 600 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-gamma1.webp" data-caption="Gamma Camera 1 · GE NM/CT 870 DR" aria-label="Gamma Camera 1 · GE NM/CT 870 DR"><img loading="lazy" src="assets/equipment-gamma1.webp" alt="Gamma Camera 1 · GE NM/CT 870 DR"/><span>Gamma Camera 1 · GE NM/CT 870 DR ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-gamma2.webp" data-caption="Gamma Camera 2 · Siemens Symbia EVO Excel" aria-label="Gamma Camera 2 · Siemens Symbia EVO Excel"><img loading="lazy" src="assets/equipment-gamma2.webp" alt="Gamma Camera 2 · Siemens Symbia EVO Excel"/><span>Gamma Camera 2 · Siemens Symbia EVO Excel ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-gamma3.webp" data-caption="Gamma Camera 3 · Siemens Symbia T16" aria-label="Gamma Camera 3 · Siemens Symbia T16"><img loading="lazy" src="assets/equipment-gamma3.webp" alt="Gamma Camera 3 · Siemens Symbia T16"/><span>Gamma Camera 3 · Siemens Symbia T16 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-dexa1.webp" data-caption="Bone Density 1 · GE Prodigy Fuga" aria-label="Bone Density 1 · GE Prodigy Fuga"><img loading="lazy" src="assets/equipment-dexa1.webp" alt="Bone Density 1 · GE Prodigy Fuga"/><span>Bone Density 1 · GE Prodigy Fuga ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-hologic.jpg" data-caption="Bone Density 2 · Hologic Horizon W" aria-label="Bone Density 2 · Hologic Horizon W"><img loading="lazy" src="assets/equipment-hologic.jpg" alt="Bone Density 2 · Hologic Horizon W"/><span>Bone Density 2 · Hologic Horizon W ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-dilon.jpg" data-caption="Breast Gamma Camera · Dilon 6800" aria-label="Breast Gamma Camera · Dilon 6800"><img loading="lazy" src="assets/equipment-dilon.jpg" alt="Breast Gamma Camera · Dilon 6800"/><span>Breast Gamma Camera · Dilon 6800 ↗</span></button>
+</div></section>
+<div class="intl-disclaimer">Индивидуальные назначения и указания персонала имеют приоритет. Не отменяйте лекарства самостоятельно. Сообщите о беременности или грудном вскармливании.<br/>Перевод для удобства пациента. Медицинские указания уточняйте у персонала. Подписи на фото могут быть на корейском.</div></main><main class="wrap main intl-main" id="intl-main-mn" lang="mn" hidden>
+<div class="intl-hero" id="intl-mn-home"><small>HANYANG UNIVERSITY HOSPITAL</small><h1>Цөмийн анагаах ухаан | Өвчтөнд зориулсан мэдээлэл</h1><p>Өөрийн шинжилгээг сонгож бэлтгэл, хүлээлт, явц, зураг болон хугацааг шалгана уу.</p></div>
+<nav class="intl-section-nav"><a href="#intl-mn-reception">📍 Бүртгэл ба ирэх зам</a><a href="#intl-mn-gamma">🩻 Гамма камерын шинжилгээ</a><a href="#intl-mn-pet">🔬 PET-CT шинжилгээ</a><a href="#intl-mn-density">📊 Ясны нягт ба биеийн бүтэц</a><a href="#intl-mn-therapy">🏥 Цацраг идэвхт иодын эмчилгээ</a><a href="#intl-mn-equip">📷 Төхөөрөмж</a></nav>
+<section class="intl-section" id="intl-mn-reception"><h2>📍 Бүртгэл ба ирэх зам</h2><p class="intl-lead">Ханян их сургуулийн эмнэлэг · Төв байр, 2-р давхар, Цөмийн анагаах ухаан<br/>Сөүл, Сондон-гу, Вансипни-ро 222-1</p><div class="intl-notice"><p>🎫 Амбулаторийн өвчтөн: эхлээд төлбөр төлөөд цөмийн анагаахын киоскоос дугаар авна.</p><p>🏥 Хэвтэн эмчлүүлэгч: киоск хэрэглэлгүй шууд бүртгэлд очно.</p></div><div class="intl-pictures"><button class="intl-picture" type="button" data-image="assets/hyumc-hospital-parking-map-20261102.png" data-caption="Эмнэлгийн байршлын зураг" aria-label="Эмнэлгийн байршлын зураг"><img loading="lazy" src="assets/hyumc-hospital-parking-map-20261102.png" alt="Эмнэлгийн байршлын зураг"/><span>Эмнэлгийн байршлын зураг ↗</span></button><button class="intl-picture" type="button" data-image="assets/nuclear-department-floorplan-20261102-final.png" data-caption="Төв байр, 2-р давхар: Цөмийн анагаахын орц ба бүртгэл" aria-label="Төв байр, 2-р давхар: Цөмийн анагаахын орц ба бүртгэл"><img loading="lazy" src="assets/nuclear-department-floorplan-20261102-final.png" alt="Төв байр, 2-р давхар: Цөмийн анагаахын орц ба бүртгэл"/><span>Төв байр, 2-р давхар: Цөмийн анагаахын орц ба бүртгэл ↗</span></button></div><p><a class="intl-external" href="https://seoul.hyumc.com/hospital/locationList.do" target="_blank" rel="noopener noreferrer">Hanyang University Hospital · Location ↗</a></p><p>☎ 02-2290-9260 · 02-2290-9261</p></section>
+<section class="intl-section" id="intl-mn-gamma"><h2>🩻 Гамма камерын шинжилгээ</h2><p>Биеийн хэсгийг сонгоно уу · 17</p>
+<div class="intl-regions">
+<a href="#intl-mn-head">Толгой ба хүзүү</a>
+<a href="#intl-mn-chest">Цээж</a>
+<a href="#intl-mn-abdomen">Хэвлий ба хоол боловсруулах</a>
+<a href="#intl-mn-kidney">Бөөр, шээсний зам</a>
+<a href="#intl-mn-limbs">Гар ба хөл</a>
+<a href="#intl-mn-whole">Бүх бие / яс</a>
+</div>
+<section class="intl-region" id="intl-mn-head"><h3>Толгой ба хүзүү <small>4</small></h3>
+<article class="intl-exam" id="intl-mn-brain">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Тархины цусан хангамжийн SPECT</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Тархины цусны урсгалыг үнэлж, судасны болон мэдрэлийн өвчнийг шалгана.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Кофеин, архи, эмийн талаар өгсөн зааврыг дагана; эмээ өөрөө зогсоож болохгүй.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Судсаар эм тарьж, хүлээсний дараа тархины зураг авна.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Ердийн үед 30 минут; DIAMOX үед ойролцоогоор 1 цаг.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/brain-spect.jpg" data-caption="Тархины цусан хангамжийн SPECT" aria-label="Тархины цусан хангамжийн SPECT"><img loading="lazy" src="assets/brain-spect.jpg" alt="Тархины цусан хангамжийн SPECT"/><span>Тархины цусан хангамжийн SPECT ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-brain">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-salivary">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Шүлсний булчирхайн шинжилгээ</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Шүлсний булчирхайн үйл ажиллагааг, мөн Шегрений хам шинжийг үнэлнэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Бэлтгэлийн зааврыг тасгаас лавлана уу.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Судсаар эм тарьж дараалан зураг авна; витамин C хэрэглэж болно.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Ойролцоогоор 1 цаг.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/salivary-gland.jpg" data-caption="Шүлсний булчирхайн шинжилгээ" aria-label="Шүлсний булчирхайн шинжилгээ"><img loading="lazy" src="assets/salivary-gland.jpg" alt="Шүлсний булчирхайн шинжилгээ"/><span>Шүлсний булчирхайн шинжилгээ ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-salivary">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-thyroid">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Бамбай булчирхайн зураг ба шингээлтийн шинжилгээ</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Бамбай булчирхайн үйл ажиллагаа, зангилаа болон эмийн шингээлтийг үнэлнэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Ихэвчлэн өлөн байх шаардлагагүй. Бамбайн эм, жирэмсэн эсэх, хөхүүл бол мэдэгдэнэ.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>1-р тариа → 15 мин хүлээнэ → хэмжилт (~5 мин); 2-р тариа → 20 мин → зураг (~5 мин).</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Нийт ойролцоогоор 1 цаг.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/thyroid-scan-uptake.jpg" data-caption="Бамбай булчирхайн зураг ба шингээлтийн шинжилгээ" aria-label="Бамбай булчирхайн зураг ба шингээлтийн шинжилгээ"><img loading="lazy" src="assets/thyroid-scan-uptake.jpg" alt="Бамбай булчирхайн зураг ба шингээлтийн шинжилгээ"/><span>Бамбай булчирхайн зураг ба шингээлтийн шинжилгээ ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-thyroid">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-para">
+      <div class="intl-exam-title"><span class="intl-index">04</span><h4>Дагалдах бамбай булчирхайн зураг / SPECT-CT</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Идэвхжил ихэссэн булчирхайн байрлалыг тогтоож мэс засалд тусална.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Ихэвчлэн өлөн байхгүй. Эм, өмнөх хагалгаа, жирэмслэлт/хөхүүл эсэхийг хэлнэ.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Тариа → 10 мин дараах зураг → 2 цаг дараах зураг; SPECT/CT хийж болно.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Нийт ~3 цаг; зураг бүр ~30 минут.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-parathyroid.jpg" data-caption="Дагалдах бамбай булчирхайн зураг / SPECT-CT" aria-label="Дагалдах бамбай булчирхайн зураг / SPECT-CT"><img loading="lazy" src="assets/other-parathyroid.jpg" alt="Дагалдах бамбай булчирхайн зураг / SPECT-CT"/><span>Дагалдах бамбай булчирхайн зураг / SPECT-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-para">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-mn-chest"><h3>Цээж <small>4</small></h3>
+<article class="intl-exam" id="intl-mn-myocardial">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Зүрхний булчингийн цусан хангамжийн SPECT</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Зүрхний булчингийн цусан хангамж, титэм судасны өвчнийг үнэлнэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Товлосон өлөн байх зааврыг дагана. Кофеин, зүрх болон чихрийн шижингийн эмээ лавлана.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Ачаалал болон тайван үеийн зургийг зайтай авна.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Эхний зураг ~30 мин, хоёр дахь ~20 мин, хооронд нь хүлээнэ.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/myocardial-spect.jpg" data-caption="Зүрхний булчингийн цусан хангамжийн SPECT" aria-label="Зүрхний булчингийн цусан хангамжийн SPECT"><img loading="lazy" src="assets/myocardial-spect.jpg" alt="Зүрхний булчингийн цусан хангамжийн SPECT"/><span>Зүрхний булчингийн цусан хангамжийн SPECT ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-myocardial">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-muga">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Зүрхний цусан сангийн шинжилгээ (MUGA)</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Зүрхний шахах чадвар болон зүүн ховдлын ялгаруулах хувийг хэмжинэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Ихэвчлэн тусгай бэлтгэлгүй. Хими эмчилгээний хуваариа хэлээрэй.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Эхний тариа → ~20 мин хүлээнэ → хоёр дахь тариа ба зураг.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Нийт ~1 цаг, зураг ~20 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/muga.jpg" data-caption="Зүрхний цусан сангийн шинжилгээ (MUGA)" aria-label="Зүрхний цусан сангийн шинжилгээ (MUGA)"><img loading="lazy" src="assets/muga.jpg" alt="Зүрхний цусан сангийн шинжилгээ (MUGA)"/><span>Зүрхний цусан сангийн шинжилгээ (MUGA) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-muga">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-lung">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Уушгины агааржилт, цусан хангамжийн SPECT</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Уушгины агааржилт болон цусны урсгалыг харьцуулж бүлэнг шалгана.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Өлөн байх шаардлагагүй. Жирэмсэн/хөхүүл, хүчтэй ханиалгатай, ингалятор хэрэглэдэг бол хэлнэ.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Амны хошуугаар Technegas амьсгална → судсаар тариа → шууд SPECT зураг авна.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>30–40 минут, удаан хүлээхгүй.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/lung-technegas-ventilation.png" data-caption="Уушгины агааржилт, цусан хангамжийн SPECT" aria-label="Уушгины агааржилт, цусан хангамжийн SPECT"><img loading="lazy" src="assets/lung-technegas-ventilation.png" alt="Уушгины агааржилт, цусан хангамжийн SPECT"/><span>Уушгины агааржилт, цусан хангамжийн SPECT ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-lung">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-bsgi">
+      <div class="intl-exam-title"><span class="intl-index">04</span><h4>Хөхний гамма дүрс оношилгоо (BSGI)</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Хөхний эдийн үйл ажиллагааны өөрчлөлтийг үнэлнэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Өлөн байхгүй. Жирэмсэн/хөхүүл эсэх, сарын тэмдгийн мөчлөгийг мэдэгдэнэ.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Судсаар тариа → ~10 мин хүлээнэ → хөхний зураг.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Зураг ~30–40 минут.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/bsgi-breast.jpg" data-caption="Хөхний гамма дүрс оношилгоо (BSGI)" aria-label="Хөхний гамма дүрс оношилгоо (BSGI)"><img loading="lazy" src="assets/bsgi-breast.jpg" alt="Хөхний гамма дүрс оношилгоо (BSGI)"/><span>Хөхний гамма дүрс оношилгоо (BSGI) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-bsgi">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-mn-abdomen"><h3>Хэвлий ба хоол боловсруулах <small>3</small></h3>
+<article class="intl-exam" id="intl-mn-hepatobiliary">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Элэг-цөсний замын зураг</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Элэг, цөсний хүүдий, цөсний сувгаар цөс урсах байдлыг харна.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Цөсний хүүдийтэй насанд хүрэгчид ~6 цаг өлөн, ус/бохь ч хэрэглэхгүй; бусдад тусгай заавар.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Тариа → ~5 мин дараа хэвлийн зураг; шаардлагатай бол нэмэлт зураг.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>2–3 цаг ба түүнээс урт байж болно.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-hepatobiliary.jpg" data-caption="Элэг-цөсний замын зураг" aria-label="Элэг-цөсний замын зураг"><img loading="lazy" src="assets/other-hepatobiliary.jpg" alt="Элэг-цөсний замын зураг"/><span>Элэг-цөсний замын зураг ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-hepato">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-gastric">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Ходоод хоосрох хугацааны шинжилгээ (G.E.T.)</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Ходоодноос хоол гарах хурдыг хэмжинэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>4 цаг өлөн: хоол, ус, ундаа, бохь, кофе, тамхи хэрэглэхгүй. Харшлаа мэдэгдэнэ.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Тусгай өндөг, будаатай хоол иднэ → 15 минут тутам 2 цаг (9 удаа) зураг.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>~2 цаг 30 мин, заримдаа 4 цаг хүртэл.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-gastric-emptying.jpg" data-caption="Ходоод хоосрох хугацааны шинжилгээ (G.E.T.)" aria-label="Ходоод хоосрох хугацааны шинжилгээ (G.E.T.)"><img loading="lazy" src="assets/other-gastric-emptying.jpg" alt="Ходоод хоосрох хугацааны шинжилгээ (G.E.T.)"/><span>Ходоод хоосрох хугацааны шинжилгээ (G.E.T.) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-get">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-bleeding">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Ходоод гэдэсний цус алдалтын зураг</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Хоол боловсруулах замын идэвхтэй эсвэл үе үеийн цус алдалтыг илрүүлнэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Өлөн байх нь заавал биш. Эм, цус сэлбүүлсэн эсэх, жирэмслэлт/хөхүүл байдлаа хэлнэ.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Цус авна → улаан эсийг тэмдэглэнэ → буцааж тарина → шууд хэвлийн зураг.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Бэлтгэл ~1 цаг + зураг ~1 цаг; нэмэлт зураг авч болно.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-gi-bleeding.jpg" data-caption="Ходоод гэдэсний цус алдалтын зураг" aria-label="Ходоод гэдэсний цус алдалтын зураг"><img loading="lazy" src="assets/other-gi-bleeding.jpg" alt="Ходоод гэдэсний цус алдалтын зураг"/><span>Ходоод гэдэсний цус алдалтын зураг ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-gibleed">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-mn-kidney"><h3>Бөөр, шээсний зам <small>3</small></h3>
+<article class="intl-exam" id="intl-mn-mag3">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Шээс хөөх сорилтой бөөрний зураг (MAG3)</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Бөөрнөөс шээс гадагшлах урсгал, бөглөрлийг үнэлнэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Өлөн байхгүй. Шингэн хязгаарлаагүй бол 30 мин өмнө ~500 мл ус ууна; катетерын заавар байж болно.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Судсаар тариа хийж шууд бөөрний хөдөлгөөнт зураг авна; шээс хөөх эм хэрэглэж болно.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Зураг ~60 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/mag3-renal.jpg" data-caption="Шээс хөөх сорилтой бөөрний зураг (MAG3)" aria-label="Шээс хөөх сорилтой бөөрний зураг (MAG3)"><img loading="lazy" src="assets/mag3-renal.jpg" alt="Шээс хөөх сорилтой бөөрний зураг (MAG3)"/><span>Шээс хөөх сорилтой бөөрний зураг (MAG3) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-mag3">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-gfr">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Түүдгэнцрийн шүүлтийн хурд (GFR)</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Бөөр цусыг хэр сайн шүүж байгааг хэмжинэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Өлөн байхгүй. Шингэн хязгаарлаагүй бол 30 мин өмнө ~500 мл ус ууна.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Судсаар тариа хийж бөөрний үйл ажиллагааг хэмжинэ.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Зураг ~30 мин, бэлтгэл нэмэгдэнэ.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/gfr-renal.jpg" data-caption="Түүдгэнцрийн шүүлтийн хурд (GFR)" aria-label="Түүдгэнцрийн шүүлтийн хурд (GFR)"><img loading="lazy" src="assets/gfr-renal.jpg" alt="Түүдгэнцрийн шүүлтийн хурд (GFR)"/><span>Түүдгэнцрийн шүүлтийн хурд (GFR) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-gfr">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-dmsa">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>Бөөрний холтослог эдийн зураг (DMSA)</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Бөөрний холтослогийн сорвижилт, хоёр бөөрний үүргийг харьцуулна.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Ихэвчлэн өлөн байхгүй. Тайвшруулах эмчилгээ хийх бол өлөн байх зааврыг дагана.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Тариа → 2–3 цаг хүлээнэ → бөөрний олон өнцгийн зураг.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Нийт ~3–4 цаг, зураг 20–30 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-dmsa.jpg" data-caption="Бөөрний холтослог эдийн зураг (DMSA)" aria-label="Бөөрний холтослог эдийн зураг (DMSA)"><img loading="lazy" src="assets/other-dmsa.jpg" alt="Бөөрний холтослог эдийн зураг (DMSA)"/><span>Бөөрний холтослог эдийн зураг (DMSA) ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-dmsa">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-mn-limbs"><h3>Гар ба хөл <small>2</small></h3>
+<article class="intl-exam" id="intl-mn-lymph">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Гар, хөлийн тунгалгийн урсгалын зураг</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Гар, хөлийн хавантай холбоотой тунгалгийн урсгалыг үнэлнэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Өлөн байхгүй. Жирэмслэлт/хөхүүл эсэх, хөдөлгөөний хүндрэл, хагалгаагаа хэлнэ.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Хуруу хооронд жижиг тариа → алхах/хөдөлсний дараа давтан зураг.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>2–4 цаг, шаардлагатай бол нэмэлт зураг.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-lymphoscintigraphy.jpg" data-caption="Гар, хөлийн тунгалгийн урсгалын зураг" aria-label="Гар, хөлийн тунгалгийн урсгалын зураг"><img loading="lazy" src="assets/other-lymphoscintigraphy.jpg" alt="Гар, хөлийн тунгалгийн урсгалын зураг"/><span>Гар, хөлийн тунгалгийн урсгалын зураг ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-lymph">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-raynaud">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>Рейногийн сорил / гар хөлийн цусны урсгал</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Хүйтний нөлөөнд гар, хөлийн цусны урсгал хэрхэн өөрчлөгдөхийг харна.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Ихэвчлэн өлөн байхгүй. Судасны эм, жирэмслэлт/хөхүүл, шарх байвал хэлнэ.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Эхний сорил: тариа → 20 мин хүлээх → 20 мин зураг; хүйтний сорил: 15 мин, хүйтэн ус ~5 мин, зураг ~20 мин.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Бэлтгэлийг оруулаад ~1 цаг 30 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/other-raynaud.jpg" data-caption="Рейногийн сорил / гар хөлийн цусны урсгал" aria-label="Рейногийн сорил / гар хөлийн цусны урсгал"><img loading="lazy" src="assets/other-raynaud.jpg" alt="Рейногийн сорил / гар хөлийн цусны урсгал"/><span>Рейногийн сорил / гар хөлийн цусны урсгал ↗</span></button>
+      <button class="intl-original" type="button" data-original="other-raynaud">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+</section>
+<section class="intl-region" id="intl-mn-whole"><h3>Бүх бие / яс <small>1</small></h3>
+<article class="intl-exam" id="intl-mn-bone">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>Бүх биеийн ясны зураг ба SPECT</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Ясны өөрчлөлт, үрэвсэл, хугарал, хавдрын тархалтыг үнэлнэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Өлөн байхгүй. Жирэмсэн/хөхүүл, эм хэрэглэдгээ хэлнэ. Зөвшөөрвөл ус сайн ууна.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Тариа → 3–4 цаг хүлээж ус уух → зураг авахын өмнө шээх → бүх бие ба SPECT зураг.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>3–4 цаг хүлээнэ; зураг 30–40 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/bone-wholebody.png" data-caption="Бүх биеийн ясны зураг ба SPECT" aria-label="Бүх биеийн ясны зураг ба SPECT"><img loading="lazy" src="assets/bone-wholebody.png" alt="Бүх биеийн ясны зураг ба SPECT"/><span>Бүх биеийн ясны зураг ба SPECT ↗</span></button>
+      <button class="intl-original" type="button" data-original="gamma-bone">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+</section>
+</section>
+<section class="intl-section" id="intl-mn-pet"><h2>🔬 PET-CT шинжилгээ</h2><p>Шинжилгээг сонгож бэлтгэл, хугацааг харна уу · 5</p>
+<article class="intl-exam" id="intl-mn-fdg">
+      <div class="intl-exam-title"><span class="intl-index">01</span><h4>FDG PET-CT</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Хавдар болон бусад заалтаар бүх биеийг (зарим үед толгойг хамруулан) шинжилнэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Хамгийн багадаа 8 цаг өлөн. Чихрийн шижингийн эм/инсулины талаар лавлана. Хүчтэй дасгалаас зайлсхий.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>FDG судсаар тарина → тайван өрөөнд ~60 мин амарна → PET-CT зураг.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Нийт ~1 цаг 30 мин–2 цаг.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/pet-fdg-2.jpg" data-caption="FDG PET-CT" aria-label="FDG PET-CT"><img loading="lazy" src="assets/pet-fdg-2.jpg" alt="FDG PET-CT"/><span>FDG PET-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-fdg">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-psma73">
+      <div class="intl-exam-title"><span class="intl-index">02</span><h4>PSMA-7.3 PET-CT</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Түрүү булчирхайн хорт хавдрын зорилтот дүрс оношилгоо.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Бага зэрэг өлөн байхыг зөвлөж болно; зааврыг лавлана. Эмээ мэдэгдэнэ.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>PSMA-7.3 тарина → ~60 мин хүлээнэ → шээх → PET-CT.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Хүлээлт ~60 мин, зураг ~20 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/pet-psma73-2.jpg" data-caption="PSMA-7.3 PET-CT" aria-label="PSMA-7.3 PET-CT"><img loading="lazy" src="assets/pet-psma73-2.jpg" alt="PSMA-7.3 PET-CT"/><span>PSMA-7.3 PET-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-psma73">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-psma1007">
+      <div class="intl-exam-title"><span class="intl-index">03</span><h4>PSMA-1007 PET-CT</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Түрүү булчирхайн хорт хавдрын үнэлгээ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>4 цаг өлөн. Эмийн хэрэглээг лавлана.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>PSMA-1007 тарина → ~90 мин хүлээнэ → шээх → PET-CT.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Хүлээлт ~90 мин, зураг 20–30 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/pet-psma1007-2.jpg" data-caption="PSMA-1007 PET-CT" aria-label="PSMA-1007 PET-CT"><img loading="lazy" src="assets/pet-psma1007-2.jpg" alt="PSMA-1007 PET-CT"/><span>PSMA-1007 PET-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-psma1007">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-fpcit">
+      <div class="intl-exam-title"><span class="intl-index">04</span><h4>FP-CIT Brain PET-CT</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Паркинсонизмын үед допамины тээвэрлэгчийн үйл ажиллагааг үнэлнэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Ихэвчлэн өлөн байхгүй. Эм, кофеин, архины талаар асууна.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Тариа → ~10 мин дараа 1-р зураг → тарианаас ~2 цагийн дараа 2-р зураг.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Хоёр зураг тус бүр ~10 мин, хооронд нь хүлээнэ.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/brain-image1.jpg" data-caption="FP-CIT Brain PET-CT" aria-label="FP-CIT Brain PET-CT"><img loading="lazy" src="assets/brain-image1.jpg" alt="FP-CIT Brain PET-CT"/><span>FP-CIT Brain PET-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-fpcit">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+<article class="intl-exam" id="intl-mn-florbetaben">
+      <div class="intl-exam-title"><span class="intl-index">05</span><h4>Neuraceq Brain PET-CT</h4></div>
+      <div class="intl-row"><strong>Зорилго</strong><p>Альцгеймерийн эмгэгтэй холбоотой тархины амилоид хуримтлалыг үнэлнэ.</p></div>
+      <div class="intl-row"><strong>Бэлтгэл</strong><p>Ихэвчлэн өлөн байхгүй. Эм, бэлтгэлээ лавлана.</p></div>
+      <div class="intl-row"><strong>Шинжилгээний явц</strong><p>Neuraceq (флорбетабен) тарина → ~90 мин хүлээнэ → тархины PET-CT.</p></div>
+      <div class="intl-time"><strong>Хугацаа</strong> <span>Хүлээлт ~90 мин; зураг ~10 мин.</span></div>
+      <button class="intl-picture" type="button" data-image="assets/brain-image2.jpg" data-caption="Neuraceq Brain PET-CT" aria-label="Neuraceq Brain PET-CT"><img loading="lazy" src="assets/brain-image2.jpg" alt="Neuraceq Brain PET-CT"/><span>Neuraceq Brain PET-CT ↗</span></button>
+      <button class="intl-original" type="button" data-original="pet-florbetaben">Солонгос хэл дээрх бүрэн заавар ↗</button>
+    </article>
+</section>
+<section class="intl-section" id="intl-mn-density"><h2>📊 Ясны нягт ба биеийн бүтэц</h2>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">01</span><h4>Ясны нягтын шинжилгээ (DEXA)</h4></div><div class="intl-row"><strong>Зорилго</strong><p>Ясны эрдсийн нягтыг хэмжиж яс сийрэгжилтийг үнэлнэ.</p></div><div class="intl-row"><strong>Бэлтгэл</strong><p>Ихэвчлэн өлөн байхгүй. Металл эд зүйлсээ авна, жирэмслэлт болон саяхан тодосгогч хэрэглэсэн эсэхийг хэлнэ.</p></div><div class="intl-row"><strong>Шинжилгээний явц</strong><p>Нуруу, ташааны зургийг авах үед хөдөлгөөнгүй хэвтэнэ.</p></div><div class="intl-time"><strong>Хугацаа</strong><span>5–15 минут.</span></div><button class="intl-picture" type="button" data-image="assets/dexa-spine.png" data-caption="Ясны нягтын шинжилгээ (DEXA)" aria-label="Ясны нягтын шинжилгээ (DEXA)"><img loading="lazy" src="assets/dexa-spine.png" alt="Ясны нягтын шинжилгээ (DEXA)"/><span>Ясны нягтын шинжилгээ (DEXA) ↗</span></button><button class="intl-original" type="button" data-original="dexa-guide">Солонгос хэл дээрх бүрэн заавар ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">02</span><h4>Биеийн бүтцийн шинжилгээ (DXA)</h4></div><div class="intl-row"><strong>Зорилго</strong><p>Өөх тос болон өөхгүй эдийн хэмжээг үнэлнэ.</p></div><div class="intl-row"><strong>Бэлтгэл</strong><p>Хоол, дасгалын зааврыг дагана; жирэмсэн эсэхээ хэлнэ.</p></div><div class="intl-row"><strong>Шинжилгээний явц</strong><p>Бүх биеийн зураг авах үед хөдөлгөөнгүй хэвтэнэ.</p></div><div class="intl-time"><strong>Хугацаа</strong><span>Зураг ~5–10 мин, бэлтгэл нэмэгдэнэ.</span></div><button class="intl-picture" type="button" data-image="assets/body-composition.jpg" data-caption="Биеийн бүтцийн шинжилгээ (DXA)" aria-label="Биеийн бүтцийн шинжилгээ (DXA)"><img loading="lazy" src="assets/body-composition.jpg" alt="Биеийн бүтцийн шинжилгээ (DXA)"/><span>Биеийн бүтцийн шинжилгээ (DXA) ↗</span></button><button class="intl-original" type="button" data-original="body-guide">Солонгос хэл дээрх бүрэн заавар ↗</button></article>
+</section>
+<section class="intl-section" id="intl-mn-therapy"><h2>🏥 Цацраг идэвхт иодын эмчилгээ</h2>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">01</span><h4>Эмчилгээний ерөнхий заавар</h4></div><p>Цацраг идэвхт иодын (I-131) эмчилгээг бамбай булчирхайн зарим өвчинд хэрэглэдэг. Эмч бэлтгэл, эмийн хэрэглээ, иод багатай хоол, цацрагийн хамгаалалтын заавар өгнө.</p>
+<button class="intl-original" data-original="therapy-education" type="button">Солонгос хэл дээрх бүрэн заавар ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">02</span><h4>Иод багатай хооллолт</h4></div><p>Иод багатай хооллолт: эмч, хоол зүйчийн өгсөн эхлэх өдөр, зөвшөөрөгдөх/хориглох хүнсний жагсаалтыг дагана. Иод ихтэй далайн байцаа болон хориглосон бүтээгдэхүүнээс зайлсхий. Найрлага өөрчлөгдөж болно.</p>
+<p class="intl-info">Иод багатай хоолны жишээ · 14</p><div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-01.webp" data-caption="Иод багатай хоолны жишээ 1" aria-label="Иод багатай хоолны жишээ 1"><img loading="lazy" src="assets/low-iodine-photo-01.webp" alt="Иод багатай хоолны жишээ 1"/><span>Иод багатай хоолны жишээ 1 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-02.webp" data-caption="Иод багатай хоолны жишээ 2" aria-label="Иод багатай хоолны жишээ 2"><img loading="lazy" src="assets/low-iodine-photo-02.webp" alt="Иод багатай хоолны жишээ 2"/><span>Иод багатай хоолны жишээ 2 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-03.webp" data-caption="Иод багатай хоолны жишээ 3" aria-label="Иод багатай хоолны жишээ 3"><img loading="lazy" src="assets/low-iodine-photo-03.webp" alt="Иод багатай хоолны жишээ 3"/><span>Иод багатай хоолны жишээ 3 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-04.webp" data-caption="Иод багатай хоолны жишээ 4" aria-label="Иод багатай хоолны жишээ 4"><img loading="lazy" src="assets/low-iodine-photo-04.webp" alt="Иод багатай хоолны жишээ 4"/><span>Иод багатай хоолны жишээ 4 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-05.webp" data-caption="Иод багатай хоолны жишээ 5" aria-label="Иод багатай хоолны жишээ 5"><img loading="lazy" src="assets/low-iodine-photo-05.webp" alt="Иод багатай хоолны жишээ 5"/><span>Иод багатай хоолны жишээ 5 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-06.webp" data-caption="Иод багатай хоолны жишээ 6" aria-label="Иод багатай хоолны жишээ 6"><img loading="lazy" src="assets/low-iodine-photo-06.webp" alt="Иод багатай хоолны жишээ 6"/><span>Иод багатай хоолны жишээ 6 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-07.webp" data-caption="Иод багатай хоолны жишээ 7" aria-label="Иод багатай хоолны жишээ 7"><img loading="lazy" src="assets/low-iodine-photo-07.webp" alt="Иод багатай хоолны жишээ 7"/><span>Иод багатай хоолны жишээ 7 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-08.webp" data-caption="Иод багатай хоолны жишээ 8" aria-label="Иод багатай хоолны жишээ 8"><img loading="lazy" src="assets/low-iodine-photo-08.webp" alt="Иод багатай хоолны жишээ 8"/><span>Иод багатай хоолны жишээ 8 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-09.webp" data-caption="Иод багатай хоолны жишээ 9" aria-label="Иод багатай хоолны жишээ 9"><img loading="lazy" src="assets/low-iodine-photo-09.webp" alt="Иод багатай хоолны жишээ 9"/><span>Иод багатай хоолны жишээ 9 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-10.webp" data-caption="Иод багатай хоолны жишээ 10" aria-label="Иод багатай хоолны жишээ 10"><img loading="lazy" src="assets/low-iodine-photo-10.webp" alt="Иод багатай хоолны жишээ 10"/><span>Иод багатай хоолны жишээ 10 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-11.webp" data-caption="Иод багатай хоолны жишээ 11" aria-label="Иод багатай хоолны жишээ 11"><img loading="lazy" src="assets/low-iodine-photo-11.webp" alt="Иод багатай хоолны жишээ 11"/><span>Иод багатай хоолны жишээ 11 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-12.webp" data-caption="Иод багатай хоолны жишээ 12" aria-label="Иод багатай хоолны жишээ 12"><img loading="lazy" src="assets/low-iodine-photo-12.webp" alt="Иод багатай хоолны жишээ 12"/><span>Иод багатай хоолны жишээ 12 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-13.webp" data-caption="Иод багатай хоолны жишээ 13" aria-label="Иод багатай хоолны жишээ 13"><img loading="lazy" src="assets/low-iodine-photo-13.webp" alt="Иод багатай хоолны жишээ 13"/><span>Иод багатай хоолны жишээ 13 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/low-iodine-photo-14.webp" data-caption="Иод багатай хоолны жишээ 14" aria-label="Иод багатай хоолны жишээ 14"><img loading="lazy" src="assets/low-iodine-photo-14.webp" alt="Иод багатай хоолны жишээ 14"/><span>Иод багатай хоолны жишээ 14 ↗</span></button>
+</div>
+<button class="intl-original" data-original="therapy-diet" type="button">Солонгос хэл дээрх бүрэн заавар ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">03</span><h4>Хэвтэн эмчлүүлэх</h4></div><p>Тусгаарлах өрөөний дэглэм, хоол, ариун цэвэр, сувилагчтай холбогдох зааврыг дагана. Зүүн байрны 7-р давхрын цахилгаан шатны зүүн талд сувилагчийн хэсэг, баруун талд иодын эмчилгээний өрөө байна.</p>
+<p class="intl-info">Жишээ зураг ба өрөөний гэрэл зураг</p><div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-06-photo-03.webp" data-caption="Жишээ зураг ба өрөөний гэрэл зураг" aria-label="Жишээ зураг ба өрөөний гэрэл зураг"><img loading="lazy" src="assets/inpatient-slide-06-photo-03.webp" alt="Жишээ зураг ба өрөөний гэрэл зураг"/><span>Жишээ зураг ба өрөөний гэрэл зураг ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-07-photo-03.webp" data-caption="Жишээ зураг ба өрөөний гэрэл зураг" aria-label="Жишээ зураг ба өрөөний гэрэл зураг"><img loading="lazy" src="assets/inpatient-slide-07-photo-03.webp" alt="Жишээ зураг ба өрөөний гэрэл зураг"/><span>Жишээ зураг ба өрөөний гэрэл зураг ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-11-photo-03.webp" data-caption="Жишээ зураг ба өрөөний гэрэл зураг" aria-label="Жишээ зураг ба өрөөний гэрэл зураг"><img loading="lazy" src="assets/inpatient-slide-11-photo-03.webp" alt="Жишээ зураг ба өрөөний гэрэл зураг"/><span>Жишээ зураг ба өрөөний гэрэл зураг ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-12-photo-02.webp" data-caption="Жишээ зураг ба өрөөний гэрэл зураг" aria-label="Жишээ зураг ба өрөөний гэрэл зураг"><img loading="lazy" src="assets/inpatient-slide-12-photo-02.webp" alt="Жишээ зураг ба өрөөний гэрэл зураг"/><span>Жишээ зураг ба өрөөний гэрэл зураг ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-15-photo-04.webp" data-caption="Жишээ зураг ба өрөөний гэрэл зураг" aria-label="Жишээ зураг ба өрөөний гэрэл зураг"><img loading="lazy" src="assets/inpatient-slide-15-photo-04.webp" alt="Жишээ зураг ба өрөөний гэрэл зураг"/><span>Жишээ зураг ба өрөөний гэрэл зураг ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/inpatient-slide-16-photo-06.webp" data-caption="Жишээ зураг ба өрөөний гэрэл зураг" aria-label="Жишээ зураг ба өрөөний гэрэл зураг"><img loading="lazy" src="assets/inpatient-slide-16-photo-06.webp" alt="Жишээ зураг ба өрөөний гэрэл зураг"/><span>Жишээ зураг ба өрөөний гэрэл зураг ↗</span></button>
+</div>
+<button class="intl-original" data-original="therapy-inpatient" type="button">Солонгос хэл дээрх бүрэн заавар ↗</button></article>
+<article class="intl-exam"><div class="intl-exam-title"><span class="intl-index">04</span><h4>Эмчилгээний дараах зураг</h4></div><p>Эмнэлгээс гарах өдөр: 08:30 зураг, 5 минутын өмнө шээх, зураг ~30 минут. 7 дахь өдөр орчим: өглөөний цагийг тусад нь мэдэгдэнэ; 5 минутын өмнө шээх, зураг ~1 цаг. Шаардлагатай бол SPECT хийж болно.</p>
+<div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/iodine-discharge-day.png" data-caption="Эмчилгээний дараах зураг" aria-label="Эмчилгээний дараах зураг"><img loading="lazy" src="assets/iodine-discharge-day.png" alt="Эмчилгээний дараах зураг"/><span>Эмчилгээний дараах зураг ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/iodine-day7.png" data-caption="Эмчилгээний дараах зураг" aria-label="Эмчилгээний дараах зураг"><img loading="lazy" src="assets/iodine-day7.png" alt="Эмчилгээний дараах зураг"/><span>Эмчилгээний дараах зураг ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/iodine-spectct.png" data-caption="Эмчилгээний дараах зураг" aria-label="Эмчилгээний дараах зураг"><img loading="lazy" src="assets/iodine-spectct.png" alt="Эмчилгээний дараах зураг"/><span>Эмчилгээний дараах зураг ↗</span></button>
+</div>
+<button class="intl-original" data-original="therapy-scans" type="button">Солонгос хэл дээрх бүрэн заавар ↗</button></article>
+</section>
+<section class="intl-section" id="intl-mn-equip"><h2>📷 Төхөөрөмж</h2><p>Эмнэлгийн төхөөрөмжийн бодит зураг. Хэрэглэх төхөөрөмж цаг товлолтоос хамаарна.</p><div class="intl-photo-grid">
+<button class="intl-picture" type="button" data-image="assets/equipment-petct.webp" data-caption="PET-CT · Siemens Biograph Vision 600" aria-label="PET-CT · Siemens Biograph Vision 600"><img loading="lazy" src="assets/equipment-petct.webp" alt="PET-CT · Siemens Biograph Vision 600"/><span>PET-CT · Siemens Biograph Vision 600 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-gamma1.webp" data-caption="Gamma Camera 1 · GE NM/CT 870 DR" aria-label="Gamma Camera 1 · GE NM/CT 870 DR"><img loading="lazy" src="assets/equipment-gamma1.webp" alt="Gamma Camera 1 · GE NM/CT 870 DR"/><span>Gamma Camera 1 · GE NM/CT 870 DR ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-gamma2.webp" data-caption="Gamma Camera 2 · Siemens Symbia EVO Excel" aria-label="Gamma Camera 2 · Siemens Symbia EVO Excel"><img loading="lazy" src="assets/equipment-gamma2.webp" alt="Gamma Camera 2 · Siemens Symbia EVO Excel"/><span>Gamma Camera 2 · Siemens Symbia EVO Excel ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-gamma3.webp" data-caption="Gamma Camera 3 · Siemens Symbia T16" aria-label="Gamma Camera 3 · Siemens Symbia T16"><img loading="lazy" src="assets/equipment-gamma3.webp" alt="Gamma Camera 3 · Siemens Symbia T16"/><span>Gamma Camera 3 · Siemens Symbia T16 ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-dexa1.webp" data-caption="Bone Density 1 · GE Prodigy Fuga" aria-label="Bone Density 1 · GE Prodigy Fuga"><img loading="lazy" src="assets/equipment-dexa1.webp" alt="Bone Density 1 · GE Prodigy Fuga"/><span>Bone Density 1 · GE Prodigy Fuga ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-hologic.jpg" data-caption="Bone Density 2 · Hologic Horizon W" aria-label="Bone Density 2 · Hologic Horizon W"><img loading="lazy" src="assets/equipment-hologic.jpg" alt="Bone Density 2 · Hologic Horizon W"/><span>Bone Density 2 · Hologic Horizon W ↗</span></button>
+<button class="intl-picture" type="button" data-image="assets/equipment-dilon.jpg" data-caption="Breast Gamma Camera · Dilon 6800" aria-label="Breast Gamma Camera · Dilon 6800"><img loading="lazy" src="assets/equipment-dilon.jpg" alt="Breast Gamma Camera · Dilon 6800"/><span>Breast Gamma Camera · Dilon 6800 ↗</span></button>
+</div></section>
+<div class="intl-disclaimer">Таны эмч, шинжилгээний цагийн заавар нэн тэргүүнд үйлчилнэ. Эмээ дур мэдэн зогсоож болохгүй. Жирэмсэн эсвэл хөхүүл бол мэдэгдэнэ үү.<br/>Энэ нь өвчтөнд зориулсан орчуулга. Эмнэлзүйн зааврыг эмчээсээ нягтлаарай. Зургийн тайлбар солонгос хэлээр байж болно.</div></main>
+</div>
+<footer class="foot" id="ko-footer"><div class="wrap foot-inner"><img alt="한양대학교의료원 로고" src="assets/hyumc-logo-clear.png"/><div class="foot-txt"><strong>한양대학교병원 핵의학과 · 검사 및 치료 안내</strong></div></div></footer>
 <dialog aria-label="검사 영상 확대" id="viewer"><button class="close" id="closeViewer" type="button">닫기 ✕</button><img alt="" id="viewerImg"/><p id="viewerCaption"></p></dialog>
 <script>(function(){
 const panels=[...document.querySelectorAll('[data-panel]')], cards=[...document.querySelectorAll('[data-category]')];
@@ -963,4 +1851,78 @@ function showForHash(){
 }
 window.addEventListener('hashchange',showForHash);showForHash();
 const viewer=document.getElementById('viewer');document.querySelectorAll('[data-image]').forEach(b=>b.addEventListener('click',()=>{if(b.classList.contains('equip-photo-pending'))return;document.getElementById('viewerImg').src=b.dataset.image;document.getElementById('viewerImg').alt=b.dataset.caption;document.getElementById('viewerCaption').textContent=b.dataset.caption;viewer.showModal();}));document.getElementById('closeViewer').addEventListener('click',()=>viewer.close());viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});
-})();</script></body></html>
+})();</script><script>
+/* Four-language display and reversible +25% text size. */
+(function(){
+  'use strict';
+  const available=['ko','en','ru','mn'];
+  const originalStyles=new WeakMap();
+  let fontMode='normal';
+  const texts='h1,h2,h3,h4,h5,h6,p,span,small,strong,b,em,a,button,summary,label,figcaption,li,th,td,dt,dd,.gamma-exam-group,.intl-row,.intl-exam,.tag,.eyebrow,.small,.intl-time';
+  const getTextElements=()=>[...document.querySelectorAll(texts)];
+  function restoreSizes(){
+    getTextElements().forEach(el=>{
+      const st=originalStyles.get(el);
+      if(st){
+        if(st.value)el.style.setProperty('font-size',st.value,st.priority);
+        else el.style.removeProperty('font-size');
+      }
+    });
+  }
+  function applyFont(mode){
+    mode=(mode==='large')?'large':'normal';
+    restoreSizes();
+    fontMode=mode;
+    if(mode==='large'){
+      // First read *all* original sizes; never calculate an inherited size after changing a parent.
+      const elements=getTextElements();
+      const sizes=elements.map(el=>parseFloat(getComputedStyle(el).fontSize)||16);
+      elements.forEach((el,i)=>{
+        if(!originalStyles.has(el))originalStyles.set(el,{value:el.style.getPropertyValue('font-size'),priority:el.style.getPropertyPriority('font-size')});
+        el.style.setProperty('font-size',(sizes[i]*1.25).toFixed(2)+'px','important');
+      });
+    }
+    document.body.dataset.fontSize=mode;
+    document.querySelectorAll('[data-font]').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.font===mode)));
+    try{localStorage.setItem('hyumc-nm-font',mode);}catch(e){}
+  }
+  function setLocale(lang,scroll){
+    lang=available.includes(lang)?lang:'ko';
+    document.documentElement.lang=lang;
+    document.body.dataset.uiLang=lang;
+    const root=document.getElementById('intl-root');
+    root.hidden=(lang==='ko');
+    document.querySelectorAll('.intl-main').forEach(m=>m.hidden=(m.id!=='intl-main-'+lang));
+    document.querySelectorAll('[data-locale]').forEach(btn=>btn.setAttribute('aria-pressed',String(btn.dataset.locale===lang)));
+    const textLabels={ko:['A− 글자 작게','A+ 글자 크게'],en:['A− Smaller text','A+ Larger text'],ru:['A− Мельче','A+ Крупнее'],mn:['A− Жижиг үсэг','A+ Том үсэг']};
+    document.querySelector('[data-font=normal]').textContent=textLabels[lang][0];
+    document.querySelector('[data-font=large]').textContent=textLabels[lang][1];
+    try{localStorage.setItem('hyumc-nm-lang',lang);}catch(e){}
+    if(scroll){
+      if(location.hash!=='#home-menu')location.hash='home-menu';
+      window.scrollTo({top:0,behavior:'instant'});
+    }
+  }
+  document.querySelectorAll('[data-font]').forEach(btn=>btn.addEventListener('click',()=>applyFont(btn.dataset.font)));
+  document.querySelectorAll('[data-locale]').forEach(btn=>btn.addEventListener('click',()=>setLocale(btn.dataset.locale,true)));
+  document.querySelectorAll('.intl-original').forEach(btn=>btn.addEventListener('click',()=>{
+      setLocale('ko',false);
+      const hash=btn.dataset.original;
+      // Route to the original full Korean article with the existing native navigation.
+      if(location.hash!=='#'+hash)location.hash=hash;
+      else window.dispatchEvent(new Event('hashchange'));
+      window.setTimeout(()=>document.getElementById(hash)?.scrollIntoView({block:'start'}),0);
+  }));
+  // Selecting an international view never runs a remote translation service.
+  let savedLang='ko',savedFont='normal';
+  try{savedLang=localStorage.getItem('hyumc-nm-lang')||'ko';savedFont=localStorage.getItem('hyumc-nm-font')||'normal';}catch(e){}
+  setLocale(savedLang,false);
+  applyFont(savedFont);
+  let resizePending=false;
+  window.addEventListener('resize',()=>{
+     if(fontMode!=='large'||resizePending)return;
+     resizePending=true;
+     requestAnimationFrame(()=>{resizePending=false;applyFont('large');});
+  });
+})();
+</script></body></html>
