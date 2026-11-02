@@ -153,6 +153,22 @@
 .equip-photo-pending .equip-body em{color:#8796a2}
 @media(max-width:850px){.equip-photo-fallback{height:220px}}
 @media(max-width:600px){.equip-photo-fallback{height:265px}}
+
+/* 2026-11 병원 공식 오시는 길과 본관 2층 핵의학과 안내 */
+.reception-topbox{display:flex;align-items:flex-start;gap:15px;border:1px solid #c7dfef;background:#eef7fd;padding:22px;border-radius:16px;margin:4px 0 27px}
+.reception-topbox strong{display:block;font-size:20px;color:#0e466f;line-height:1.4}.reception-topbox p{margin:6px 0 12px;color:#456c85;font-size:15px}
+.reception-quicklinks{display:flex;flex-wrap:wrap;gap:9px}.reception-quicklinks a{display:inline-flex;align-items:center;justify-content:center;background:#fff;border:1px solid #bfdced;padding:9px 13px;border-radius:9px;color:#125a8c;font-size:13px;font-weight:750}
+.reception-quicklinks a:hover{background:#e1f3ff}
+.reception-section .reception-h3{font-size:22px;margin:28px 0 8px;color:#103d60}.reception-section .reception-h4{font-size:17px;margin:20px 0 11px;color:#184a6c}.reception-text{font-size:14px;color:#577388;margin:4px 0 15px;line-height:1.8}
+.official-campus-map{padding:15px;margin:12px 0 24px;background:#fff;border:1px solid #d6e5ee;border-radius:16px;overflow:hidden}
+.official-campus-map>img{display:block;object-fit:contain;width:100%;height:auto;max-height:570px;background:#f8fbfd;border-radius:8px}
+.official-campus-map figcaption{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:14px;font-weight:750;color:#1e4e70;padding:13px 5px 0}
+.official-campus-map figcaption a{color:#176eaa;text-decoration:underline;text-underline-offset:3px}.campus-map-status{font-size:12px;margin:5px;color:#6d8495}
+.reception-transport{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.transport-card{background:#f6fafc;border:1px solid #dcebf4;border-radius:13px;padding:19px;display:flex;gap:12px;align-items:flex-start;min-width:0}
+.transport-symbol{font-size:27px;line-height:1.3}.transport-card strong{display:block;color:#113f63;font-size:16px}.transport-card p{font-size:14px;color:#476b84;margin:6px 0 0;line-height:1.75}.transport-card a{font-size:13px;color:#1371a8;font-weight:750;margin-top:8px;display:inline-block;text-decoration:underline}
+.transport-note{background:#fff8ee;border-left:3px solid #d69b52;color:#785c38;padding:12px 15px;font-size:13px;line-height:1.6;margin:15px 0 33px}
+@media(max-width:720px){.reception-topbox{padding:16px 14px;gap:9px}.reception-topbox strong{font-size:17px}.reception-quicklinks{flex-direction:column;align-items:stretch}.reception-quicklinks a{width:100%}.reception-transport{grid-template-columns:1fr}.transport-card{padding:15px}.reception-section .reception-h3{font-size:20px}.official-campus-map{padding:8px}.official-campus-map>img{max-height:none}.official-campus-map figcaption{font-size:13px}}
 </style></head><body>
 <header class="top"><div class="wrap"><a aria-label="검사 안내 첫 화면으로 이동" class="brand" href="#home-menu"><img alt="한양대학교의료원" class="hospital-logo" src="assets/hyumc-logo-clear.png"/></a><nav aria-label="빠른 이동" class="nav"><a class="homebtn" href="#home-menu">전체 검사 보기</a><a href="#bone">뼈검사</a><a href="#pet">PET-CT 검사</a><a href="#cardiac">심장검사</a><a href="#density">골밀도 검사</a><a href="#other">기타검사</a></nav></div></header>
 <section class="hero" id="home"><div class="wrap"><div class="eyebrow">NUCLEAR MEDICINE · PATIENT GUIDE</div><h1>핵의학과 검사 및 치료 안내</h1><p>검사 종류를 선택하면 준비사항, 검사 과정, 소요시간과 주의사항을 한눈에 확인할 수 있습니다.</p><a class="cta" href="#home-menu">검사 종류 선택하기 ↓</a></div></section>
@@ -166,9 +182,9 @@
 <a class="cat" data-category="other" href="#other"><span aria-hidden="true" class="cat-icon">🩺</span><span><strong>핵의학 기타검사</strong><small>뇌혈류 · 침샘 · 유방감마카메라 · 이뇨제 신장 · 사구체여과율</small><span class="pill">5개 검사 안내 보기</span></span></a>
 </div>
 <div class="support-heading"><h3>검사실·접수 안내</h3><p>검사를 받기 전 검사실 모습과 접수 위치를 미리 확인하실 수 있습니다.</p></div>
-<div class="support-cards" aria-label="검사장비 및 접수 안내">
-<a class="support-card" data-category="equipment" href="#equipment"><span class="support-card-icon" aria-hidden="true">📷</span><span><strong>검사장비 소개</strong><small>감마카메라 · PET-CT · 골밀도 · 유방감마카메라 · 안정실</small></span><span class="support-arrow" aria-hidden="true">→</span></a>
-<a class="support-card" data-category="reception" href="#reception"><span class="support-card-icon" aria-hidden="true">📍</span><span><strong>접수·오시는 길</strong><small>핵의학과 접수 위치 · 검사실 배치도</small></span><span class="support-arrow" aria-hidden="true">→</span></a>
+<div aria-label="검사장비 및 접수 안내" class="support-cards">
+<a class="support-card" data-category="equipment" href="#equipment"><span aria-hidden="true" class="support-card-icon">📷</span><span><strong>검사장비 소개</strong><small>감마카메라 · PET-CT · 골밀도 · 유방감마카메라 · 안정실</small></span><span aria-hidden="true" class="support-arrow">→</span></a>
+<a class="support-card" data-category="reception" href="#reception"><span aria-hidden="true" class="support-card-icon">📍</span><span><strong>접수·오시는 길</strong><small>핵의학과 접수 위치 · 검사실 배치도</small></span><span aria-hidden="true" class="support-arrow">→</span></a>
 </div></section>
 <div class="panel" data-panel="bone" id="panel-bone"><div class="panel-header"><h2>뼈검사 안내</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
 <div aria-label="뼈검사 항목" class="subnav"><a href="#overview">검사 목적</a><a href="#prep">검사 준비</a><a href="#procedure">검사 방법</a><a href="#images">대표영상</a><a href="#after">검사 후 주의</a><a href="#faq">자주 묻는 질문</a></div>
@@ -280,96 +296,95 @@
 <div class="therapy-alert"><strong>퇴원 후 제한 기간은 개인별로 다릅니다</strong><p>퇴원 후 접촉 제한 기간은 치료 용량과 환자 상태에 따라 다릅니다. 퇴원 시 받는 개별 방사선안전 수칙을 따라주세요.</p></div></section>
 <section class="section"><h2>자주 묻는 질문</h2><details><summary>방사성요오드 치료를 위해 입원해야 하나요?</summary><p>투여량과 환자별 안전 기준에 따라 달라집니다. 의료진이 외래 또는 격리병실 치료를 결정합니다.</p></details><details><summary>갑상선호르몬제를 중단해야 하나요?</summary><p>치료 준비 방식에 따라 다르므로 처방한 의료진의 안내를 따르세요. 임의로 중단하지 마세요.</p></details><details><summary>치료 후 가족과 언제부터 가까이 지낼 수 있나요?</summary><p>방사선량 평가 및 개인별 퇴원 안내문에 정해진 기간을 따르세요. 어린이와 임산부에 대한 제한을 특히 확인하세요.</p></details></section>
 </article>
-
-<article aria-labelledby="therapy-diet-title" class="therapy-doc" data-therapy="diet" hidden id="therapy-diet">
-  <div class="pet-article-top"><span class="tag">옥소치료 · 저요오드 식이 안내</span><a class="back-link" href="#therapy">← 옥소치료 목록</a></div>
-  <section class="section">
-    <h2 id="therapy-diet-title">방사성요오드 치료를 위한 저요오드 식사요법</h2>
-    <p class="subtitle">Low-Iodine Diet · 치료 전 영양관리</p>
-    <div class="diet-highlights" aria-label="저요오드 식이 핵심 안내">
-      <div><span>식이 시작</span><strong>치료 약 2주 전</strong><small>정확한 시작일은 병원 안내에 따라 주세요.</small></div>
-      <div><span>기본 원칙</span><strong>요오드 함량 높은 식품 제한</strong><small>해조류·해산물·유제품 등</small></div>
-      <div><span>복용약 확인</span><strong>임의 중단 금지</strong><small>영양제·소독제 사용도 의료진에게 확인</small></div>
-    </div>
-    <h3>저요오드 식사는 왜 하나요?</h3>
-    <p>요오드는 음식물을 통해 우리 몸에 들어오는 영양소입니다. 방사성요오드 치료 전에는 체내 요오드의 양을 낮춰 치료에 사용하는 방사성요오드가 잘 흡수되도록 식사를 조절합니다.</p>
-    <div class="diet-guidance"><strong>식사 제한은 치료 준비 기간에만 시행하세요.</strong><p>저요오드 식이는 보통 치료 약 2주 전부터 시작합니다. 치료 전후 정확한 시행 기간은 담당 의료진과 영양팀의 안내를 따라 주세요. 필요 이상으로 일찍 시작하거나 장기간 제한하면 영양상태에 영향을 줄 수 있습니다.</p></div>
-  </section>
-  <section class="section" aria-labelledby="diet-foods-title">
-    <h2 id="diet-foods-title">식품별 허용·제한 안내</h2>
-    <p class="subtitle">식품의 원재료, 사용한 소금, 양념 및 가공 방법에 따라 선택이 달라질 수 있습니다.</p>
-    <div class="diet-food-grid">
-      <div class="diet-food-card"><h3>🍚 곡류 · 감자류</h3><div class="diet-food-allow"><strong>먹을 수 있는 식품</strong><p>쌀·잡곡·밀가루·옥수수, 껍질을 벗겨 조리한 감자·고구마, 정제염을 사용한 떡·면류</p><small>식빵·모닝빵·통밀빵은 자료에서 하루 3쪽 이내로 안내합니다. 원재료를 꼭 확인하세요.</small></div><div class="diet-food-limit"><strong>제한할 식품</strong><p>인스턴트 라면·우동, 과자·시리얼, 위에 안내된 빵 외의 빵류, 껍질째 익힌 감자·고구마</p></div></div>
-      <div class="diet-food-card"><h3>🍗 고기 · 계란 · 콩류</h3><div class="diet-food-allow"><strong>먹을 수 있는 식품</strong><p>소고기·돼지고기·닭고기·오리고기 등 가공하지 않은 육류, 계란 흰자, 국산 콩</p><small>육류는 자료 기준 하루 150g 미만으로 섭취합니다.</small></div><div class="diet-food-limit"><strong>제한할 식품</strong><p>모든 생선·조개·새우 등 해산물, 젓갈, 계란 노른자, 가공육류, 해수 또는 천일염을 사용한 두부</p></div></div>
-      <div class="diet-food-card"><h3>🥬 채소 · 과일</h3><div class="diet-food-allow"><strong>먹을 수 있는 식품</strong><p>제한 식품을 제외한 신선한 채소와 과일</p><small>채소와 과일은 여러 종류를 골고루 섭취합니다.</small></div><div class="diet-food-limit"><strong>제한할 식품</strong><p>김·미역·다시마·파래 등 해조류, 천일염으로 만든 김치·장아찌, 녹즙·야채즙, 과일 통조림</p></div></div>
-      <div class="diet-food-card"><h3>🥛 우유 · 유제품</h3><div class="diet-food-limit"><strong>제한할 식품</strong><p>우유, 두유, 치즈, 요구르트·요플레, 생크림·크림, 아이스크림, 유제품이 들어간 가공식품</p></div><p class="diet-mini-note">빵·과자·소스 등에 들어 있는 우유·계란노른자도 원재료 표시를 확인하세요.</p></div>
-      <div class="diet-food-card"><h3>🧂 소금 · 장류 · 양념</h3><div class="diet-food-allow"><strong>먹을 수 있는 식품</strong><p>성분이 확인된 무요오드 소금·정제염, 식물성기름, 설탕·꿀·올리고당, 고춧가루, 파·마늘·생강·후추, 깨·들깨</p><small>장류는 정제염만 사용하고 다시마 추출액 등 해산물 유래 성분이 없는 제품인지 확인하세요.</small></div><div class="diet-food-limit"><strong>제한할 식품</strong><p>천일염·수입 소금 등 요오드 함유 여부가 확인되지 않은 소금, 액젓·젓갈·농축액을 넣은 양념, 마요네즈</p></div></div>
-      <div class="diet-food-card"><h3>🥤 음료 · 간식 · 영양제</h3><div class="diet-food-allow"><strong>먹을 수 있는 식품</strong><p>양념을 하지 않은 견과류, 100% 과일주스, 사이다·탄산수, 정수한 물, 일반적인 블랙커피</p><small>생수는 요오드 함량을 확인하고 영양팀이 안내한 제품을 선택하세요.</small></div><div class="diet-food-limit"><strong>제한할 식품</strong><p>초콜릿, 양념 견과류, 적색 식용색소 함유 사탕·음료, 요오드 함유 물, 종합비타민·무기질 영양제·건강보조식품</p></div></div>
-    </div>
-    <div class="diet-guidance"><strong>식품 선택이 어려우신가요?</strong><p>가공식품은 제품마다 소금·해조 추출물·유제품·계란노른자 함유 여부가 다릅니다. 허용 목록에 있는 식품이라도 원재료 표시를 확인하고, 헷갈리면 영양팀에 문의해 주세요.</p></div>
-  </section>
-<section class="section diet-photo-section" aria-labelledby="diet-photo-heading">
+<article aria-labelledby="therapy-diet-title" class="therapy-doc" data-therapy="diet" hidden="" id="therapy-diet">
+<div class="pet-article-top"><span class="tag">옥소치료 · 저요오드 식이 안내</span><a class="back-link" href="#therapy">← 옥소치료 목록</a></div>
+<section class="section">
+<h2 id="therapy-diet-title">방사성요오드 치료를 위한 저요오드 식사요법</h2>
+<p class="subtitle">Low-Iodine Diet · 치료 전 영양관리</p>
+<div aria-label="저요오드 식이 핵심 안내" class="diet-highlights">
+<div><span>식이 시작</span><strong>치료 약 2주 전</strong><small>정확한 시작일은 병원 안내에 따라 주세요.</small></div>
+<div><span>기본 원칙</span><strong>요오드 함량 높은 식품 제한</strong><small>해조류·해산물·유제품 등</small></div>
+<div><span>복용약 확인</span><strong>임의 중단 금지</strong><small>영양제·소독제 사용도 의료진에게 확인</small></div>
+</div>
+<h3>저요오드 식사는 왜 하나요?</h3>
+<p>요오드는 음식물을 통해 우리 몸에 들어오는 영양소입니다. 방사성요오드 치료 전에는 체내 요오드의 양을 낮춰 치료에 사용하는 방사성요오드가 잘 흡수되도록 식사를 조절합니다.</p>
+<div class="diet-guidance"><strong>식사 제한은 치료 준비 기간에만 시행하세요.</strong><p>저요오드 식이는 보통 치료 약 2주 전부터 시작합니다. 치료 전후 정확한 시행 기간은 담당 의료진과 영양팀의 안내를 따라 주세요. 필요 이상으로 일찍 시작하거나 장기간 제한하면 영양상태에 영향을 줄 수 있습니다.</p></div>
+</section>
+<section aria-labelledby="diet-foods-title" class="section">
+<h2 id="diet-foods-title">식품별 허용·제한 안내</h2>
+<p class="subtitle">식품의 원재료, 사용한 소금, 양념 및 가공 방법에 따라 선택이 달라질 수 있습니다.</p>
+<div class="diet-food-grid">
+<div class="diet-food-card"><h3>🍚 곡류 · 감자류</h3><div class="diet-food-allow"><strong>먹을 수 있는 식품</strong><p>쌀·잡곡·밀가루·옥수수, 껍질을 벗겨 조리한 감자·고구마, 정제염을 사용한 떡·면류</p><small>식빵·모닝빵·통밀빵은 자료에서 하루 3쪽 이내로 안내합니다. 원재료를 꼭 확인하세요.</small></div><div class="diet-food-limit"><strong>제한할 식품</strong><p>인스턴트 라면·우동, 과자·시리얼, 위에 안내된 빵 외의 빵류, 껍질째 익힌 감자·고구마</p></div></div>
+<div class="diet-food-card"><h3>🍗 고기 · 계란 · 콩류</h3><div class="diet-food-allow"><strong>먹을 수 있는 식품</strong><p>소고기·돼지고기·닭고기·오리고기 등 가공하지 않은 육류, 계란 흰자, 국산 콩</p><small>육류는 자료 기준 하루 150g 미만으로 섭취합니다.</small></div><div class="diet-food-limit"><strong>제한할 식품</strong><p>모든 생선·조개·새우 등 해산물, 젓갈, 계란 노른자, 가공육류, 해수 또는 천일염을 사용한 두부</p></div></div>
+<div class="diet-food-card"><h3>🥬 채소 · 과일</h3><div class="diet-food-allow"><strong>먹을 수 있는 식품</strong><p>제한 식품을 제외한 신선한 채소와 과일</p><small>채소와 과일은 여러 종류를 골고루 섭취합니다.</small></div><div class="diet-food-limit"><strong>제한할 식품</strong><p>김·미역·다시마·파래 등 해조류, 천일염으로 만든 김치·장아찌, 녹즙·야채즙, 과일 통조림</p></div></div>
+<div class="diet-food-card"><h3>🥛 우유 · 유제품</h3><div class="diet-food-limit"><strong>제한할 식품</strong><p>우유, 두유, 치즈, 요구르트·요플레, 생크림·크림, 아이스크림, 유제품이 들어간 가공식품</p></div><p class="diet-mini-note">빵·과자·소스 등에 들어 있는 우유·계란노른자도 원재료 표시를 확인하세요.</p></div>
+<div class="diet-food-card"><h3>🧂 소금 · 장류 · 양념</h3><div class="diet-food-allow"><strong>먹을 수 있는 식품</strong><p>성분이 확인된 무요오드 소금·정제염, 식물성기름, 설탕·꿀·올리고당, 고춧가루, 파·마늘·생강·후추, 깨·들깨</p><small>장류는 정제염만 사용하고 다시마 추출액 등 해산물 유래 성분이 없는 제품인지 확인하세요.</small></div><div class="diet-food-limit"><strong>제한할 식품</strong><p>천일염·수입 소금 등 요오드 함유 여부가 확인되지 않은 소금, 액젓·젓갈·농축액을 넣은 양념, 마요네즈</p></div></div>
+<div class="diet-food-card"><h3>🥤 음료 · 간식 · 영양제</h3><div class="diet-food-allow"><strong>먹을 수 있는 식품</strong><p>양념을 하지 않은 견과류, 100% 과일주스, 사이다·탄산수, 정수한 물, 일반적인 블랙커피</p><small>생수는 요오드 함량을 확인하고 영양팀이 안내한 제품을 선택하세요.</small></div><div class="diet-food-limit"><strong>제한할 식품</strong><p>초콜릿, 양념 견과류, 적색 식용색소 함유 사탕·음료, 요오드 함유 물, 종합비타민·무기질 영양제·건강보조식품</p></div></div>
+</div>
+<div class="diet-guidance"><strong>식품 선택이 어려우신가요?</strong><p>가공식품은 제품마다 소금·해조 추출물·유제품·계란노른자 함유 여부가 다릅니다. 허용 목록에 있는 식품이라도 원재료 표시를 확인하고, 헷갈리면 영양팀에 문의해 주세요.</p></div>
+</section>
+<section aria-labelledby="diet-photo-heading" class="section diet-photo-section">
 <div class="diet-photo-intro"><div><span class="tag">사진으로 보는 식사요법</span><h2 id="diet-photo-heading">저요오드 식품 사진 안내</h2><p class="subtitle">허용식품과 제한식품을 사진으로 확인할 수 있습니다. <strong>사진을 누르면 크게 확대됩니다.</strong></p></div><span class="diet-photo-count">사진 14장</span></div>
 <div class="diet-guidance"><strong>식품 사진을 볼 때 확인하세요</strong><p>식품 사진은 선택을 돕는 예시입니다. 가공식품의 원재료·제품 구성·요오드 함량은 변경될 수 있으므로 제품명만 보고 판단하지 마시고, 소금·장류·영양보충음료 등은 담당 영양팀의 최신 안내를 우선해 주세요.</p></div>
-<div class="diet-photo-group" aria-label="곡류 · 감자·고구마 사진 안내">
+<div aria-label="곡류 · 감자·고구마 사진 안내" class="diet-photo-group">
 <h3>곡류 · 감자·고구마</h3><div class="diet-photo-grid">
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-01.webp" data-caption="곡류 허용식품 · 사진 1/14" aria-label="곡류 허용식품 · 사진 1/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-01.webp" alt="곡류 허용식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>곡류 허용식품</strong><small>쌀, 잡곡, 껍질을 벗겨 조리한 감자·고구마, 정제염 사용 떡·빵·면</small><em>사진 확대 보기 ↗</em></span></button>
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-02.webp" data-caption="곡류 제한식품 · 사진 2/14" aria-label="곡류 제한식품 · 사진 2/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-02.webp" alt="곡류 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>곡류 제한식품</strong><small>인스턴트 면, 시리얼, 과자류 등은 원재료·조미료 확인</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="곡류 허용식품 · 사진 1/14 확대 보기" class="diet-photo-item" data-caption="곡류 허용식품 · 사진 1/14" data-image="assets/low-iodine-photo-01.webp" type="button"><img alt="곡류 허용식품에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-01.webp"/><span class="diet-photo-caption"><strong>곡류 허용식품</strong><small>쌀, 잡곡, 껍질을 벗겨 조리한 감자·고구마, 정제염 사용 떡·빵·면</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="곡류 제한식품 · 사진 2/14 확대 보기" class="diet-photo-item" data-caption="곡류 제한식품 · 사진 2/14" data-image="assets/low-iodine-photo-02.webp" type="button"><img alt="곡류 제한식품에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-02.webp"/><span class="diet-photo-caption"><strong>곡류 제한식품</strong><small>인스턴트 면, 시리얼, 과자류 등은 원재료·조미료 확인</small><em>사진 확대 보기 ↗</em></span></button>
 </div></div>
-<div class="diet-photo-group" aria-label="어육류 · 계란 사진 안내">
+<div aria-label="어육류 · 계란 사진 안내" class="diet-photo-group">
 <h3>어육류 · 계란</h3><div class="diet-photo-grid">
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-03.webp" data-caption="어육류 허용식품 · 사진 3/14" aria-label="어육류 허용식품 · 사진 3/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-03.webp" alt="어육류 허용식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>어육류 허용식품</strong><small>가공하지 않은 육류, 계란 흰자, 국산 콩과 1일 섭취량 예시</small><em>사진 확대 보기 ↗</em></span></button>
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-04.webp" data-caption="어육류 제한식품 · 사진 4/14" aria-label="어육류 제한식품 · 사진 4/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-04.webp" alt="어육류 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>어육류 제한식품</strong><small>생선·해산물, 가공육, 계란노른자 및 가공젓갈</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="어육류 허용식품 · 사진 3/14 확대 보기" class="diet-photo-item" data-caption="어육류 허용식품 · 사진 3/14" data-image="assets/low-iodine-photo-03.webp" type="button"><img alt="어육류 허용식품에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-03.webp"/><span class="diet-photo-caption"><strong>어육류 허용식품</strong><small>가공하지 않은 육류, 계란 흰자, 국산 콩과 1일 섭취량 예시</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="어육류 제한식품 · 사진 4/14 확대 보기" class="diet-photo-item" data-caption="어육류 제한식품 · 사진 4/14" data-image="assets/low-iodine-photo-04.webp" type="button"><img alt="어육류 제한식품에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-04.webp"/><span class="diet-photo-caption"><strong>어육류 제한식품</strong><small>생선·해산물, 가공육, 계란노른자 및 가공젓갈</small><em>사진 확대 보기 ↗</em></span></button>
 </div></div>
-<div class="diet-photo-group" aria-label="채소 · 과일 · 유제품 사진 안내">
+<div aria-label="채소 · 과일 · 유제품 사진 안내" class="diet-photo-group">
 <h3>채소 · 과일 · 유제품</h3><div class="diet-photo-grid">
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-05.webp" data-caption="채소·과일 제한식품 · 사진 5/14" aria-label="채소·과일 제한식품 · 사진 5/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-05.webp" alt="채소·과일 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>채소·과일 제한식품</strong><small>해조류, 김·미역·다시마, 천일염을 사용한 김치, 일부 가공식품 등</small><em>사진 확대 보기 ↗</em></span></button>
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-06.webp" data-caption="우유·유제품 제한식품 · 사진 6/14" aria-label="우유·유제품 제한식품 · 사진 6/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-06.webp" alt="우유·유제품 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>우유·유제품 제한식품</strong><small>우유, 두유, 치즈, 아이스크림, 생크림 및 유제품</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="채소·과일 제한식품 · 사진 5/14 확대 보기" class="diet-photo-item" data-caption="채소·과일 제한식품 · 사진 5/14" data-image="assets/low-iodine-photo-05.webp" type="button"><img alt="채소·과일 제한식품에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-05.webp"/><span class="diet-photo-caption"><strong>채소·과일 제한식품</strong><small>해조류, 김·미역·다시마, 천일염을 사용한 김치, 일부 가공식품 등</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="우유·유제품 제한식품 · 사진 6/14 확대 보기" class="diet-photo-item" data-caption="우유·유제품 제한식품 · 사진 6/14" data-image="assets/low-iodine-photo-06.webp" type="button"><img alt="우유·유제품 제한식품에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-06.webp"/><span class="diet-photo-caption"><strong>우유·유제품 제한식품</strong><small>우유, 두유, 치즈, 아이스크림, 생크림 및 유제품</small><em>사진 확대 보기 ↗</em></span></button>
 </div></div>
-<div class="diet-photo-group" aria-label="소금 · 장류 · 양념 사진 안내">
+<div aria-label="소금 · 장류 · 양념 사진 안내" class="diet-photo-group">
 <h3>소금 · 장류 · 양념</h3><div class="diet-photo-grid">
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-07.webp" data-caption="양념류 허용식품 · 사진 7/14" aria-label="양념류 허용식품 · 사진 7/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-07.webp" alt="양념류 허용식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>양념류 허용식품</strong><small>식물성기름, 깨·들깨, 파·마늘·생강, 설탕·꿀 등</small><em>사진 확대 보기 ↗</em></span></button>
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-08.webp" data-caption="허용 소금·장류 선택 예시 · 사진 8/14" aria-label="허용 소금·장류 선택 예시 · 사진 8/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-08.webp" alt="허용 소금·장류 선택 예시에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>허용 소금·장류 선택 예시</strong><small>정제염 함유 여부와 해산물 유래 첨가물 없는지 확인</small><em>사진 확대 보기 ↗</em></span></button>
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-09.webp" data-caption="양념류 제한식품 · 사진 9/14" aria-label="양념류 제한식품 · 사진 9/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-09.webp" alt="양념류 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>양념류 제한식품</strong><small>천일염, 수입 소금, 마요네즈, 액젓·양념 등 성분 확인</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="양념류 허용식품 · 사진 7/14 확대 보기" class="diet-photo-item" data-caption="양념류 허용식품 · 사진 7/14" data-image="assets/low-iodine-photo-07.webp" type="button"><img alt="양념류 허용식품에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-07.webp"/><span class="diet-photo-caption"><strong>양념류 허용식품</strong><small>식물성기름, 깨·들깨, 파·마늘·생강, 설탕·꿀 등</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="허용 소금·장류 선택 예시 · 사진 8/14 확대 보기" class="diet-photo-item" data-caption="허용 소금·장류 선택 예시 · 사진 8/14" data-image="assets/low-iodine-photo-08.webp" type="button"><img alt="허용 소금·장류 선택 예시에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-08.webp"/><span class="diet-photo-caption"><strong>허용 소금·장류 선택 예시</strong><small>정제염 함유 여부와 해산물 유래 첨가물 없는지 확인</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="양념류 제한식품 · 사진 9/14 확대 보기" class="diet-photo-item" data-caption="양념류 제한식품 · 사진 9/14" data-image="assets/low-iodine-photo-09.webp" type="button"><img alt="양념류 제한식품에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-09.webp"/><span class="diet-photo-caption"><strong>양념류 제한식품</strong><small>천일염, 수입 소금, 마요네즈, 액젓·양념 등 성분 확인</small><em>사진 확대 보기 ↗</em></span></button>
 </div></div>
-<div class="diet-photo-group" aria-label="기타 식품 · 음료 사진 안내">
+<div aria-label="기타 식품 · 음료 사진 안내" class="diet-photo-group">
 <h3>기타 식품 · 음료</h3><div class="diet-photo-grid">
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-10.webp" data-caption="기타 허용식품 · 사진 10/14" aria-label="기타 허용식품 · 사진 10/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-10.webp" alt="기타 허용식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>기타 허용식품</strong><small>양념하지 않은 견과류, 블랙커피, 과일주스, 정수기 물 등</small><em>사진 확대 보기 ↗</em></span></button>
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-11.webp" data-caption="기타 제한식품 · 사진 11/14" aria-label="기타 제한식품 · 사진 11/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-11.webp" alt="기타 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>기타 제한식품</strong><small>양념 견과류, 초콜릿, 적색색소 함유 가공식품, 영양제·건강보조식품</small><em>사진 확대 보기 ↗</em></span></button>
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-12.webp" data-caption="생수 관련 주의 식품 · 사진 12/14" aria-label="생수 관련 주의 식품 · 사진 12/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-12.webp" alt="생수 관련 주의 식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>생수 관련 주의 식품</strong><small>일부 생수 제품은 요오드 함량을 확인해야 합니다</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="기타 허용식품 · 사진 10/14 확대 보기" class="diet-photo-item" data-caption="기타 허용식품 · 사진 10/14" data-image="assets/low-iodine-photo-10.webp" type="button"><img alt="기타 허용식품에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-10.webp"/><span class="diet-photo-caption"><strong>기타 허용식품</strong><small>양념하지 않은 견과류, 블랙커피, 과일주스, 정수기 물 등</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="기타 제한식품 · 사진 11/14 확대 보기" class="diet-photo-item" data-caption="기타 제한식품 · 사진 11/14" data-image="assets/low-iodine-photo-11.webp" type="button"><img alt="기타 제한식품에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-11.webp"/><span class="diet-photo-caption"><strong>기타 제한식품</strong><small>양념 견과류, 초콜릿, 적색색소 함유 가공식품, 영양제·건강보조식품</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="생수 관련 주의 식품 · 사진 12/14 확대 보기" class="diet-photo-item" data-caption="생수 관련 주의 식품 · 사진 12/14" data-image="assets/low-iodine-photo-12.webp" type="button"><img alt="생수 관련 주의 식품에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-12.webp"/><span class="diet-photo-caption"><strong>생수 관련 주의 식품</strong><small>일부 생수 제품은 요오드 함량을 확인해야 합니다</small><em>사진 확대 보기 ↗</em></span></button>
 </div></div>
-<div class="diet-photo-group" aria-label="식단 예시 · 영양보충음료 사진 안내">
+<div aria-label="식단 예시 · 영양보충음료 사진 안내" class="diet-photo-group">
 <h3>식단 예시 · 영양보충음료</h3><div class="diet-photo-grid">
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-13.webp" data-caption="저요오드 하루 식단 예시 · 사진 13/14" aria-label="저요오드 하루 식단 예시 · 사진 13/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-13.webp" alt="저요오드 하루 식단 예시에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>저요오드 하루 식단 예시</strong><small>아침·점심·저녁 및 간식 구성 예시</small><em>사진 확대 보기 ↗</em></span></button>
-<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-14.webp" data-caption="영양보충음료 제품 예시 · 사진 14/14" aria-label="영양보충음료 제품 예시 · 사진 14/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-14.webp" alt="영양보충음료 제품 예시에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>영양보충음료 제품 예시</strong><small>제품별 요오드 함유 여부가 다르므로 영양팀에 확인 후 사용</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="저요오드 하루 식단 예시 · 사진 13/14 확대 보기" class="diet-photo-item" data-caption="저요오드 하루 식단 예시 · 사진 13/14" data-image="assets/low-iodine-photo-13.webp" type="button"><img alt="저요오드 하루 식단 예시에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-13.webp"/><span class="diet-photo-caption"><strong>저요오드 하루 식단 예시</strong><small>아침·점심·저녁 및 간식 구성 예시</small><em>사진 확대 보기 ↗</em></span></button>
+<button aria-label="영양보충음료 제품 예시 · 사진 14/14 확대 보기" class="diet-photo-item" data-caption="영양보충음료 제품 예시 · 사진 14/14" data-image="assets/low-iodine-photo-14.webp" type="button"><img alt="영양보충음료 제품 예시에 관한 식품 안내 그림" decoding="async" loading="lazy" src="assets/low-iodine-photo-14.webp"/><span class="diet-photo-caption"><strong>영양보충음료 제품 예시</strong><small>제품별 요오드 함유 여부가 다르므로 영양팀에 확인 후 사용</small><em>사진 확대 보기 ↗</em></span></button>
 </div></div>
 </section>
-  <section class="section">
-    <h2>하루 식단 예시</h2>
-    <p class="subtitle">식단 구성의 예시입니다. 개인별 영양 요구량과 병원 지침에 맞춰 조절하세요.</p>
-    <div class="diet-meal-grid">
-      <div><strong>아침 · 치킨 샌드위치</strong><p>허용된 빵, 닭고기, 계란 흰자, 토마토·양상추 등</p></div>
-      <div><strong>점심 · 한식 백반</strong><p>잡곡밥, 소고기 구이, 계란 흰자찜, 나물 반찬 등</p></div>
-      <div><strong>저녁 · 잔치국수</strong><p>허용된 소면, 소고기 고명, 계란 흰자지단, 채소 고명 등</p></div>
-    </div>
-    <div class="diet-example-image"><button type="button" data-image="assets/low-iodine-meal-examples.jpg" data-caption="저요오드 식사요법 하루 식단 예시"><img src="assets/low-iodine-meal-examples.jpg" loading="lazy" alt="아침 치킨 샌드위치, 점심 한식 백반, 저녁 잔치국수 등 저요오드 식단 예시표"/><span>식단 예시 그림 크게 보기 ↗</span></button></div>
-    <p class="diet-mini-note">양념은 허용된 소금과 원재료를 사용하고, 고기·빵 등은 안내받은 섭취량을 지켜 주세요.</p>
-  </section>
-  <section class="section">
-    <h2>약물과 생활 속 주의사항</h2>
-    <ul class="therapy-list">
-      <li><strong>처방약:</strong> 갑상선호르몬제를 포함한 모든 약은 담당 의료진의 지시에 따라 복용하거나 조절하세요. 고혈압약·당뇨약도 임의로 중단하지 마세요.</li>
-      <li><strong>영양제·한약:</strong> 종합비타민, 무기질 보충제, 건강보조식품, 한약은 요오드가 포함될 수 있으므로 치료 전 복용 여부를 확인해 주세요.</li>
-      <li><strong>소독제·가글:</strong> 포비돈요오드 소독제, 베타딘 가글, 요오드 함유 세정제 등은 사용 전 의료진에게 알려 주세요.</li>
-      <li><strong>영양보충음료:</strong> 같은 제조사의 제품이라도 요오드 함유 여부가 다를 수 있습니다. 필요한 경우 영양팀과 제품을 확인한 뒤 선택하세요.</li>
-    </ul>
-  </section>
-  <section class="section diet-faq">
-    <h2>자주 묻는 질문</h2>
-    <details><summary>2주보다 더 일찍 저요오드 식사를 시작하면 좋나요?</summary><p>미리 시작할 필요는 없습니다. 불필요하게 식사 제한을 오래 하면 영양상태에 영향을 줄 수 있으므로 병원에서 안내한 시작일을 지켜 주세요.</p></details>
-    <details><summary>요오드는 몸에 해로운 성분인가요?</summary><p>요오드는 우리 몸에 필요한 영양소입니다. 저요오드 식사는 방사성요오드 치료를 준비하는 동안만 일시적으로 시행하는 식사요법입니다.</p></details>
-    <details><summary>인터넷에서 본 식품 목록과 다르면 어떻게 하나요?</summary><p>저요오드 식이 지침은 국가와 의료기관에 따라 다를 수 있습니다. 치료받으시는 병원에서 안내한 식품 선택 기준을 우선해 주세요.</p></details>
-  </section>
+<section class="section">
+<h2>하루 식단 예시</h2>
+<p class="subtitle">식단 구성의 예시입니다. 개인별 영양 요구량과 병원 지침에 맞춰 조절하세요.</p>
+<div class="diet-meal-grid">
+<div><strong>아침 · 치킨 샌드위치</strong><p>허용된 빵, 닭고기, 계란 흰자, 토마토·양상추 등</p></div>
+<div><strong>점심 · 한식 백반</strong><p>잡곡밥, 소고기 구이, 계란 흰자찜, 나물 반찬 등</p></div>
+<div><strong>저녁 · 잔치국수</strong><p>허용된 소면, 소고기 고명, 계란 흰자지단, 채소 고명 등</p></div>
+</div>
+<div class="diet-example-image"><button data-caption="저요오드 식사요법 하루 식단 예시" data-image="assets/low-iodine-meal-examples.jpg" type="button"><img alt="아침 치킨 샌드위치, 점심 한식 백반, 저녁 잔치국수 등 저요오드 식단 예시표" loading="lazy" src="assets/low-iodine-meal-examples.jpg"/><span>식단 예시 그림 크게 보기 ↗</span></button></div>
+<p class="diet-mini-note">양념은 허용된 소금과 원재료를 사용하고, 고기·빵 등은 안내받은 섭취량을 지켜 주세요.</p>
+</section>
+<section class="section">
+<h2>약물과 생활 속 주의사항</h2>
+<ul class="therapy-list">
+<li><strong>처방약:</strong> 갑상선호르몬제를 포함한 모든 약은 담당 의료진의 지시에 따라 복용하거나 조절하세요. 고혈압약·당뇨약도 임의로 중단하지 마세요.</li>
+<li><strong>영양제·한약:</strong> 종합비타민, 무기질 보충제, 건강보조식품, 한약은 요오드가 포함될 수 있으므로 치료 전 복용 여부를 확인해 주세요.</li>
+<li><strong>소독제·가글:</strong> 포비돈요오드 소독제, 베타딘 가글, 요오드 함유 세정제 등은 사용 전 의료진에게 알려 주세요.</li>
+<li><strong>영양보충음료:</strong> 같은 제조사의 제품이라도 요오드 함유 여부가 다를 수 있습니다. 필요한 경우 영양팀과 제품을 확인한 뒤 선택하세요.</li>
+</ul>
+</section>
+<section class="section diet-faq">
+<h2>자주 묻는 질문</h2>
+<details><summary>2주보다 더 일찍 저요오드 식사를 시작하면 좋나요?</summary><p>미리 시작할 필요는 없습니다. 불필요하게 식사 제한을 오래 하면 영양상태에 영향을 줄 수 있으므로 병원에서 안내한 시작일을 지켜 주세요.</p></details>
+<details><summary>요오드는 몸에 해로운 성분인가요?</summary><p>요오드는 우리 몸에 필요한 영양소입니다. 저요오드 식사는 방사성요오드 치료를 준비하는 동안만 일시적으로 시행하는 식사요법입니다.</p></details>
+<details><summary>인터넷에서 본 식품 목록과 다르면 어떻게 하나요?</summary><p>저요오드 식이 지침은 국가와 의료기관에 따라 다를 수 있습니다. 치료받으시는 병원에서 안내한 식품 선택 기준을 우선해 주세요.</p></details>
+</section>
 </article>
 <article aria-labelledby="therapy-inpatient-title" class="therapy-doc" data-therapy="inpatient" hidden="" id="therapy-inpatient">
 <div class="pet-article-top"><span class="tag">옥소치료 · 입원생활안내</span><a class="back-link" href="#therapy">← 옥소치료 목록</a></div>
@@ -378,13 +393,13 @@
 <div class="therapy-alert"><strong>병동 운영정보 사전 확인</strong><p>입원 병동과 시간, 병실번호 및 연락처는 입원 전 안내받은 내용을 확인해 주세요. 입원 전 최신 안내문 또는 담당 병동에서 확인하세요. 당뇨약·인슐린 용량은 의료진의 지시에 따라서만 조절하세요.</p></div>
 <p class="inpatient-photo-intro">병실 및 장비 사진은 이해를 돕기 위한 안내 이미지입니다. 실제 시설과 배치·운영 방식은 변경될 수 있으므로 <strong>입원 당일 담당 간호사의 설명을 우선</strong>해 주세요. 사진을 누르면 확대됩니다.</p><h3>입원 전 절차</h3><ol class="therapy-list"><li>외래에서 치료 및 입원 여부·일정 결정</li><li>검사·교육 및 입원서류 안내 받기</li><li>입원 당일 병원에서 안내한 시각에 검사·원무 수속 진행</li><li>담당 병동에서 환자 확인, 치료 전 교육 및 치료병실 입실</li></ol>
 <!-- INPATIENT_GALLERY_START -->
-<details class="inpatient-photo-section" open>
+<details class="inpatient-photo-section" open="">
 <summary><span>입원 동선과 치료병실</span><small>3장 · 펼쳐서 보기</small></summary>
 <p class="inpatient-photo-description">입원 안내를 받는 장소와 방사성요오드 치료병실의 모습을 확인하세요.</p>
 <div class="inpatient-photo-grid">
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-06-photo-03.webp" data-caption="외래·입원 안내 공간" aria-label="외래·입원 안내 공간 사진 확대"><img src="assets/inpatient-slide-06-photo-03.webp" loading="lazy" alt="외래·입원 안내 공간" /><span>외래·입원 안내 공간</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-07-photo-03.webp" data-caption="입원 병동 복도" aria-label="입원 병동 복도 사진 확대"><img src="assets/inpatient-slide-07-photo-03.webp" loading="lazy" alt="입원 병동 복도" /><span>입원 병동 복도</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-11-photo-03.webp" data-caption="방사성요오드 치료병실 출입구" aria-label="방사성요오드 치료병실 출입구 사진 확대"><img src="assets/inpatient-slide-11-photo-03.webp" loading="lazy" alt="방사성요오드 치료병실 출입구" /><span>방사성요오드 치료병실 출입구</span></button>
+<button aria-label="외래·입원 안내 공간 사진 확대" class="inpatient-photo-card" data-caption="외래·입원 안내 공간" data-image="assets/inpatient-slide-06-photo-03.webp" type="button"><img alt="외래·입원 안내 공간" loading="lazy" src="assets/inpatient-slide-06-photo-03.webp"/><span>외래·입원 안내 공간</span></button>
+<button aria-label="입원 병동 복도 사진 확대" class="inpatient-photo-card" data-caption="입원 병동 복도" data-image="assets/inpatient-slide-07-photo-03.webp" type="button"><img alt="입원 병동 복도" loading="lazy" src="assets/inpatient-slide-07-photo-03.webp"/><span>입원 병동 복도</span></button>
+<button aria-label="방사성요오드 치료병실 출입구 사진 확대" class="inpatient-photo-card" data-caption="방사성요오드 치료병실 출입구" data-image="assets/inpatient-slide-11-photo-03.webp" type="button"><img alt="방사성요오드 치료병실 출입구" loading="lazy" src="assets/inpatient-slide-11-photo-03.webp"/><span>방사성요오드 치료병실 출입구</span></button>
 </div>
 </details></section>
 <section class="section"><h2>입원 시 준비물</h2><div class="grid"><div class="tile"><strong>개인 위생용품</strong><p>칫솔·치약, 수건, 속옷, 개인 물컵 등 병동이 안내한 물품</p></div><div class="tile"><strong>복용약·의료정보</strong><p>평소 복용하는 약과 약 목록을 가지고 와 담당 간호사에게 알려주세요.</p></div><div class="tile"><strong>음료·간식</strong><p>생수, 사탕·껌 등은 담당 의료진이 허용한 종류와 시점에 따라 준비하세요.</p></div><div class="tile"><strong>개인 여가용품</strong><p>책 등 입원 중 사용할 물품. 반입·반출 제한은 병동 확인</p></div></div></section>
@@ -393,43 +408,43 @@
 <details><summary>식사와 식기·폐기물 관리</summary><p>식사는 병실 내 지정된 반입구로 전달될 수 있습니다. 사용한 식기, 오염 가능 물품, 생활폐기물은 병동 지침에 따라 분리·처리합니다.</p></details>
 <details><summary>화장실 및 개인위생</summary><p>손 씻기, 변기 물 내리기, 구토 시 대처 및 세면 관련 주의사항을 지켜 주세요. 샤워 가능 여부는 병동 지침을 확인하세요.</p></details>
 <details><summary>낙상·화재 등 안전수칙</summary><p>야간 이동 시 조명을 켜고, 어지러우면 혼자 움직이지 마세요. 응급상황이나 화재 발생 시 호출기로 즉시 직원에게 알리고 안내에 따르세요.</p></details>
-<details class="inpatient-photo-section" open>
+<details class="inpatient-photo-section" open="">
 <summary><span>병실 시설과 간호사 연락</span><small>7장 · 펼쳐서 보기</small></summary>
 <p class="inpatient-photo-description">입실 후 간호사에게 실제 위치와 사용법을 안내받으세요.</p>
 <div class="inpatient-photo-grid">
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-12-photo-02.webp" data-caption="치료병실 내부 및 침상" aria-label="치료병실 내부 및 침상 사진 확대"><img src="assets/inpatient-slide-12-photo-02.webp" loading="lazy" alt="치료병실 내부 및 침상" /><span>치료병실 내부 및 침상</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-13-photo-11.webp" data-caption="병상 주변 설비" aria-label="병상 주변 설비 사진 확대"><img src="assets/inpatient-slide-13-photo-11.webp" loading="lazy" alt="병상 주변 설비" /><span>병상 주변 설비</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-14-photo-03.webp" data-caption="병실 온도조절 장치" aria-label="병실 온도조절 장치 사진 확대"><img src="assets/inpatient-slide-14-photo-03.webp" loading="lazy" alt="병실 온도조절 장치" /><span>병실 온도조절 장치</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-15-photo-04.webp" data-caption="병실 안전관리용 카메라" aria-label="병실 안전관리용 카메라 사진 확대"><img src="assets/inpatient-slide-15-photo-04.webp" loading="lazy" alt="병실 안전관리용 카메라" /><span>병실 안전관리용 카메라</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-16-photo-06.webp" data-caption="비디오폰 및 통화 장치" aria-label="비디오폰 및 통화 장치 사진 확대"><img src="assets/inpatient-slide-16-photo-06.webp" loading="lazy" alt="비디오폰 및 통화 장치" /><span>비디오폰 및 통화 장치</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-17-photo-05.webp" data-caption="병실 전화기와 리모컨" aria-label="병실 전화기와 리모컨 사진 확대"><img src="assets/inpatient-slide-17-photo-05.webp" loading="lazy" alt="병실 전화기와 리모컨" /><span>병실 전화기와 리모컨</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-18-photo-03.webp" data-caption="간호사 호출기 사용 예시" aria-label="간호사 호출기 사용 예시 사진 확대"><img src="assets/inpatient-slide-18-photo-03.webp" loading="lazy" alt="간호사 호출기 사용 예시" /><span>간호사 호출기 사용 예시</span></button>
+<button aria-label="치료병실 내부 및 침상 사진 확대" class="inpatient-photo-card" data-caption="치료병실 내부 및 침상" data-image="assets/inpatient-slide-12-photo-02.webp" type="button"><img alt="치료병실 내부 및 침상" loading="lazy" src="assets/inpatient-slide-12-photo-02.webp"/><span>치료병실 내부 및 침상</span></button>
+<button aria-label="병상 주변 설비 사진 확대" class="inpatient-photo-card" data-caption="병상 주변 설비" data-image="assets/inpatient-slide-13-photo-11.webp" type="button"><img alt="병상 주변 설비" loading="lazy" src="assets/inpatient-slide-13-photo-11.webp"/><span>병상 주변 설비</span></button>
+<button aria-label="병실 온도조절 장치 사진 확대" class="inpatient-photo-card" data-caption="병실 온도조절 장치" data-image="assets/inpatient-slide-14-photo-03.webp" type="button"><img alt="병실 온도조절 장치" loading="lazy" src="assets/inpatient-slide-14-photo-03.webp"/><span>병실 온도조절 장치</span></button>
+<button aria-label="병실 안전관리용 카메라 사진 확대" class="inpatient-photo-card" data-caption="병실 안전관리용 카메라" data-image="assets/inpatient-slide-15-photo-04.webp" type="button"><img alt="병실 안전관리용 카메라" loading="lazy" src="assets/inpatient-slide-15-photo-04.webp"/><span>병실 안전관리용 카메라</span></button>
+<button aria-label="비디오폰 및 통화 장치 사진 확대" class="inpatient-photo-card" data-caption="비디오폰 및 통화 장치" data-image="assets/inpatient-slide-16-photo-06.webp" type="button"><img alt="비디오폰 및 통화 장치" loading="lazy" src="assets/inpatient-slide-16-photo-06.webp"/><span>비디오폰 및 통화 장치</span></button>
+<button aria-label="병실 전화기와 리모컨 사진 확대" class="inpatient-photo-card" data-caption="병실 전화기와 리모컨" data-image="assets/inpatient-slide-17-photo-05.webp" type="button"><img alt="병실 전화기와 리모컨" loading="lazy" src="assets/inpatient-slide-17-photo-05.webp"/><span>병실 전화기와 리모컨</span></button>
+<button aria-label="간호사 호출기 사용 예시 사진 확대" class="inpatient-photo-card" data-caption="간호사 호출기 사용 예시" data-image="assets/inpatient-slide-18-photo-03.webp" type="button"><img alt="간호사 호출기 사용 예시" loading="lazy" src="assets/inpatient-slide-18-photo-03.webp"/><span>간호사 호출기 사용 예시</span></button>
 </div>
 </details>
-<details class="inpatient-photo-section" open>
+<details class="inpatient-photo-section" open="">
 <summary><span>식사·위생·생활 및 안전시설</span><small>10장 · 펼쳐서 보기</small></summary>
 <p class="inpatient-photo-description">식사·폐기물·화장실 이용과 안전시설을 사진으로 살펴보세요.</p>
 <div class="inpatient-photo-grid">
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-19-photo-03.webp" data-caption="식사·물품 반입구" aria-label="식사·물품 반입구 사진 확대"><img src="assets/inpatient-slide-19-photo-03.webp" loading="lazy" alt="식사·물품 반입구" /><span>식사·물품 반입구</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-20-photo-04.webp" data-caption="식기 보관함" aria-label="식기 보관함 사진 확대"><img src="assets/inpatient-slide-20-photo-04.webp" loading="lazy" alt="식기 보관함" /><span>식기 보관함</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-21-photo-03.webp" data-caption="폐기물 분리 보관함" aria-label="폐기물 분리 보관함 사진 확대"><img src="assets/inpatient-slide-21-photo-03.webp" loading="lazy" alt="폐기물 분리 보관함" /><span>폐기물 분리 보관함</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-22-photo-04.webp" data-caption="화장실 이용 안내문" aria-label="화장실 이용 안내문 사진 확대"><img src="assets/inpatient-slide-22-photo-04.webp" loading="lazy" alt="화장실 이용 안내문" /><span>화장실 이용 안내문</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-22-photo-05.webp" data-caption="치료병실 화장실" aria-label="치료병실 화장실 사진 확대"><img src="assets/inpatient-slide-22-photo-05.webp" loading="lazy" alt="치료병실 화장실" /><span>치료병실 화장실</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-24-photo-05.webp" data-caption="병실 창문 블라인드" aria-label="병실 창문 블라인드 사진 확대"><img src="assets/inpatient-slide-24-photo-05.webp" loading="lazy" alt="병실 창문 블라인드" /><span>병실 창문 블라인드</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-25-photo-03.webp" data-caption="침대 조절 장치" aria-label="침대 조절 장치 사진 확대"><img src="assets/inpatient-slide-25-photo-03.webp" loading="lazy" alt="침대 조절 장치" /><span>침대 조절 장치</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-25-photo-04.webp" data-caption="침대 난간" aria-label="침대 난간 사진 확대"><img src="assets/inpatient-slide-25-photo-04.webp" loading="lazy" alt="침대 난간" /><span>침대 난간</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-26-photo-03.webp" data-caption="낙상 예방 안내" aria-label="낙상 예방 안내 사진 확대"><img src="assets/inpatient-slide-26-photo-03.webp" loading="lazy" alt="낙상 예방 안내" /><span>낙상 예방 안내</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-27-photo-03.webp" data-caption="화재 시 대피 안내" aria-label="화재 시 대피 안내 사진 확대"><img src="assets/inpatient-slide-27-photo-03.webp" loading="lazy" alt="화재 시 대피 안내" /><span>화재 시 대피 안내</span></button>
+<button aria-label="식사·물품 반입구 사진 확대" class="inpatient-photo-card" data-caption="식사·물품 반입구" data-image="assets/inpatient-slide-19-photo-03.webp" type="button"><img alt="식사·물품 반입구" loading="lazy" src="assets/inpatient-slide-19-photo-03.webp"/><span>식사·물품 반입구</span></button>
+<button aria-label="식기 보관함 사진 확대" class="inpatient-photo-card" data-caption="식기 보관함" data-image="assets/inpatient-slide-20-photo-04.webp" type="button"><img alt="식기 보관함" loading="lazy" src="assets/inpatient-slide-20-photo-04.webp"/><span>식기 보관함</span></button>
+<button aria-label="폐기물 분리 보관함 사진 확대" class="inpatient-photo-card" data-caption="폐기물 분리 보관함" data-image="assets/inpatient-slide-21-photo-03.webp" type="button"><img alt="폐기물 분리 보관함" loading="lazy" src="assets/inpatient-slide-21-photo-03.webp"/><span>폐기물 분리 보관함</span></button>
+<button aria-label="화장실 이용 안내문 사진 확대" class="inpatient-photo-card" data-caption="화장실 이용 안내문" data-image="assets/inpatient-slide-22-photo-04.webp" type="button"><img alt="화장실 이용 안내문" loading="lazy" src="assets/inpatient-slide-22-photo-04.webp"/><span>화장실 이용 안내문</span></button>
+<button aria-label="치료병실 화장실 사진 확대" class="inpatient-photo-card" data-caption="치료병실 화장실" data-image="assets/inpatient-slide-22-photo-05.webp" type="button"><img alt="치료병실 화장실" loading="lazy" src="assets/inpatient-slide-22-photo-05.webp"/><span>치료병실 화장실</span></button>
+<button aria-label="병실 창문 블라인드 사진 확대" class="inpatient-photo-card" data-caption="병실 창문 블라인드" data-image="assets/inpatient-slide-24-photo-05.webp" type="button"><img alt="병실 창문 블라인드" loading="lazy" src="assets/inpatient-slide-24-photo-05.webp"/><span>병실 창문 블라인드</span></button>
+<button aria-label="침대 조절 장치 사진 확대" class="inpatient-photo-card" data-caption="침대 조절 장치" data-image="assets/inpatient-slide-25-photo-03.webp" type="button"><img alt="침대 조절 장치" loading="lazy" src="assets/inpatient-slide-25-photo-03.webp"/><span>침대 조절 장치</span></button>
+<button aria-label="침대 난간 사진 확대" class="inpatient-photo-card" data-caption="침대 난간" data-image="assets/inpatient-slide-25-photo-04.webp" type="button"><img alt="침대 난간" loading="lazy" src="assets/inpatient-slide-25-photo-04.webp"/><span>침대 난간</span></button>
+<button aria-label="낙상 예방 안내 사진 확대" class="inpatient-photo-card" data-caption="낙상 예방 안내" data-image="assets/inpatient-slide-26-photo-03.webp" type="button"><img alt="낙상 예방 안내" loading="lazy" src="assets/inpatient-slide-26-photo-03.webp"/><span>낙상 예방 안내</span></button>
+<button aria-label="화재 시 대피 안내 사진 확대" class="inpatient-photo-card" data-caption="화재 시 대피 안내" data-image="assets/inpatient-slide-27-photo-03.webp" type="button"><img alt="화재 시 대피 안내" loading="lazy" src="assets/inpatient-slide-27-photo-03.webp"/><span>화재 시 대피 안내</span></button>
 </div>
 </details></section>
 <section class="section"><h2>치료 후 병동 생활</h2><ul class="therapy-list"><li>옥소 복용 후 활동·금식시간은 당일 간호사 안내를 따르세요.</li><li>배뇨와 위생 관리는 의료진의 지시에 따라 시행합니다.</li><li>침샘 자극용 식품과 수분 섭취는 의료진이 안내한 시점과 양에 따라주세요.</li><li>구토나 발열 등 증상이 있으면 병실에서 즉시 간호사를 호출하세요.</li></ul>
-<details class="inpatient-photo-section" open>
+<details class="inpatient-photo-section" open="">
 <summary><span>방사성요오드 복용 안내 사진</span><small>3장 · 펼쳐서 보기</small></summary>
 <p class="inpatient-photo-description">아래 사진은 복용 방법을 이해하기 위한 예시입니다. 실제 복용은 의료진의 안내에 따라 진행하세요.</p>
 <div class="inpatient-photo-grid">
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-28-photo-02.webp" data-caption="방사성요오드 복용 교육 사진 1" aria-label="방사성요오드 복용 교육 사진 1 사진 확대"><img src="assets/inpatient-slide-28-photo-02.webp" loading="lazy" alt="방사성요오드 복용 교육 사진 1" /><span>방사성요오드 복용 교육 사진 1</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-28-photo-03.webp" data-caption="방사성요오드 복용 교육 사진 2" aria-label="방사성요오드 복용 교육 사진 2 사진 확대"><img src="assets/inpatient-slide-28-photo-03.webp" loading="lazy" alt="방사성요오드 복용 교육 사진 2" /><span>방사성요오드 복용 교육 사진 2</span></button>
-<button type="button" class="inpatient-photo-card" data-image="assets/inpatient-slide-28-photo-04.webp" data-caption="방사성요오드 복용 교육 사진 3" aria-label="방사성요오드 복용 교육 사진 3 사진 확대"><img src="assets/inpatient-slide-28-photo-04.webp" loading="lazy" alt="방사성요오드 복용 교육 사진 3" /><span>방사성요오드 복용 교육 사진 3</span></button>
+<button aria-label="방사성요오드 복용 교육 사진 1 사진 확대" class="inpatient-photo-card" data-caption="방사성요오드 복용 교육 사진 1" data-image="assets/inpatient-slide-28-photo-02.webp" type="button"><img alt="방사성요오드 복용 교육 사진 1" loading="lazy" src="assets/inpatient-slide-28-photo-02.webp"/><span>방사성요오드 복용 교육 사진 1</span></button>
+<button aria-label="방사성요오드 복용 교육 사진 2 사진 확대" class="inpatient-photo-card" data-caption="방사성요오드 복용 교육 사진 2" data-image="assets/inpatient-slide-28-photo-03.webp" type="button"><img alt="방사성요오드 복용 교육 사진 2" loading="lazy" src="assets/inpatient-slide-28-photo-03.webp"/><span>방사성요오드 복용 교육 사진 2</span></button>
+<button aria-label="방사성요오드 복용 교육 사진 3 사진 확대" class="inpatient-photo-card" data-caption="방사성요오드 복용 교육 사진 3" data-image="assets/inpatient-slide-28-photo-04.webp" type="button"><img alt="방사성요오드 복용 교육 사진 3" loading="lazy" src="assets/inpatient-slide-28-photo-04.webp"/><span>방사성요오드 복용 교육 사진 3</span></button>
 </div>
 </details>
 <!-- INPATIENT_GALLERY_END -->
@@ -467,7 +482,7 @@
 <section class="pet-subsection"><h3>검사 목적</h3><ul class="pet-notes"><li>협심증 진단을 돕습니다.</li><li>관상동맥질환의 정도와 예후 평가에 활용됩니다.</li></ul></section>
 <section class="pet-subsection"><h3>검사 전 준비사항</h3><div class="pet-info-grid"><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>금식</strong><p>검사 당일 금식이 필요합니다. 예약 시 안내받은 구체적인 금식 시간을 지켜 주세요.</p></div></div><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>카페인·흡연</strong><p>검사 전날부터 커피와 흡연 등을 피하세요. 정확한 제한 기간은 검사실에 확인하세요.</p></div></div><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>복용약 확인</strong><p>진통제·감기약·당뇨약 및 심장약·혈압약의 복용 여부를 미리 확인해 주세요. 특히 당뇨약을 포함한 모든 약은 임의로 중단하지 말고 처방 의료진과 검사실에 반드시 확인하세요.</p></div></div></div></section>
 <section class="pet-subsection"><h3>검사 진행 과정</h3><ol class="pet-steps"><li><span aria-hidden="true" class="pet-step-num">1</span><div><strong>접수</strong><small>환자 확인 및 검사 준비</small></div></li><li><span aria-hidden="true" class="pet-step-num">2</span><div><strong>1차 주사·검사</strong><small>약물부하 또는 1차 검사 후 영상 촬영(약 20분)</small></div></li><li><span aria-hidden="true" class="pet-step-num">3</span><div><strong>대기</strong><small>약 3~4시간 뒤 2차 검사 예정</small></div></li><li><span aria-hidden="true" class="pet-step-num">4</span><div><strong>2차 촬영</strong><small>안정 상태 촬영(약 20분)</small></div></li><li><span aria-hidden="true" class="pet-step-num">5</span><div><strong>귀가</strong><small>검사 종료 후 안내받고 귀가</small></div></li></ol></section>
-<section class="pet-subsection"><h3>대표 검사 영상</h3><p class="explain">대표 검사 영상입니다. 선택하면 크게 볼 수 있습니다.</p><div class="gallery one"><button data-caption="심근관류 SPECT 대표영상" data-image="assets/myocardial-spect.jpg" type="button"><img alt="심근관류 SPECT 대표영상" loading="lazy" src="assets/myocardial-spect.jpg"><span>심근관류 SPECT 대표영상</span></img></button></div></section>
+<section class="pet-subsection"><h3>대표 검사 영상</h3><p class="explain">대표 검사 영상입니다. 선택하면 크게 볼 수 있습니다.</p><div class="gallery one"><button data-caption="심근관류 SPECT 대표영상" data-image="assets/myocardial-spect.jpg" type="button"><img alt="심근관류 SPECT 대표영상" loading="lazy" src="assets/myocardial-spect.jpg"/><span>심근관류 SPECT 대표영상</span></button></div></section>
 <section class="pet-subsection"><h3>검사 후 안내 및 소요시간</h3><ul class="pet-notes"><li>오전 검사 약 30분, 오후 검사 약 20분이며 1차와 2차 촬영 사이에 약 3~4시간 간격이 있습니다. 방문부터 종료까지는 이 간격을 포함하므로 당일 일정에 여유를 두세요.</li><li>첫 촬영 후 다른 금식 검사가 없다면 가벼운 식사가 가능하다고 안내되어 있습니다. 현장 직원의 안내를 우선해 주세요.</li></ul></section>
 <section class="pet-subsection"><h3>자주 묻는 질문</h3><div class="pet-faq"><details><summary>왜 오후에도 검사를 하나요?</summary><p>오전 부하 상태와 오후 안정 상태의 심근 혈류를 비교하기 위한 검사입니다.</p></details><details><summary>오후에도 금식하나요?</summary><p>다른 금식 검사가 없다면 첫 촬영 후 가벼운 식사를 할 수 있습니다. 당일 검사실 지침을 따르세요.</p></details></div></section>
 </article><article aria-labelledby="other-heading-muga" class="other-detail pet-detail section" data-cardiac="muga" hidden="" id="other-muga">
@@ -477,7 +492,7 @@
 <section class="pet-subsection"><h3>검사 목적</h3><ul class="pet-notes"><li>심장 좌심실 기능과 박출률을 평가합니다.</li><li>항암치료 계획 등에서 심장 기능 확인이 필요할 때 활용될 수 있습니다.</li></ul></section>
 <section class="pet-subsection"><h3>검사 전 준비사항</h3><div class="pet-info-grid"><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>별도 준비</strong><p>특별한 사전 준비는 필요하지 않습니다.</p></div></div><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>치료 일정</strong><p>항암치료 일정이 있는 경우 담당 의료진에게 알려 검사 시기를 확인해 주세요.</p></div></div></div></section>
 <section class="pet-subsection"><h3>검사 진행 과정</h3><ol class="pet-steps"><li><span aria-hidden="true" class="pet-step-num">1</span><div><strong>접수</strong><small>환자 확인 및 준비</small></div></li><li><span aria-hidden="true" class="pet-step-num">2</span><div><strong>1차 정맥주사</strong><small>첫 번째 주사</small></div></li><li><span aria-hidden="true" class="pet-step-num">3</span><div><strong>대기</strong><small>약 20분 대기</small></div></li><li><span aria-hidden="true" class="pet-step-num">4</span><div><strong>2차 주사 및 촬영</strong><small>두 번째 주사 후 약 20분 촬영</small></div></li><li><span aria-hidden="true" class="pet-step-num">5</span><div><strong>귀가</strong><small>검사 종료 후 안내받고 귀가</small></div></li></ol></section>
-<section class="pet-subsection"><h3>대표 검사 영상</h3><p class="explain">대표 검사 영상입니다. 선택하면 크게 볼 수 있습니다.</p><div class="gallery one"><button data-caption="MUGA (심장 혈액풀 검사) 대표영상" data-image="assets/muga.jpg" type="button"><img alt="MUGA (심장 혈액풀 검사) 대표영상" loading="lazy" src="assets/muga.jpg"><span>MUGA (심장 혈액풀 검사) 대표영상</span></img></button></div></section>
+<section class="pet-subsection"><h3>대표 검사 영상</h3><p class="explain">대표 검사 영상입니다. 선택하면 크게 볼 수 있습니다.</p><div class="gallery one"><button data-caption="MUGA (심장 혈액풀 검사) 대표영상" data-image="assets/muga.jpg" type="button"><img alt="MUGA (심장 혈액풀 검사) 대표영상" loading="lazy" src="assets/muga.jpg"/><span>MUGA (심장 혈액풀 검사) 대표영상</span></button></div></section>
 <section class="pet-subsection"><h3>검사 후 안내 및 소요시간</h3><ul class="pet-notes"><li>검사 전체는 약 1시간으로 안내되어 있습니다.</li><li>촬영을 위해 사용하는 방사성의약품은 체내에서 시간이 지나며 감소합니다. 검사 후 담당자의 안내를 따라주세요.</li></ul></section>
 <section class="pet-subsection"><h3>자주 묻는 질문</h3><div class="pet-faq"><details><summary>왜 주사를 두 번 맞나요?</summary><p>심장의 혈액풀 영상을 얻기 위해 주사를 두 차례 투여합니다.</p></details></div></section>
 </article></div><div class="panel" data-panel="other" hidden="" id="panel-other">
@@ -492,7 +507,7 @@
 <section class="pet-subsection"><h3>검사 목적</h3><ul class="pet-notes"><li>뇌혈관 질환의 진단과 평가를 돕습니다.</li><li>치매 및 알츠하이머병 관련 뇌혈류 상태를 평가합니다.</li><li>뇌종양 관련 평가에 활용됩니다.</li></ul></section>
 <section class="pet-subsection"><h3>검사 전 준비사항</h3><div class="pet-info-grid"><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>카페인·음주·약물</strong><p>검사 전 카페인과 술 등 뇌혈류에 영향을 주는 물질을 피하도록 안내되어 있습니다. 복용 중인 약은 임의로 중단하지 말고 검사실 또는 처방 의료진에게 확인하세요.</p></div></div><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>촬영 전 배뇨</strong><p>검사 전 소변을 보도록 안내되어 있습니다.</p></div></div></div></section>
 <section class="pet-subsection"><h3>검사 진행 과정</h3><ol class="pet-steps"><li><span aria-hidden="true" class="pet-step-num">1</span><div><strong>접수</strong><small>환자 확인 및 검사 안내</small></div></li><li><span aria-hidden="true" class="pet-step-num">2</span><div><strong>정맥주사</strong><small>검사에 사용하는 방사성의약품 투여</small></div></li><li><span aria-hidden="true" class="pet-step-num">3</span><div><strong>대기</strong><small>주사 후 약 10분 대기</small></div></li><li><span aria-hidden="true" class="pet-step-num">4</span><div><strong>촬영</strong><small>뇌혈류 단층영상 촬영</small></div></li><li><span aria-hidden="true" class="pet-step-num">5</span><div><strong>귀가</strong><small>촬영 종료 후 안내받고 귀가</small></div></li></ol></section>
-<section class="pet-subsection"><h3>대표 검사 영상</h3><p class="explain">대표 검사 영상입니다. 선택하면 크게 볼 수 있습니다.</p><div class="gallery one"><button data-caption="뇌혈류 SPECT 대표영상" data-image="assets/brain-spect.jpg" type="button"><img alt="뇌혈류 SPECT 대표영상" loading="lazy" src="assets/brain-spect.jpg"><span>뇌혈류 SPECT 대표영상</span></img></button></div></section>
+<section class="pet-subsection"><h3>대표 검사 영상</h3><p class="explain">대표 검사 영상입니다. 선택하면 크게 볼 수 있습니다.</p><div class="gallery one"><button data-caption="뇌혈류 SPECT 대표영상" data-image="assets/brain-spect.jpg" type="button"><img alt="뇌혈류 SPECT 대표영상" loading="lazy" src="assets/brain-spect.jpg"/><span>뇌혈류 SPECT 대표영상</span></button></div></section>
 <section class="pet-subsection"><h3>검사 후 안내 및 소요시간</h3><ul class="pet-notes"><li>일반 Brain SPECT 약 30분, Brain DIAMOX SPECT 약 1시간으로 안내되어 있습니다. 실제 시간은 검사 종류와 운영 상황에 따라 달라질 수 있습니다.</li><li>검사에 사용하는 방사성의약품은 시간이 지나면서 체내에서 감소합니다. 검사 후 의료진이 안내하는 생활수칙을 따르세요.</li></ul></section>
 <section class="pet-subsection"><h3>자주 묻는 질문</h3><div class="pet-faq"><details><summary>검사 시간은 얼마나 걸리나요?</summary><p>일반 Brain SPECT는 약 30분, DIAMOX SPECT는 약 1시간 걸립니다.</p></details></div></section>
 </article><article aria-labelledby="other-heading-salivary" class="other-detail pet-detail section" data-other="salivary" hidden="" id="other-salivary">
@@ -528,7 +543,6 @@
 <section class="pet-subsection"><h3>검사 후 안내</h3><p>검사 후 대부분 바로 일상생활이 가능합니다. 방사성의약품은 시간이 지나면서 감소하고 소변으로 배출됩니다. 개인별 주의사항은 검사실 안내를 따라주세요.</p></section>
 <section class="pet-subsection"><h3>자주 묻는 질문</h3><div class="pet-faq"><details><summary>검사 중 도뇨관을 사용하는 이유는 무엇인가요?</summary><p>방광에 소변이 고이는 영향을 줄이고 소변 배출 상태를 평가하기 위해 사용한다고 자료에 설명되어 있습니다. 환자 상태에 따른 적용 여부는 검사실에 확인해 주세요.</p></details><details><summary>검사 도중에도 도뇨관을 유지하나요?</summary><p>도뇨관을 삽입한 경우에는 촬영 중 유지하며 검사 후 의료진이 제거합니다.</p></details><details><summary>이뇨제를 사용하는 이유는 무엇인가요?</summary><p>소변 배출을 촉진해 실제 요로 폐쇄인지, 일시적인 소변 정체인지 구분하는 데 도움을 줍니다.</p></details><details><summary>검사할 때 아픈가요?</summary><p>주사할 때 따끔할 수 있고 도뇨관 삽입 시 일시적인 불편감이 있을 수 있으나, 촬영 자체는 일반적으로 통증이 크지 않습니다.</p></details><details><summary>검사 후 바로 일상생활이 가능한가요?</summary><p>대부분 가능합니다. 의료진의 개별 안내를 따라주세요.</p></details></div></section>
 </article>
-
 <article aria-labelledby="other-heading-gfr" class="other-detail pet-detail section" data-other="gfr" hidden="" id="other-gfr">
 <div class="pet-article-top"><span class="tag">핵의학 기타검사</span><a class="back-link" href="#other">← 기타검사 목록</a></div>
 <h2 id="other-heading-gfr">사구체여과율 검사(GFR)</h2><p class="pet-en">GFR Measurement · Glomerular Filtration Rate Test</p>
@@ -536,28 +550,55 @@
 <section class="pet-subsection"><h3>검사 목적</h3><p>신장이 혈액을 얼마나 잘 걸러내는지 사구체여과율(GFR)을 측정하여 신장 기능을 평가합니다. 신장 기능을 보다 자세히 확인하거나 치료 전후 및 신장이식 전후의 변화를 평가하는 데 활용할 수 있습니다.</p></section>
 <section class="pet-subsection"><h3>검사 전 준비사항</h3><div class="pet-info-grid"><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>금식</strong><p>금식은 필요하지 않습니다.</p></div></div><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>수분 섭취</strong><p>검사 약 30분 전에 물 500mL를 마셔주세요. 수분 섭취를 제한받는 분은 의료진에게 먼저 문의해 주세요.</p></div></div><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>임신·수유</strong><p>임신 가능성이 있거나 수유 중인 분은 검사 전에 반드시 의료진에게 알려주세요.</p></div></div></div></section>
 <section class="pet-subsection"><h3>검사 진행 과정</h3><ol class="pet-steps"><li><span class="pet-step-num">1</span><div><strong>접수</strong><small>예약 및 환자 확인</small></div></li><li><span class="pet-step-num">2</span><div><strong>정맥로 확보</strong><small>방사성의약품 주사 준비</small></div></li><li><span class="pet-step-num">3</span><div><strong>정맥주사·촬영</strong><small>주사와 동시에 검사 시작, 약 30분 촬영</small></div></li><li><span class="pet-step-num">4</span><div><strong>검사 종료</strong><small>의료진 안내 후 귀가</small></div></li></ol></section>
-<section class="pet-subsection"><h3>대표 검사 영상</h3><p class="explain">영상을 누르면 크게 볼 수 있습니다.</p><div class="gallery one"><button type="button" data-image="assets/gfr-renal.jpg" data-caption="사구체여과율 검사(GFR) 대표영상"><img src="assets/gfr-renal.jpg" loading="lazy" alt="GFR 검사 신장 기능 영상과 사구체여과율 측정 결과 그래프"/><span>사구체여과율 검사(GFR) 대표영상</span></button></div></section>
+<section class="pet-subsection"><h3>대표 검사 영상</h3><p class="explain">영상을 누르면 크게 볼 수 있습니다.</p><div class="gallery one"><button data-caption="사구체여과율 검사(GFR) 대표영상" data-image="assets/gfr-renal.jpg" type="button"><img alt="GFR 검사 신장 기능 영상과 사구체여과율 측정 결과 그래프" loading="lazy" src="assets/gfr-renal.jpg"/><span>사구체여과율 검사(GFR) 대표영상</span></button></div></section>
 <section class="pet-subsection"><h3>검사 후 안내</h3><p>검사 후 대부분 바로 일상생활이 가능합니다. 검사에 사용한 방사성의약품은 시간이 지나면서 체내에서 감소하고 소변으로 배출됩니다. 의료진이 별도로 안내한 주의사항이 있다면 따라주세요.</p></section>
 <section class="pet-subsection"><h3>자주 묻는 질문</h3><div class="pet-faq"><details><summary>일반 혈액검사 외에 GFR 검사를 추가로 하는 이유는 무엇인가요?</summary><p>혈액검사의 크레아티닌 수치 등으로 신장 기능을 추정할 수 있지만, 핵의학 GFR 검사는 방사성의약품을 이용해 신장의 여과 기능을 평가합니다. 신장 기능을 더 자세히 확인하거나 치료·이식 전후의 변화를 확인할 때 시행할 수 있습니다.</p></details><details><summary>검사할 때 주사를 맞나요?</summary><p>네. 신장의 여과 기능을 평가하기 위해 방사성의약품을 정맥으로 주사합니다.</p></details><details><summary>검사 후 바로 일상생활이 가능한가요?</summary><p>네. 대부분 검사 후 바로 일상생활이 가능합니다. 의료진의 개별 안내를 따라주세요.</p></details></div></section>
 </article>
 </div>
-
-<div class="panel" data-panel="equipment" hidden id="panel-equipment">
-  <div class="panel-header"><h2>핵의학과 검사장비 소개</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
-  <section class="section equip-section"><p class="subtitle">검사 전 실제 검사장비와 검사실 환경을 미리 확인해 보세요. 장비 사진을 누르면 크게 볼 수 있습니다.</p>
-    <div class="equip-grid"><button class="equip-card" type="button" data-image="assets/equipment-petct.webp" data-caption="PET-CT 검사실 — Siemens Biograph Vision 600 · PET-CT 검사"><img loading="lazy" alt="PET-CT 검사실 실제 검사장비 사진" src="assets/equipment-petct.webp"/><span class="equip-body"><strong>PET-CT 검사실</strong><small>Siemens Biograph Vision 600 · PET-CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" type="button" data-image="assets/equipment-gamma1.webp" data-caption="감마카메라 1 — GE NM/CT 870 DR · SPECT/CT 검사"><img loading="lazy" alt="감마카메라 1 실제 검사장비 사진" src="assets/equipment-gamma1.webp"/><span class="equip-body"><strong>감마카메라 1</strong><small>GE NM/CT 870 DR · SPECT/CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" type="button" data-image="assets/equipment-gamma2.webp" data-caption="감마카메라 2 — Siemens Symbia Evo Excel · 감마카메라 검사"><img loading="lazy" alt="감마카메라 2 실제 검사장비 사진" src="assets/equipment-gamma2.webp"/><span class="equip-body"><strong>감마카메라 2</strong><small>Siemens Symbia Evo Excel · 감마카메라 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" type="button" data-image="assets/equipment-gamma3.webp" data-caption="감마카메라 3 — Siemens Symbia T16 · SPECT/CT 검사"><img loading="lazy" alt="감마카메라 3 실제 검사장비 사진" src="assets/equipment-gamma3.webp"/><span class="equip-body"><strong>감마카메라 3</strong><small>Siemens Symbia T16 · SPECT/CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" type="button" data-image="assets/equipment-dexa1.webp" data-caption="골밀도 1 (GE) — 골밀도 및 체성분 검사"><img loading="lazy" alt="골밀도 1 (GE) 실제 검사장비 사진" src="assets/equipment-dexa1.webp"/><span class="equip-body"><strong>골밀도 1 (GE)</strong><small>골밀도 및 체성분 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card equip-photo-pending" type="button" data-image="assets/equipment-hologic.jpg" data-caption="골밀도 2 (Hologic) — 골밀도 및 체성분 검사"><img loading="lazy" src="assets/equipment-hologic.jpg" alt="골밀도 2 (Hologic) 장비 사진" onload="this.closest('.equip-card').classList.remove('equip-photo-pending')" onerror="this.hidden=true"/><div class="equip-photo-fallback" aria-hidden="true">📊<small>장비 사진 준비 중</small></div><span class="equip-body"><strong>골밀도 2 (Hologic)</strong><small>골밀도 및 체성분 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card equip-photo-pending" type="button" data-image="assets/equipment-dilon.jpg" data-caption="유방감마카메라 (Dilon) — 유방감마카메라 검사(BSGI)"><img loading="lazy" src="assets/equipment-dilon.jpg" alt="유방감마카메라 (Dilon) 장비 사진" onload="this.closest('.equip-card').classList.remove('equip-photo-pending')" onerror="this.hidden=true"/><div class="equip-photo-fallback" aria-hidden="true">🎗️<small>장비 사진 준비 중</small></div><span class="equip-body"><strong>유방감마카메라 (Dilon)</strong><small>유방감마카메라 검사(BSGI)</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" type="button" data-image="assets/equipment-rest.webp" data-caption="안정실 — PET-CT 검사 전 편안하게 대기하는 공간"><img loading="lazy" alt="안정실 실제 검사장비 사진" src="assets/equipment-rest.webp"/><span class="equip-body"><strong>안정실</strong><small>PET-CT 검사 전 편안하게 대기하는 공간</small><em>사진 크게 보기 ↗</em></span></button></div>
-    <p class="equip-footnote">검사 종류와 예약 상황에 따라 사용 장비와 검사실이 달라질 수 있습니다. 당일 접수 후 안내에 따라 이동해 주세요.</p>
-  </section>
+<div class="panel" data-panel="equipment" hidden="" id="panel-equipment">
+<div class="panel-header"><h2>핵의학과 검사장비 소개</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
+<section class="section equip-section"><p class="subtitle">검사 전 실제 검사장비와 검사실 환경을 미리 확인해 보세요. 장비 사진을 누르면 크게 볼 수 있습니다.</p>
+<div class="equip-grid"><button class="equip-card" data-caption="PET-CT 검사실 — Siemens Biograph Vision 600 · PET-CT 검사" data-image="assets/equipment-petct.webp" type="button"><img alt="PET-CT 검사실 실제 검사장비 사진" loading="lazy" src="assets/equipment-petct.webp"/><span class="equip-body"><strong>PET-CT 검사실</strong><small>Siemens Biograph Vision 600 · PET-CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="감마카메라 1 — GE NM/CT 870 DR · SPECT/CT 검사" data-image="assets/equipment-gamma1.webp" type="button"><img alt="감마카메라 1 실제 검사장비 사진" loading="lazy" src="assets/equipment-gamma1.webp"/><span class="equip-body"><strong>감마카메라 1</strong><small>GE NM/CT 870 DR · SPECT/CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="감마카메라 2 — Siemens Symbia Evo Excel · 감마카메라 검사" data-image="assets/equipment-gamma2.webp" type="button"><img alt="감마카메라 2 실제 검사장비 사진" loading="lazy" src="assets/equipment-gamma2.webp"/><span class="equip-body"><strong>감마카메라 2</strong><small>Siemens Symbia Evo Excel · 감마카메라 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="감마카메라 3 — Siemens Symbia T16 · SPECT/CT 검사" data-image="assets/equipment-gamma3.webp" type="button"><img alt="감마카메라 3 실제 검사장비 사진" loading="lazy" src="assets/equipment-gamma3.webp"/><span class="equip-body"><strong>감마카메라 3</strong><small>Siemens Symbia T16 · SPECT/CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="골밀도 1 (GE) — 골밀도 및 체성분 검사" data-image="assets/equipment-dexa1.webp" type="button"><img alt="골밀도 1 (GE) 실제 검사장비 사진" loading="lazy" src="assets/equipment-dexa1.webp"/><span class="equip-body"><strong>골밀도 1 (GE)</strong><small>골밀도 및 체성분 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="골밀도 2 (Hologic) — 골밀도 및 체성분 검사" data-image="assets/equipment-hologic.jpg" type="button"><img alt="골밀도 2 (Hologic) 장비 사진" loading="lazy" src="assets/equipment-hologic.jpg"/><span class="equip-body"><strong>골밀도 2 (Hologic)</strong><small>골밀도 및 체성분 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="유방감마카메라 (Dilon) — 유방감마카메라 검사(BSGI)" data-image="assets/equipment-dilon.jpg" type="button"><img alt="유방감마카메라 (Dilon) 장비 사진" loading="lazy" src="assets/equipment-dilon.jpg"/><span class="equip-body"><strong>유방감마카메라 (Dilon)</strong><small>유방감마카메라 검사(BSGI)</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="안정실 — PET-CT 검사 전 편안하게 대기하는 공간" data-image="assets/equipment-rest.webp" type="button"><img alt="안정실 실제 검사장비 사진" loading="lazy" src="assets/equipment-rest.webp"/><span class="equip-body"><strong>안정실</strong><small>PET-CT 검사 전 편안하게 대기하는 공간</small><em>사진 크게 보기 ↗</em></span></button></div>
+<p class="equip-footnote">검사 종류와 예약 상황에 따라 사용 장비와 검사실이 달라질 수 있습니다. 당일 접수 후 안내에 따라 이동해 주세요.</p>
+</section>
 </div>
-<div class="panel" data-panel="reception" hidden id="panel-reception">
-  <div class="panel-header"><h2>핵의학과 접수·오시는 길</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
-  <section class="section reception-section">
-    <div class="reception-intro"><span class="reception-pin" aria-hidden="true">📍</span><div><strong>먼저 핵의학과 접수로 와주세요</strong><p>아래 배치도에서 <b>‘핵의학과 접수’</b> 위치를 확인한 뒤, 도착하시면 안내받은 검사실로 이동해 주세요.</p></div></div>
-    <h3>핵의학과 검사실 배치도</h3>
-    <button class="reception-map" type="button" data-image="assets/nuclear-department-floorplan.png" data-caption="핵의학과 검사실 배치도 — 도면에서 ‘핵의학과 접수’를 확인하세요"><img src="assets/nuclear-department-floorplan.png" alt="핵의학과 접수, PET센터 및 감마카메라 검사실 등이 표시된 내부 배치도" loading="lazy"/><span>배치도를 누르면 크게 볼 수 있습니다 ↗</span></button>
-    <div class="reception-steps"><div><span>01</span><strong>핵의학과 접수</strong><p>검사 예약과 접수 여부를 확인합니다.</p></div><div><span>02</span><strong>검사실 안내</strong><p>검사 종류에 따라 해당 검사실 또는 안정실로 안내받습니다.</p></div></div>
-    <p class="equip-footnote">병원 내부 동선이나 검사실 배치는 운영 상황에 따라 변경될 수 있습니다. 현장 안내 표지판과 직원 안내를 우선해 주세요.</p>
-  </section>
+<div class="panel" data-panel="reception" hidden="" id="panel-reception">
+<div class="panel-header"><h2>핵의학과 접수·오시는 길</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
+<section aria-label="병원 오시는 길과 핵의학과 접수 안내" class="section reception-section">
+<div class="reception-topbox"><span aria-hidden="true" class="reception-pin">📍</span><div>
+<strong>한양대학교병원 · 본관 2층 핵의학과</strong>
+<p>서울특별시 성동구 왕십리로 222-1</p>
+<div class="reception-quicklinks">
+<a href="https://seoul.hyumc.com/conts/102009001000000.do" rel="noopener noreferrer" target="_blank">병원 공식 오시는 길 ↗</a>
+<a href="https://seoul.hyumc.com/hospital/locationList.do?buildCode=001000000&amp;numCode=001005000&amp;zoneCode=001005007" rel="noopener noreferrer" target="_blank">본관 2층 공식 층별안내 ↗</a>
+<a href="tel:0222909260">핵의학과 02-2290-9260</a>
+</div>
+</div></div>
+<h3 class="reception-h3">1. 병원까지 오시는 길</h3>
+<p class="reception-text">병원 건물의 위치를 먼저 확인하세요. 지도는 한양대학교병원 공식 홈페이지의 원본 이미지를 표시합니다.</p>
+<figure class="official-campus-map">
+<img alt="한양대학교병원 서관, 본관, 신관, 동관과 주차장 위치 안내도" decoding="async" loading="lazy" onerror="this.onerror=null;this.src='assets/hyumc-campus-schematic.svg';this.nextElementSibling.textContent='공식 이미지 연결이 원활하지 않아 건물 위치 개략도를 표시합니다.';" src="https://seoul.hyumc.com/skin/0002/images/seoul/img_map_02.png"/>
+<figcaption>병원 건물 위치 안내 · <a href="https://seoul.hyumc.com/skin/0002/images/seoul/img_map_02.png" rel="noopener noreferrer" target="_blank">공식 원본 이미지 크게 보기 ↗</a></figcaption>
+<p class="campus-map-status">병원 공식 홈페이지의 건물 배치도입니다.</p>
+</figure>
+<div class="reception-transport">
+<div class="transport-card"><span aria-hidden="true" class="transport-symbol">🚇</span><div><strong>지하철 · 한양대역</strong><p><b>2호선 한양대역 1번 출구</b> → 한양대학교 정문 방향 → 도보 이동 또는 셔틀버스 1호차 이용</p></div></div>
+<div class="transport-card"><span aria-hidden="true" class="transport-symbol">🚇</span><div><strong>지하철 · 왕십리역</strong><p><b>6번·13번 출구</b>에서 도보 약 15분(750m). <b>6-1번 출구</b>에서는 병원 셔틀버스 2·3·4호차 이용</p></div></div>
+<div class="transport-card"><span aria-hidden="true" class="transport-symbol">🚌</span><div><strong>버스</strong><p>병원 후문(사근파출소 앞) 지선 4211 · 한양대부속고등학교 정류장 지선 2013 / 간선 121</p></div></div>
+<div class="transport-card"><span aria-hidden="true" class="transport-symbol">🚗</span><div><strong>자가용 · 주차</strong><p>내비게이션에 <b>한양대학교병원</b> 또는 <b>서울 성동구 왕십리로 222-1</b>을 검색하세요. 주차 위치·요금은 병원 안내를 확인하세요.</p><a href="https://seoul.hyumc.com/conts/102009002000000.do" rel="noopener noreferrer" target="_blank">공식 주차안내 ↗</a></div></div>
+</div>
+<p class="transport-note">대중교통 운행과 셔틀버스 시간은 변경될 수 있습니다. 출발 전 병원 공식 안내를 확인해 주세요.</p>
+<h3 class="reception-h3">2. 병원 도착 후 · 핵의학과 접수</h3>
+<div class="reception-intro"><span aria-hidden="true" class="reception-pin">🏥</span><div><strong>본관 2층 핵의학과 접수로 오세요</strong><p>핵의학과 접수에서 예약 및 검사 종류를 확인한 뒤, 검사실 또는 PET센터로 안내받으시면 됩니다.</p></div></div>
+<h4 class="reception-h4">본관 2층 핵의학과 입구 및 검사실 배치도</h4>
+<p class="reception-text"><strong>빨간 화살표가 핵의학과 입구입니다.</strong> 입구를 통해 들어오신 뒤 안내에 따라 접수와 해당 검사실로 이동해 주세요.</p>
+<button class="reception-map" data-caption="한양대학교병원 본관 2층 핵의학과 입구 및 검사실 배치도 — 빨간 화살표가 핵의학과 입구입니다." data-image="assets/nuclear-department-floorplan-entrance.png" type="button">
+<img alt="한양대학교병원 본관 2층 배치도. 빨간 화살표로 핵의학과 입구를 표시하고 PET센터, 감마카메라실 1·2·3, 영상의학과 접수 등이 표시되어 있습니다." loading="lazy" src="assets/nuclear-department-floorplan-entrance.png"/>
+<span>배치도를 누르면 크게 볼 수 있습니다 ↗</span>
+</button>
+<div class="reception-steps"><div><span>01</span><strong>본관 2층 핵의학과 접수</strong><p>예약 시간 및 검사 종류를 확인합니다.</p></div><div><span>02</span><strong>해당 검사실로 이동</strong><p>접수 안내에 따라 PET-CT, 감마카메라, 골밀도 검사실 등으로 이동합니다.</p></div></div>
+<p class="equip-footnote">병원 내부 동선과 검사실 위치는 변경될 수 있습니다. 현장 표지판 및 직원의 안내를 우선해 주세요.</p>
+</section>
 </div>
 </main>
 <footer class="foot"><div class="wrap foot-inner"><img alt="한양대학교의료원 로고" src="assets/hyumc-logo-clear.png"/><div class="foot-txt"><strong>한양대학교병원 핵의학과 · 검사 및 치료 안내</strong><p>환자 교육용 정보입니다. 검사실과 담당 의료진의 지침을 우선해 주세요.</p><p>※ 병원 공식 공개 전 내부 검토가 필요한 홈페이지 시안입니다.</p></div></div></footer>

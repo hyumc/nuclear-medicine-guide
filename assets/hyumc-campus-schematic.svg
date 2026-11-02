@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 770" width="1500" height="770" role="img" aria-label="한양대학교병원 주요 건물 위치 개략도">
+<defs>
+  <style>
+    text { font-family: "Noto Sans KR", "Malgun Gothic", sans-serif; fill: #173d62; }
+    .title { font-size: 44px; font-weight: 800; }
+    .sub { font-size: 23px; fill: #5d7286; }
+    .bldg { fill: #e2edf5; stroke: #24608e; stroke-width: 4; rx: 17; }
+    .word { font-size: 39px; font-weight: 750; text-anchor: middle; }
+    .word-sm { font-size: 28px; font-weight: 650; text-anchor: middle; }
+    .label { fill: #fff; stroke: #d8e5ef; stroke-width: 3; rx: 15; }
+    .caption { font-size: 27px; font-weight: 650; text-anchor: middle; }
+  </style>
+</defs>
+<rect width="1500" height="770" fill="#f8fbfd"/>
+<text x="60" y="82" class="title">한양대학교병원 건물 안내도</text>
+<text x="60" y="122" class="sub">위치를 이해하기 위한 개략도입니다. 실제 이동은 현장 표지판을 따라주세요.</text>
+<path d="M 55 683 L 1405 683" stroke="#d1d8df" stroke-width="89" fill="none" stroke-linecap="round"/>
+<path d="M 55 683 L 1405 683" stroke="#fff" stroke-width="4" stroke-dasharray="32 20" fill="none" />
+<text x="715" y="732" font-size="23" text-anchor="middle" fill="#688197">진입로 · 차량 출입구</text>
+<rect x="130" y="284" width="266" height="245" class="bldg"/>
+<text x="263" y="390" class="word">서관</text>
+<text x="263" y="435" class="word-sm">국제병원 등</text>
+<rect x="505" y="277" width="380" height="256" class="bldg"/>
+<text x="695" y="395" class="word">본관</text>
+<text x="695" y="442" class="word-sm">핵의학과 · 2층</text>
+<rect x="566" y="151" width="250" height="116" class="bldg"/>
+<text x="691" y="224" class="word">신관</text>
+<rect x="981" y="215" width="270" height="315" class="bldg"/>
+<text x="1116" y="355" class="word">동관</text>
+<text x="1116" y="404" class="word-sm">류마티스병원</text>
+<rect x="541" y="565" width="308" height="65" class="label"/>
+<text x="695" y="606" class="caption">권역응급의료센터</text>
+<path d="M 696 535 V 561" stroke="#1d7ca9" stroke-width="5" stroke-dasharray="10 7"/>
+<text x="150" y="625" font-size="26" fill="#38759e">P 주차장</text>
+<text x="1140" y="627" font-size="26" fill="#38759e">P 주차장</text>
+</svg>
