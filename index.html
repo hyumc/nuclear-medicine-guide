@@ -203,7 +203,7 @@
 <a class="cat" data-category="other" href="#other"><span aria-hidden="true" class="cat-icon">🩺</span><span><strong>핵의학 기타검사</strong><small>뇌혈류 · 침샘 · 유방감마카메라 · 이뇨제 신장 · 사구체여과율 · 갑상선 스캔</small><span class="pill">6개 검사 안내 보기</span></span></a>
 </div>
 </section>
-<div class="panel" data-panel="bone" id="panel-bone"><div class="panel-header"><h2>뼈검사 안내</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
+<div class="panel" data-panel="bone" hidden="" id="panel-bone"><div class="panel-header"><h2>뼈검사 안내</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
 <div aria-label="뼈검사 항목" class="subnav"><a href="#overview">검사 목적</a><a href="#prep">검사 준비</a><a href="#procedure">검사 방법</a><a href="#images">대표영상</a><a href="#after">검사 후 주의</a><a href="#faq">자주 묻는 질문</a></div>
 <section class="section" id="overview"><span class="tag">검사 안내 01</span><h2>전신 뼈 스캔 및 SPECT 검사</h2><p class="subtitle">Bone Scan &amp; Single Photon Emission Computed Tomography</p><div class="stat"><div><strong>금식 불필요</strong><span>일반적으로 평소대로 식사 가능</span></div><div><strong>약 3~4시간</strong><span>주사 후 대기시간</span></div><div><strong>약 30~40분</strong><span>촬영 시간(추가 촬영에 따라 변동)</span></div></div><h3>검사 목적</h3><div class="grid"><div class="tile"><strong>뼈의 이상 징후 확인</strong><p>일반 X-ray에서 잘 보이지 않는 골절, 골수염 등 뼈의 이상을 평가하는 데 도움을 줍니다.</p></div><div class="tile"><strong>암의 뼈 전이 평가</strong><p>암이 뼈로 전이되었는지 확인하거나 관련 병변을 평가하기 위해 시행합니다.</p></div></div></section>
 <section class="section" id="prep"><h2>검사 전 준비사항</h2><div class="grid"><div class="tile"><strong>🍚 식사</strong><p>일반적으로 금식하지 않아도 됩니다.</p></div><div class="tile"><strong>💊 복용 약물</strong><p>대부분 평소대로 복용할 수 있으나, 별도 안내를 받았다면 그 지침을 따라주세요.</p></div><div class="tile"><strong>🤰 임신·수유</strong><p>임신 중이거나 임신 가능성이 있거나 수유 중이라면 반드시 검사 전에 의료진에게 알려주세요.</p></div><div class="tile"><strong>💧 수분 섭취</strong><p>수분 제한이 없다면 검사 전후로 물을 충분히 마셔주세요.</p></div></div></section>
@@ -605,7 +605,7 @@
 <p class="equip-footnote">검사 종류와 예약 상황에 따라 사용 장비와 검사실이 달라질 수 있습니다. 당일 접수 후 안내에 따라 이동해 주세요.</p>
 </section>
 </div>
-<div class="panel" data-panel="reception" hidden="" id="panel-reception">
+<div class="panel" data-panel="reception" id="panel-reception">
 <div class="panel-header"><h2>핵의학과 접수·오시는 길</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
 <section aria-label="병원 오시는 길과 핵의학과 접수 안내" class="section reception-section">
 <div class="reception-topbox"><span aria-hidden="true" class="reception-pin">📍</span><div>
@@ -658,7 +658,7 @@ const panels=[...document.querySelectorAll('[data-panel]')];const cards=[...docu
 const boneAnchors=new Set(['overview','prep','procedure','images','after','faq']);const densityAnchors=new Set(['dexa-guide','body-guide']);const petAnchors=new Set(['pet-fdg','pet-psma73','pet-psma1007','pet-fpcit','pet-florbetaben']);const cardiacAnchors=new Set(['other-myocardial','other-muga']);const otherAnchors=new Set(['other-brain','other-salivary','other-bsgi','other-mag3','other-gfr','other-thyroid']);const therapyAnchors=new Set(['therapy-education','therapy-diet','therapy-inpatient','therapy-scans']);
 function showForHash(){const hash=decodeURIComponent(location.hash.slice(1));let category=hash;
 if(boneAnchors.has(hash))category='bone';if(densityAnchors.has(hash))category='density';if(petAnchors.has(hash))category='pet';if(otherAnchors.has(hash))category='other';if(cardiacAnchors.has(hash))category='cardiac';if(therapyAnchors.has(hash))category='therapy';
-if(!['bone','pet','density','therapy','other','cardiac','equipment','reception'].includes(category)){category='bone';}
+if(!['bone','pet','density','therapy','other','cardiac','equipment','reception'].includes(category)){category='reception';}
 panels.forEach(p=>p.hidden=p.dataset.panel!==category);document.querySelectorAll('[data-pet]').forEach(p=>p.hidden=p.id!==hash);document.querySelectorAll('[data-other]').forEach(p=>p.hidden=p.id!==hash);document.querySelectorAll('[data-cardiac]').forEach(p=>p.hidden=p.id!==hash);document.querySelectorAll('[data-therapy]').forEach(p=>p.hidden=p.id!==hash);document.querySelectorAll('[data-pet-link],[data-other-link],[data-cardiac-link],[data-therapy-link]').forEach(a=>{if(a.getAttribute('href')==='#'+hash)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});cards.forEach(c=>{let on=c.dataset.category===category;c.classList.toggle('is-active',on);if(on)c.setAttribute('aria-current','true');else c.removeAttribute('aria-current');});
 if(hash&&hash!=='home-menu'&&hash!=='home'){requestAnimationFrame(()=>{const target=document.getElementById(hash)||document.getElementById('panel-'+category);if(target)target.scrollIntoView({block:'start'});});}
 }
