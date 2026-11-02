@@ -241,9 +241,8 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
   .nav .homebtn,.nav .font-toggle{font-size:12px;padding:8px 12px;min-height:36px}
 }
 
-/* Whole-exam links go straight to the category cards, not reception/equipment. */
-#exam-category-start{scroll-margin-top:108px}
-@media(max-width:760px){#exam-category-start{scroll-margin-top:175px}}
+/* Whole-exam heading is aligned beneath the actual sticky header with JS, not a guessed fixed offset. */
+#exam-category-start{scroll-margin-top:0}
 </style></head><body data-font-size="normal">
 <header class="top"><div class="wrap"><a aria-label="검사 안내 첫 화면으로 이동" class="brand" href="#home-menu"><img alt="한양대학교의료원" class="hospital-logo" src="assets/hyumc-logo-clear.png"/></a><nav aria-label="빠른 이동" class="nav"><button type="button" class="a11y-btn font-toggle" data-font-toggle aria-pressed="false" aria-label="글자 크게, 현재 기본 글자 크기" title="글자 크기를 25% 확대합니다">A+ 글자 크게</button><a class="homebtn" href="#exam-category-start">전체 검사 보기</a><a href="#gamma">감마카메라 검사</a><a href="#pet">PET-CT 검사</a><a href="#density">골밀도 검사</a><a href="#therapy">옥소치료</a></nav></div></header>
 <section class="hero" id="home"><div class="wrap"><div class="eyebrow">NUCLEAR MEDICINE · PATIENT GUIDE</div><h1>핵의학과 검사 및 치료 안내</h1><p>검사 종류를 선택하면 준비사항, 검사 과정, 소요시간과 주의사항을 한눈에 확인할 수 있습니다.</p></div></section>
@@ -984,6 +983,32 @@ function showForHash(){
  if(hash&&hash!=='home-menu'&&hash!=='home')requestAnimationFrame(()=>{const regionSelection=category==='gamma'&&gammaRegionKeys.has(hash.replace('gamma-',''));const mobile=window.matchMedia('(max-width:760px)').matches;const anchor=regionSelection&&mobile?document.querySelector('#panel-gamma .gamma-list-card'):(activeExam?document.getElementById(activeExam):document.getElementById(hash));const target=anchor||document.getElementById('panel-'+category);if(target)target.scrollIntoView({block:'start'});});
 }
 window.addEventListener('hashchange',showForHash);showForHash();
+/* Mobile Safari/desktop: show the exam-category heading immediately below the sticky header. */
+(function(){
+ const heading=document.getElementById('exam-category-start');
+ const header=document.querySelector('header.top');
+ if(!heading||!header)return;
+ function alignCategoryHeading(){
+   if(location.hash!=='#exam-category-start')return;
+   const offset=header.getBoundingClientRect().bottom+12;
+   const change=heading.getBoundingClientRect().top-offset;
+   if(Math.abs(change)>2)window.scrollBy({top:change,behavior:'instant'});
+ }
+ function afterLayout(){
+   requestAnimationFrame(()=>requestAnimationFrame(alignCategoryHeading));
+   setTimeout(alignCategoryHeading,100);
+ }
+ document.querySelectorAll('a[href="#exam-category-start"]').forEach(link=>{
+   link.addEventListener('click',()=>{afterLayout();});
+ });
+ window.addEventListener('hashchange',()=>{
+   if(location.hash==='#exam-category-start')afterLayout();
+ });
+ window.addEventListener('pageshow',()=>{
+   if(location.hash==='#exam-category-start')afterLayout();
+ });
+ if(location.hash==='#exam-category-start')afterLayout();
+})();
 const viewer=document.getElementById('viewer');document.querySelectorAll('[data-image]').forEach(b=>b.addEventListener('click',()=>{if(b.classList.contains('equip-photo-pending'))return;document.getElementById('viewerImg').src=b.dataset.image;document.getElementById('viewerImg').alt=b.dataset.caption;document.getElementById('viewerCaption').textContent=b.dataset.caption;viewer.showModal();}));document.getElementById('closeViewer').addEventListener('click',()=>viewer.close());viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});
 })();</script><script>
 /* Korean patient guide: reversible, stored 25% text enlargement. */
