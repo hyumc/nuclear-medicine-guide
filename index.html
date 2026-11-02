@@ -169,11 +169,29 @@
 .transport-symbol{font-size:27px;line-height:1.3}.transport-card strong{display:block;color:#113f63;font-size:16px}.transport-card p{font-size:14px;color:#476b84;margin:6px 0 0;line-height:1.75}.transport-card a{font-size:13px;color:#1371a8;font-weight:750;margin-top:8px;display:inline-block;text-decoration:underline}
 .transport-note{background:#fff8ee;border-left:3px solid #d69b52;color:#785c38;padding:12px 15px;font-size:13px;line-height:1.6;margin:15px 0 33px}
 @media(max-width:720px){.reception-topbox{padding:16px 14px;gap:9px}.reception-topbox strong{font-size:17px}.reception-quicklinks{flex-direction:column;align-items:stretch}.reception-quicklinks a{width:100%}.reception-transport{grid-template-columns:1fr}.transport-card{padding:15px}.reception-section .reception-h3{font-size:20px}.official-campus-map{padding:8px}.official-campus-map>img{max-height:none}.official-campus-map figcaption{font-size:13px}}
+
+/* 외래·입원환자 접수 경로 안내: PC 2열 / 휴대전화 1열 */
+.reception-patient-guide{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px;margin:14px 0 23px}
+.reception-patient-card{display:flex;align-items:flex-start;gap:14px;border:1px solid #c4deef;background:#ebf6fc;border-radius:14px;padding:19px 17px;min-width:0}
+.reception-patient-card.inpatient{border-color:#d5e4d9;background:#f0f8f3}
+.reception-patient-card .patient-marker{display:grid;place-items:center;min-width:42px;height:42px;border-radius:11px;background:#fff;font-size:23px}
+.reception-patient-card strong{display:block;font-size:19px;font-weight:800;color:#114b76;margin-bottom:8px}
+.reception-patient-card.inpatient strong{color:#1c654e}
+.reception-patient-card p{font-size:15px;line-height:1.7;color:#264c67;margin:0}
+.reception-patient-card .patient-steps{font-size:13px;font-weight:750;margin-top:11px;color:#165f91}
+.reception-patient-card.inpatient .patient-steps{color:#25664d}
+@media(max-width:720px){.reception-patient-guide{grid-template-columns:1fr;gap:10px}.reception-patient-card{padding:15px 13px}.reception-patient-card strong{font-size:17px}.reception-patient-card p{font-size:14px}}
 </style></head><body>
 <header class="top"><div class="wrap"><a aria-label="검사 안내 첫 화면으로 이동" class="brand" href="#home-menu"><img alt="한양대학교의료원" class="hospital-logo" src="assets/hyumc-logo-clear.png"/></a><nav aria-label="빠른 이동" class="nav"><a class="homebtn" href="#home-menu">전체 검사 보기</a><a href="#bone">뼈검사</a><a href="#pet">PET-CT 검사</a><a href="#cardiac">심장검사</a><a href="#density">골밀도 검사</a><a href="#other">기타검사</a></nav></div></header>
-<section class="hero" id="home"><div class="wrap"><div class="eyebrow">NUCLEAR MEDICINE · PATIENT GUIDE</div><h1>핵의학과 검사 및 치료 안내</h1><p>검사 종류를 선택하면 준비사항, 검사 과정, 소요시간과 주의사항을 한눈에 확인할 수 있습니다.</p><a class="cta" href="#home-menu">검사 종류 선택하기 ↓</a></div></section>
+<section class="hero" id="home"><div class="wrap"><div class="eyebrow">NUCLEAR MEDICINE · PATIENT GUIDE</div><h1>핵의학과 검사 및 치료 안내</h1><p>검사 종류를 선택하면 준비사항, 검사 과정, 소요시간과 주의사항을 한눈에 확인할 수 있습니다.</p><a class="cta" href="#home-menu">접수·검사 안내 보기 ↓</a></div></section>
 <main class="wrap main"><div class="notice"><strong>환자 안내</strong> · 검사 소요시간과 준비사항은 환자의 상태와 예약 상황에 따라 달라질 수 있습니다. 담당 의료진의 개별 안내를 우선해 주세요.</div>
-<section aria-label="검사 종류 선택" id="home-menu"><h2 class="collection-title">검사·치료 종류 선택</h2><p class="collection-subtitle">원하시는 항목을 누르면 상세 안내가 열립니다.</p>
+<section aria-label="접수 및 검사 종류 선택" id="home-menu"><div class="support-heading"><h3>검사실·접수 안내</h3><p>검사 전에 외래·입원 접수 방법과 오시는 길을 먼저 확인하세요. 검사장비도 미리 살펴보실 수 있습니다.</p></div>
+<div aria-label="검사장비 및 접수 안내" class="support-cards">
+<a class="support-card" data-category="reception" href="#reception"><span aria-hidden="true" class="support-card-icon">📍</span><span><strong>접수·오시는 길</strong><small>외래: 수납 후 순번표 발급 · 입원: 바로 접수 · 오시는 길</small></span><span aria-hidden="true" class="support-arrow">→</span></a>
+<a class="support-card" data-category="equipment" href="#equipment"><span aria-hidden="true" class="support-card-icon">📷</span><span><strong>검사장비 소개</strong><small>감마카메라 · PET-CT · 골밀도 · 유방감마카메라 · 안정실</small></span><span aria-hidden="true" class="support-arrow">→</span></a>
+
+</div>
+<h2 class="collection-title">검사·치료 종류 선택</h2><p class="collection-subtitle">원하시는 항목을 누르면 상세 안내가 열립니다.</p>
 <div class="category-grid">
 <a class="cat" data-category="pet" href="#pet"><span aria-hidden="true" class="cat-icon">🔬</span><span><strong>PET-CT 검사</strong><small>FDG · PSMA · 뇌 PET-CT 검사</small><span class="pill">5개 검사 안내 보기</span></span></a>
 <a class="cat" data-category="bone" href="#bone"><span aria-hidden="true" class="cat-icon">🦴</span><span><strong>뼈검사</strong><small>전신 뼈 스캔 · SPECT/CT</small><span class="pill">상세 안내 보기</span></span></a>
@@ -181,11 +199,7 @@
 <a class="cat" data-category="therapy" href="#therapy"><span aria-hidden="true" class="cat-icon">🏥</span><span><strong>옥소치료</strong><small>환자교육 · 저요오드 식이 · 입원생활 · 영상검사</small><span class="pill">4개 안내 보기</span></span></a>
 <a class="cat" data-category="other" href="#other"><span aria-hidden="true" class="cat-icon">🩺</span><span><strong>핵의학 기타검사</strong><small>뇌혈류 · 침샘 · 유방감마카메라 · 이뇨제 신장 · 사구체여과율</small><span class="pill">5개 검사 안내 보기</span></span></a>
 </div>
-<div class="support-heading"><h3>검사실·접수 안내</h3><p>검사를 받기 전 검사실 모습과 접수 위치를 미리 확인하실 수 있습니다.</p></div>
-<div aria-label="검사장비 및 접수 안내" class="support-cards">
-<a class="support-card" data-category="equipment" href="#equipment"><span aria-hidden="true" class="support-card-icon">📷</span><span><strong>검사장비 소개</strong><small>PET-CT · 감마카메라 · 골밀도 · 유방감마카메라 · 안정실</small></span><span aria-hidden="true" class="support-arrow">→</span></a>
-<a class="support-card" data-category="reception" href="#reception"><span aria-hidden="true" class="support-card-icon">📍</span><span><strong>접수·오시는 길</strong><small>핵의학과 접수 위치 · 검사실 배치도</small></span><span aria-hidden="true" class="support-arrow">→</span></a>
-</div></section>
+</section>
 <div class="panel" data-panel="bone" id="panel-bone"><div class="panel-header"><h2>뼈검사 안내</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
 <div aria-label="뼈검사 항목" class="subnav"><a href="#overview">검사 목적</a><a href="#prep">검사 준비</a><a href="#procedure">검사 방법</a><a href="#images">대표영상</a><a href="#after">검사 후 주의</a><a href="#faq">자주 묻는 질문</a></div>
 <section class="section" id="overview"><span class="tag">검사 안내 01</span><h2>전신 뼈 스캔 및 SPECT 검사</h2><p class="subtitle">Bone Scan &amp; Single Photon Emission Computed Tomography</p><div class="stat"><div><strong>금식 불필요</strong><span>일반적으로 평소대로 식사 가능</span></div><div><strong>약 3~4시간</strong><span>주사 후 대기시간</span></div><div><strong>약 30~40분</strong><span>촬영 시간(추가 촬영에 따라 변동)</span></div></div><h3>검사 목적</h3><div class="grid"><div class="tile"><strong>뼈의 이상 징후 확인</strong><p>일반 X-ray에서 잘 보이지 않는 골절, 골수염 등 뼈의 이상을 평가하는 데 도움을 줍니다.</p></div><div class="tile"><strong>암의 뼈 전이 평가</strong><p>암이 뼈로 전이되었는지 확인하거나 관련 병변을 평가하기 위해 시행합니다.</p></div></div></section>
@@ -558,16 +572,7 @@
 <div class="panel" data-panel="equipment" hidden="" id="panel-equipment">
 <div class="panel-header"><h2>핵의학과 검사장비 소개</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
 <section class="section equip-section"><p class="subtitle">검사 전 실제 검사장비와 검사실 환경을 미리 확인해 보세요. 장비 사진을 누르면 크게 볼 수 있습니다.</p>
-<div class="equip-grid">
-<button class="equip-card" type="button" data-image="assets/equipment-petct.webp" data-caption="PET-CT 검사실 — Siemens Healthineers · Biograph Vision 600 · PET-CT 검사"><img loading="lazy" alt="PET-CT 검사실 장비 사진" src="assets/equipment-petct.webp"/><span class="equip-body"><strong>PET-CT 검사실</strong><small>Siemens Healthineers · Biograph Vision 600</small><small>PET-CT 검사</small><em>사진 크게 보기 ↗</em></span></button>
-<button class="equip-card" type="button" data-image="assets/equipment-gamma1.webp" data-caption="감마카메라 1 — GE · NM/CT 870 DR · SPECT/CT 검사"><img loading="lazy" alt="감마카메라 1 장비 사진" src="assets/equipment-gamma1.webp"/><span class="equip-body"><strong>감마카메라 1</strong><small>GE · NM/CT 870 DR</small><small>SPECT/CT 검사</small><em>사진 크게 보기 ↗</em></span></button>
-<button class="equip-card" type="button" data-image="assets/equipment-gamma2.webp" data-caption="감마카메라 2 — Siemens · Symbia EVO Excel · 감마카메라(SPECT) 검사"><img loading="lazy" alt="감마카메라 2 장비 사진" src="assets/equipment-gamma2.webp"/><span class="equip-body"><strong>감마카메라 2</strong><small>Siemens · Symbia EVO Excel</small><small>감마카메라(SPECT) 검사</small><em>사진 크게 보기 ↗</em></span></button>
-<button class="equip-card" type="button" data-image="assets/equipment-gamma3.webp" data-caption="감마카메라 3 — Siemens · Symbia T16 · SPECT/CT 검사"><img loading="lazy" alt="감마카메라 3 장비 사진" src="assets/equipment-gamma3.webp"/><span class="equip-body"><strong>감마카메라 3</strong><small>Siemens · Symbia T16</small><small>SPECT/CT 검사</small><em>사진 크게 보기 ↗</em></span></button>
-<button class="equip-card" type="button" data-image="assets/equipment-dexa1.webp" data-caption="골밀도 1 (GE) — GE Healthcare Lunar · Prodigy Fuga · 골밀도·체성분 검사"><img loading="lazy" alt="골밀도 1 (GE) 장비 사진" src="assets/equipment-dexa1.webp"/><span class="equip-body"><strong>골밀도 1 (GE)</strong><small>GE Healthcare Lunar · Prodigy Fuga</small><small>골밀도·체성분 검사</small><em>사진 크게 보기 ↗</em></span></button>
-<button class="equip-card" type="button" data-image="assets/equipment-hologic-horizon-w-20261102.jpg" data-caption="골밀도 2 (Hologic) — Hologic · Horizon W · 골밀도·체성분 검사"><img loading="lazy" alt="골밀도 2 (Hologic) 장비 사진" src="assets/equipment-hologic-horizon-w-20261102.jpg"/><span class="equip-body"><strong>골밀도 2 (Hologic)</strong><small>Hologic · Horizon W</small><small>골밀도·체성분 검사</small><em>사진 크게 보기 ↗</em></span></button>
-<button class="equip-card" type="button" data-image="assets/equipment-dilon-6800-20261102.jpg" data-caption="유방감마카메라 (Dilon) — Dilon · Dilon 6800 · 유방감마카메라(BSGI) 검사"><img loading="lazy" alt="유방감마카메라 (Dilon) 장비 사진" src="assets/equipment-dilon-6800-20261102.jpg"/><span class="equip-body"><strong>유방감마카메라 (Dilon)</strong><small>Dilon · Dilon 6800</small><small>유방감마카메라(BSGI) 검사</small><em>사진 크게 보기 ↗</em></span></button>
-<button class="equip-card" type="button" data-image="assets/equipment-rest.webp" data-caption="PET-CT 안정실 — PET-CT 검사 전 안정 대기 공간"><img loading="lazy" alt="PET-CT 안정실 장비 사진" src="assets/equipment-rest.webp"/><span class="equip-body"><strong>PET-CT 안정실</strong><small>PET-CT 검사 전 안정 대기 공간</small><em>사진 크게 보기 ↗</em></span></button>
-</div>
+<div class="equip-grid"><button class="equip-card" data-caption="PET-CT 검사실 — Siemens Biograph Vision 600 · PET-CT 검사" data-image="assets/equipment-petct.webp" type="button"><img alt="PET-CT 검사실 실제 검사장비 사진" loading="lazy" src="assets/equipment-petct.webp"/><span class="equip-body"><strong>PET-CT 검사실</strong><small>Siemens Biograph Vision 600 · PET-CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="감마카메라 1 — GE NM/CT 870 DR · SPECT/CT 검사" data-image="assets/equipment-gamma1.webp" type="button"><img alt="감마카메라 1 실제 검사장비 사진" loading="lazy" src="assets/equipment-gamma1.webp"/><span class="equip-body"><strong>감마카메라 1</strong><small>GE NM/CT 870 DR · SPECT/CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="감마카메라 2 — Siemens Symbia Evo Excel · 감마카메라 검사" data-image="assets/equipment-gamma2.webp" type="button"><img alt="감마카메라 2 실제 검사장비 사진" loading="lazy" src="assets/equipment-gamma2.webp"/><span class="equip-body"><strong>감마카메라 2</strong><small>Siemens Symbia Evo Excel · 감마카메라 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="감마카메라 3 — Siemens Symbia T16 · SPECT/CT 검사" data-image="assets/equipment-gamma3.webp" type="button"><img alt="감마카메라 3 실제 검사장비 사진" loading="lazy" src="assets/equipment-gamma3.webp"/><span class="equip-body"><strong>감마카메라 3</strong><small>Siemens Symbia T16 · SPECT/CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="골밀도 1 (GE) — 골밀도 및 체성분 검사" data-image="assets/equipment-dexa1.webp" type="button"><img alt="골밀도 1 (GE) 실제 검사장비 사진" loading="lazy" src="assets/equipment-dexa1.webp"/><span class="equip-body"><strong>골밀도 1 (GE)</strong><small>골밀도 및 체성분 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="골밀도 2 (Hologic) — 골밀도 및 체성분 검사" data-image="assets/equipment-hologic.jpg" type="button"><img alt="골밀도 2 (Hologic) 장비 사진" loading="lazy" src="assets/equipment-hologic.jpg"/><span class="equip-body"><strong>골밀도 2 (Hologic)</strong><small>골밀도 및 체성분 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="유방감마카메라 (Dilon) — 유방감마카메라 검사(BSGI)" data-image="assets/equipment-dilon.jpg" type="button"><img alt="유방감마카메라 (Dilon) 장비 사진" loading="lazy" src="assets/equipment-dilon.jpg"/><span class="equip-body"><strong>유방감마카메라 (Dilon)</strong><small>유방감마카메라 검사(BSGI)</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="안정실 — PET-CT 검사 전 편안하게 대기하는 공간" data-image="assets/equipment-rest.webp" type="button"><img alt="안정실 실제 검사장비 사진" loading="lazy" src="assets/equipment-rest.webp"/><span class="equip-body"><strong>안정실</strong><small>PET-CT 검사 전 편안하게 대기하는 공간</small><em>사진 크게 보기 ↗</em></span></button></div>
 <p class="equip-footnote">검사 종류와 예약 상황에 따라 사용 장비와 검사실이 달라질 수 있습니다. 당일 접수 후 안내에 따라 이동해 주세요.</p>
 </section>
 </div>
@@ -598,14 +603,18 @@
 </div>
 <p class="transport-note">대중교통 운행과 셔틀버스 시간은 변경될 수 있습니다. 출발 전 병원 공식 안내를 확인해 주세요.</p>
 <h3 class="reception-h3">2. 병원 도착 후 · 핵의학과 접수</h3>
-<div class="reception-intro"><span aria-hidden="true" class="reception-pin">🏥</span><div><strong>본관 2층 핵의학과 접수로 오세요</strong><p>핵의학과 접수에서 예약 및 검사 종류를 확인한 뒤, 검사실 또는 PET센터로 안내받으시면 됩니다.</p></div></div>
+<div class="reception-patient-guide" aria-label="외래환자와 입원환자 접수 방법">
+  <div class="reception-patient-card outpatient"><span class="patient-marker" aria-hidden="true">🎫</span><div><strong>외래환자 접수 방법</strong><p><b>검사비 수납 후</b> 핵의학과 접수 키오스크에서 <b>순번표를 발급</b>받아 주세요.</p><p class="patient-steps">수납 → 키오스크 순번표 발급 → 대기 및 접수 안내</p></div></div>
+  <div class="reception-patient-card inpatient"><span class="patient-marker" aria-hidden="true">🏥</span><div><strong>입원환자 접수 방법</strong><p><b>키오스크를 이용하지 않고</b> 핵의학과 접수로 <b>바로 오시면 됩니다.</b></p><p class="patient-steps">핵의학과 도착 → 접수로 바로 방문</p></div></div>
+</div>
+<div class="reception-intro"><span aria-hidden="true" class="reception-pin">🏥</span><div><strong>본관 2층 핵의학과 접수로 오세요</strong><p>외래환자는 수납 후 키오스크에서 순번표를 발급받고, 입원환자는 키오스크 없이 접수로 바로 오세요. 이후 예약 및 검사 종류를 확인하고 해당 검사실로 안내받으시면 됩니다.</p></div></div>
 <h4 class="reception-h4">본관 2층 핵의학과 입구 및 검사실 배치도</h4>
 <p class="reception-text"><strong>빨간 화살표가 핵의학과 입구입니다.</strong> 입구를 통해 들어오신 뒤 안내에 따라 접수와 해당 검사실로 이동해 주세요.</p>
 <button class="reception-map" data-caption="한양대학교병원 본관 2층 핵의학과 입구 및 검사실 배치도 — 빨간 화살표가 핵의학과 입구입니다." data-image="assets/nuclear-department-floorplan-entrance.png" type="button">
 <img alt="한양대학교병원 본관 2층 배치도. 빨간 화살표로 핵의학과 입구를 표시하고 PET센터, 감마카메라실 1·2·3, 영상의학과 접수 등이 표시되어 있습니다." loading="lazy" src="assets/nuclear-department-floorplan-entrance.png"/>
 <span>배치도를 누르면 크게 볼 수 있습니다 ↗</span>
 </button>
-<div class="reception-steps"><div><span>01</span><strong>본관 2층 핵의학과 접수</strong><p>예약 시간 및 검사 종류를 확인합니다.</p></div><div><span>02</span><strong>해당 검사실로 이동</strong><p>접수 안내에 따라 PET-CT, 감마카메라, 골밀도 검사실 등으로 이동합니다.</p></div></div>
+<div class="reception-steps"><div><span>01</span><strong>접수 및 예약 확인</strong><p>외래환자는 순번표 발급 후, 입원환자는 직접 접수하여 예약 시간 및 검사 종류를 확인합니다.</p></div><div><span>02</span><strong>해당 검사실로 이동</strong><p>접수 안내에 따라 PET-CT, 감마카메라, 골밀도 검사실 등으로 이동합니다.</p></div></div>
 <p class="equip-footnote">병원 내부 동선과 검사실 위치는 변경될 수 있습니다. 현장 표지판 및 직원의 안내를 우선해 주세요.</p>
 </section>
 </div>
