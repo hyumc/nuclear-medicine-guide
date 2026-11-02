@@ -218,6 +218,10 @@
 .gamma-photo-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .gamma-photo-hint{font-size:12px;line-height:1.6;color:#446a83;margin:11px 1px 0}
 @media(max-width:760px){.gamma-photo-point{width:44px;height:44px}.gamma-photo-hint{font-size:12px}}
+.density-intro{font-size:14px;color:#627789;line-height:1.75;margin:7px 0 0}
+.density-choices{margin:19px 0 24px}
+.density-detail{scroll-margin-top:110px}
+.density-detail-back{display:flex;justify-content:flex-end;margin-bottom:18px}
 </style></head><body>
 <header class="top"><div class="wrap"><a aria-label="검사 안내 첫 화면으로 이동" class="brand" href="#home-menu"><img alt="한양대학교의료원" class="hospital-logo" src="assets/hyumc-logo-clear.png"/></a><nav aria-label="빠른 이동" class="nav"><a class="homebtn" href="#home-menu">전체 검사 보기</a><a href="#gamma">감마카메라 검사</a><a href="#pet">PET-CT 검사</a><a href="#density">골밀도 검사</a><a href="#therapy">옥소치료</a></nav></div></header>
 <section class="hero" id="home"><div class="wrap"><div class="eyebrow">NUCLEAR MEDICINE · PATIENT GUIDE</div><h1>핵의학과 검사 및 치료 안내</h1><p>검사 종류를 선택하면 준비사항, 검사 과정, 소요시간과 주의사항을 한눈에 확인할 수 있습니다.</p></div></section>
@@ -231,13 +235,17 @@
 <div class="category-grid">
 <a class="cat" data-category="gamma" href="#gamma"><span aria-hidden="true" class="cat-icon">🩻</span><span><strong>감마카메라 검사</strong><small>뇌·갑상선·심장·폐·복부·신장·뼈·사지 검사</small><span class="pill">신체 부위별 검사 17종 보기</span></span></a>
 <a class="cat" data-category="pet" href="#pet"><span aria-hidden="true" class="cat-icon">🔬</span><span><strong>PET-CT 검사</strong><small>FDG · PSMA · 뇌 PET-CT 검사</small><span class="pill">5개 검사 안내 보기</span></span></a>
-<a class="cat" data-category="density" href="#density"><span aria-hidden="true" class="cat-icon">📊</span><span><strong>골밀도 검사</strong><small>골밀도(DEXA) · 체지방검사</small><span class="pill">상세 안내 보기</span></span></a>
+<a class="cat" data-category="density" href="#density"><span aria-hidden="true" class="cat-icon">📊</span><span><strong>골밀도 검사</strong><small>골밀도(DEXA) · 체지방검사</small><span class="pill">2개 검사 안내 보기</span></span></a>
 <a class="cat" data-category="therapy" href="#therapy"><span aria-hidden="true" class="cat-icon">🏥</span><span><strong>옥소치료</strong><small>기본 안내 · 저요오드 식이 · 입원생활 · 영상검사</small><span class="pill">4개 안내 보기</span></span></a></div>
 </section>
 
 <div class="panel" data-panel="density" hidden="" id="panel-density"><div class="panel-header"><h2>골밀도·체지방검사 안내</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
-<div aria-label="골밀도 및 체지방검사 세부 안내" class="subnav"><a href="#dexa-guide">골밀도 검사 (DEXA)</a><a href="#body-guide">체지방검사</a></div>
-<section class="section" id="dexa-guide"><span class="tag">검사 안내 02-A</span><h2>골밀도 검사</h2><p class="subtitle">Bone Densitometry / DEXA</p>
+<p class="density-intro">원하시는 검사를 선택하면 검사 목적, 준비사항, 검사 방법, 소요시간과 대표영상을 확인하실 수 있습니다.</p>
+<div aria-label="골밀도 및 체지방 검사 종류 선택" class="pet-choices density-choices">
+<a class="pet-choice" data-density-link="dexa-guide" href="#dexa-guide"><span class="pet-choice-tag">Bone Densitometry · DEXA</span><strong>골밀도 검사</strong><small>골다공증·골감소증 평가 · 금식 불필요 · 촬영 약 5~15분</small><span aria-hidden="true" class="pet-choice-arrow">→</span></a>
+<a class="pet-choice" data-density-link="body-guide" href="#body-guide"><span class="pet-choice-tag">Body Composition Analysis</span><strong>체지방검사 (체성분 분석)</strong><small>체지방·제지방량 평가 · 촬영 약 5~10분</small><span aria-hidden="true" class="pet-choice-arrow">→</span></a>
+</div>
+<section class="section density-detail" data-density="dexa-guide" hidden="" id="dexa-guide"><div class="density-detail-back"><a class="back-link" href="#density">← 골밀도·체지방 검사 목록</a></div><span class="tag">검사 안내 02-A</span><h2>골밀도 검사</h2><p class="subtitle">Bone Densitometry / DEXA</p>
 <div class="summary-belt"><div><strong>금식 불필요</strong><span>평소대로 식사 가능</span></div><div><strong>약 5~15분</strong><span>검사 소요시간 (부위에 따라 차이)</span></div><div><strong>척추 · 대퇴골</strong><span>일반적인 측정 부위</span></div></div>
 <h3>검사 목적</h3><div class="grid"><div class="tile"><strong>골다공증 및 골감소증 확인</strong><p>뼈의 무기질 함량을 측정하여 골다공증 여부를 평가합니다.</p></div><div class="tile"><strong>골절 위험도 평가</strong><p>뼈 건강 상태를 파악하고 향후 치료 방향을 정하는 데 도움을 줍니다.</p></div></div>
 <h3>검사 전 준비사항</h3><div class="grid"><div class="tile"><strong>🍚 금식</strong><p>일반적으로 금식이 필요 없습니다. 평소대로 식사하셔도 됩니다.</p></div><div class="tile"><strong>👕 복장 및 금속류</strong><p>단추, 지퍼, 와이어 등 금속이 없는 편안한 옷이 좋습니다. 검사 전에 목걸이, 벨트 등 금속 액세서리는 제거합니다.</p></div><div class="tile"><strong>📝 최근 조영검사</strong><p>최근 약 1~2주 이내 CT 또는 위장관 조영검사 등 조영제를 사용한 검사를 받으셨다면 미리 의료진에게 알려주세요.</p></div><div class="tile"><strong>🤰 임신 관련</strong><p>임신 중이거나 임신 가능성이 있다면 검사 전에 반드시 의료진에게 알려주세요.</p></div></div>
@@ -247,7 +255,7 @@
 <h3>대표 검사 영상</h3><p class="subtitle">골밀도 검사 영상 예시입니다. 이미지를 선택하면 확대됩니다.</p>
 <div class="gallery two"><button data-caption="요추 골밀도 검사 결과 예시" data-image="assets/dexa-spine.png" type="button"><img alt="요추 부위 골밀도 검사 결과 예시" loading="lazy" src="assets/dexa-spine.png"/><span>척추(요추) 골밀도</span></button><button data-caption="대퇴골 골밀도 검사 결과 예시" data-image="assets/dexa-hip.png" type="button"><img alt="대퇴골 골밀도 검사 결과 예시" loading="lazy" src="assets/dexa-hip.png"/><span>대퇴골 골밀도</span></button></div>
 </section>
-<section class="section" id="body-guide"><span class="tag">검사 안내 02-B</span><h2>체지방검사</h2><p class="subtitle">Body Composition Analysis</p>
+<section class="section density-detail" data-density="body-guide" hidden="" id="body-guide"><div class="density-detail-back"><a class="back-link" href="#density">← 골밀도·체지방 검사 목록</a></div><span class="tag">검사 안내 02-B</span><h2>체지방검사</h2><p class="subtitle">Body Composition Analysis</p>
 <div class="summary-belt"><div><strong>약 2~4시간</strong><span>검사 전 공복 권장</span></div><div><strong>약 5~10분</strong><span>실제 촬영 시간</span></div><div><strong>약 15~20분</strong><span>전체 검사 과정 예상</span></div></div>
 <h3>검사 목적</h3><div class="grid"><div class="tile"><strong>체성분 분석</strong><p>체내 지방과 제지방량 등의 신체 구성 상태를 분석합니다.</p></div><div class="tile"><strong>영양·건강 상태 평가</strong><p>신체 부위별 체지방과 근육 분포 등을 평가하여 건강 관리에 필요한 정보를 확인합니다.</p></div></div>
 <h3>검사 전 준비사항</h3><div class="grid"><div class="tile"><strong>🍚 공복 유지</strong><p>검사 전 약 2~4시간 공복을 권장합니다. 검사실에서 별도 안내한 기준이 있다면 그에 따라주세요.</p></div><div class="tile"><strong>💧 수분·이뇨제</strong><p>검사 직전에 과도한 수분 섭취를 피하고, 이뇨제 복용 여부를 검사실에 알려주세요. 처방약은 의료진의 지시 없이 임의로 중단하지 마세요.</p></div><div class="tile"><strong>🏃 운동 및 사우나</strong><p>검사 직전의 격렬한 운동이나 사우나는 체수분 상태에 영향을 줄 수 있어 자제하는 것이 좋습니다.</p></div><div class="tile"><strong>👕 복장·임신 여부</strong><p>촬영 부위의 금속류를 제거합니다. 임신 중이거나 임신 가능성이 있다면 반드시 알려주세요.</p></div></div>
@@ -931,6 +939,7 @@ function showForHash(){
  panels.forEach(p=>p.hidden=p.dataset.panel!==category);
  document.querySelectorAll('[data-pet]').forEach(p=>p.hidden=p.id!==hash);
  document.querySelectorAll('[data-therapy]').forEach(p=>p.hidden=p.id!==hash);
+ document.querySelectorAll('[data-density]').forEach(p=>p.hidden=!(category==='density'&&p.id===hash));
  let activeExam=boneAnchors.has(hash)?'gamma-bone':(gammaExamIds.has(hash)?hash:null);
  if(category==='gamma'){
    let region=hash.startsWith('gamma-')?hash.slice(6):null;
@@ -943,7 +952,7 @@ function showForHash(){
  }
  document.querySelectorAll('.gamma-exam-detail').forEach(el=>el.hidden=!(category==='gamma'&&el.id===activeExam));
  document.querySelectorAll('[data-gamma-exam]').forEach(el=>{if(el.dataset.gammaExam===activeExam)el.setAttribute('aria-current','true');else el.removeAttribute('aria-current')});
- document.querySelectorAll('[data-pet-link],[data-therapy-link]').forEach(a=>{if(a.getAttribute('href')==='#'+hash)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
+ document.querySelectorAll('[data-pet-link],[data-therapy-link],[data-density-link]').forEach(a=>{if(a.getAttribute('href')==='#'+hash)a.setAttribute('aria-current','true');else a.removeAttribute('aria-current')});
  cards.forEach(c=>{const on=c.dataset.category===category;c.classList.toggle('is-active',on);if(on)c.setAttribute('aria-current','true');else c.removeAttribute('aria-current')});
  if(hash&&hash!=='home-menu'&&hash!=='home')requestAnimationFrame(()=>{const regionSelection=category==='gamma'&&gammaRegionKeys.has(hash.replace('gamma-',''));const mobile=window.matchMedia('(max-width:760px)').matches;const anchor=regionSelection&&mobile?document.querySelector('#panel-gamma .gamma-list-card'):(activeExam?document.getElementById(activeExam):document.getElementById(hash));const target=anchor||document.getElementById('panel-'+category);if(target)target.scrollIntoView({block:'start'});});
 }
