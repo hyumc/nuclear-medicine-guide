@@ -55,7 +55,7 @@
 @media(max-width:760px){.therapy-choices,.therapy-timeline{grid-template-columns:1fr}.therapy-choice{padding:18px}.therapy-choice strong{font-size:18px}}
 
 /* 옥소치료 후 영상검사 요약·대표영상 */
-.therapy-choices{grid-template-columns:repeat(2,minmax(0,1fr))}
+.therapy-choices{grid-template-columns:repeat(3,minmax(0,1fr))}
 .therapy-scan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:22px 0}
 .therapy-scan-card{background:#eaf5fc;border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:5px}
 .therapy-scan-card span{color:#637e92;font-size:13px}.therapy-scan-card strong{color:#135d8b;font-size:21px;line-height:1.35}.therapy-scan-card small{color:#536f83;font-size:13px;margin-bottom:9px}
@@ -93,6 +93,22 @@
 .diet-faq details{border-bottom:1px solid #e0e8ef;padding:13px 0}.diet-faq summary{cursor:pointer;font-weight:750;color:#163c5c}.diet-faq details p{margin:10px 0 2px;color:#506b7d;font-size:14px}
 .diet-inline-link{color:#125e92;text-decoration:underline;text-underline-offset:3px;font-weight:700}
 @media(max-width:760px){.diet-highlights{grid-template-columns:1fr}.diet-food-grid{grid-template-columns:1fr}.diet-meal-grid{grid-template-columns:1fr}.diet-food-card{padding:14px}.diet-highlights strong{font-size:16px}.diet-food-card h3{font-size:16px!important}}
+
+/* 저요오드 식품 사진: 원본 교육 이미지 14쪽을 그대로 볼 수 있는 갤러리 */
+.diet-photo-intro{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.diet-photo-count{display:inline-block;flex-shrink:0;background:#eaf5fd;color:#12619c;border-radius:999px;padding:5px 12px;font-size:12px;font-weight:800}
+.diet-photo-intro .subtitle{margin-bottom:12px}
+.diet-photo-group{margin:27px 0 10px}
+.diet-photo-group h3{color:#133e61;font-size:18px;margin:0 0 12px;padding-bottom:8px;border-bottom:1px solid #e3ebf2}
+.diet-photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}
+.diet-photo-item{display:flex;flex-direction:column;overflow:hidden;text-align:left;background:#fff;padding:0;border:1px solid #dce8f1;border-radius:13px;box-shadow:0 4px 12px #153c5a08;cursor:zoom-in}
+.diet-photo-item:hover,.diet-photo-item:focus-visible{outline:2px solid #1976b2;outline-offset:1px}
+.diet-photo-item img{display:block;width:100%;aspect-ratio:842/595;object-fit:contain;background:#f6f9fb}
+.diet-photo-caption{display:flex;flex-direction:column;align-items:flex-start;gap:3px;padding:11px 14px 14px;flex:1}
+.diet-photo-caption strong{font-size:14px;color:#123d60}
+.diet-photo-caption small{font-size:12px;color:#617789;line-height:1.55}
+.diet-photo-caption em{font-size:12px;color:#146da5;font-style:normal;font-weight:750;margin-top:5px}
+@media(max-width:760px){.diet-photo-grid{grid-template-columns:1fr;gap:12px}.diet-photo-intro{flex-direction:column;gap:5px}.diet-photo-group{margin-top:20px}.diet-photo-item img{aspect-ratio:842/595}}
 </style></head><body>
 <header class="top"><div class="wrap"><a aria-label="검사 안내 첫 화면으로 이동" class="brand" href="#home-menu"><img alt="한양대학교의료원" class="hospital-logo" src="assets/hyumc-logo-clear.png"/></a><nav aria-label="빠른 이동" class="nav"><a class="homebtn" href="#home-menu">전체 검사 보기</a><a href="#bone">뼈검사</a><a href="#pet">PET-CT 검사</a><a href="#cardiac">심장검사</a><a href="#density">골밀도 검사</a><a href="#other">기타검사</a></nav></div></header>
 <section class="hero" id="home"><div class="wrap"><div class="eyebrow">NUCLEAR MEDICINE · PATIENT GUIDE</div><h1>핵의학과 검사 및 치료 안내</h1><p>검사 종류를 선택하면 준비사항, 검사 과정, 소요시간과 주의사항을 한눈에 확인할 수 있습니다.</p><a class="cta" href="#home-menu">검사 종류 선택하기 ↓</a></div></section>
@@ -243,6 +259,42 @@
     </div>
     <div class="diet-guidance"><strong>식품 선택이 어려우신가요?</strong><p>가공식품은 제품마다 소금·해조 추출물·유제품·계란노른자 함유 여부가 다릅니다. 허용 목록에 있는 식품이라도 원재료 표시를 확인하고, 헷갈리면 영양팀에 문의해 주세요.</p></div>
   </section>
+<section class="section diet-photo-section" aria-labelledby="diet-photo-heading">
+<div class="diet-photo-intro"><div><span class="tag">사진으로 보는 식사요법</span><h2 id="diet-photo-heading">저요오드 식품 사진 안내</h2><p class="subtitle">허용식품과 제한식품을 사진으로 확인할 수 있습니다. <strong>사진을 누르면 크게 확대됩니다.</strong></p></div><span class="diet-photo-count">사진 14장</span></div>
+<div class="diet-guidance"><strong>식품 사진을 볼 때 확인하세요</strong><p>식품 사진은 선택을 돕는 예시입니다. 가공식품의 원재료·제품 구성·요오드 함량은 변경될 수 있으므로 제품명만 보고 판단하지 마시고, 소금·장류·영양보충음료 등은 담당 영양팀의 최신 안내를 우선해 주세요.</p></div>
+<div class="diet-photo-group" aria-label="곡류 · 감자·고구마 사진 안내">
+<h3>곡류 · 감자·고구마</h3><div class="diet-photo-grid">
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-01.webp" data-caption="곡류 허용식품 · 사진 1/14" aria-label="곡류 허용식품 · 사진 1/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-01.webp" alt="곡류 허용식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>곡류 허용식품</strong><small>쌀, 잡곡, 껍질을 벗겨 조리한 감자·고구마, 정제염 사용 떡·빵·면</small><em>사진 확대 보기 ↗</em></span></button>
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-02.webp" data-caption="곡류 제한식품 · 사진 2/14" aria-label="곡류 제한식품 · 사진 2/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-02.webp" alt="곡류 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>곡류 제한식품</strong><small>인스턴트 면, 시리얼, 과자류 등은 원재료·조미료 확인</small><em>사진 확대 보기 ↗</em></span></button>
+</div></div>
+<div class="diet-photo-group" aria-label="어육류 · 계란 사진 안내">
+<h3>어육류 · 계란</h3><div class="diet-photo-grid">
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-03.webp" data-caption="어육류 허용식품 · 사진 3/14" aria-label="어육류 허용식품 · 사진 3/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-03.webp" alt="어육류 허용식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>어육류 허용식품</strong><small>가공하지 않은 육류, 계란 흰자, 국산 콩과 1일 섭취량 예시</small><em>사진 확대 보기 ↗</em></span></button>
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-04.webp" data-caption="어육류 제한식품 · 사진 4/14" aria-label="어육류 제한식품 · 사진 4/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-04.webp" alt="어육류 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>어육류 제한식품</strong><small>생선·해산물, 가공육, 계란노른자 및 가공젓갈</small><em>사진 확대 보기 ↗</em></span></button>
+</div></div>
+<div class="diet-photo-group" aria-label="채소 · 과일 · 유제품 사진 안내">
+<h3>채소 · 과일 · 유제품</h3><div class="diet-photo-grid">
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-05.webp" data-caption="채소·과일 제한식품 · 사진 5/14" aria-label="채소·과일 제한식품 · 사진 5/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-05.webp" alt="채소·과일 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>채소·과일 제한식품</strong><small>해조류, 김·미역·다시마, 천일염을 사용한 김치, 일부 가공식품 등</small><em>사진 확대 보기 ↗</em></span></button>
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-06.webp" data-caption="우유·유제품 제한식품 · 사진 6/14" aria-label="우유·유제품 제한식품 · 사진 6/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-06.webp" alt="우유·유제품 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>우유·유제품 제한식품</strong><small>우유, 두유, 치즈, 아이스크림, 생크림 및 유제품</small><em>사진 확대 보기 ↗</em></span></button>
+</div></div>
+<div class="diet-photo-group" aria-label="소금 · 장류 · 양념 사진 안내">
+<h3>소금 · 장류 · 양념</h3><div class="diet-photo-grid">
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-07.webp" data-caption="양념류 허용식품 · 사진 7/14" aria-label="양념류 허용식품 · 사진 7/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-07.webp" alt="양념류 허용식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>양념류 허용식품</strong><small>식물성기름, 깨·들깨, 파·마늘·생강, 설탕·꿀 등</small><em>사진 확대 보기 ↗</em></span></button>
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-08.webp" data-caption="허용 소금·장류 선택 예시 · 사진 8/14" aria-label="허용 소금·장류 선택 예시 · 사진 8/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-08.webp" alt="허용 소금·장류 선택 예시에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>허용 소금·장류 선택 예시</strong><small>정제염 함유 여부와 해산물 유래 첨가물 없는지 확인</small><em>사진 확대 보기 ↗</em></span></button>
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-09.webp" data-caption="양념류 제한식품 · 사진 9/14" aria-label="양념류 제한식품 · 사진 9/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-09.webp" alt="양념류 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>양념류 제한식품</strong><small>천일염, 수입 소금, 마요네즈, 액젓·양념 등 성분 확인</small><em>사진 확대 보기 ↗</em></span></button>
+</div></div>
+<div class="diet-photo-group" aria-label="기타 식품 · 음료 사진 안내">
+<h3>기타 식품 · 음료</h3><div class="diet-photo-grid">
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-10.webp" data-caption="기타 허용식품 · 사진 10/14" aria-label="기타 허용식품 · 사진 10/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-10.webp" alt="기타 허용식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>기타 허용식품</strong><small>양념하지 않은 견과류, 블랙커피, 과일주스, 정수기 물 등</small><em>사진 확대 보기 ↗</em></span></button>
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-11.webp" data-caption="기타 제한식품 · 사진 11/14" aria-label="기타 제한식품 · 사진 11/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-11.webp" alt="기타 제한식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>기타 제한식품</strong><small>양념 견과류, 초콜릿, 적색색소 함유 가공식품, 영양제·건강보조식품</small><em>사진 확대 보기 ↗</em></span></button>
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-12.webp" data-caption="생수 관련 주의 식품 · 사진 12/14" aria-label="생수 관련 주의 식품 · 사진 12/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-12.webp" alt="생수 관련 주의 식품에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>생수 관련 주의 식품</strong><small>일부 생수 제품은 요오드 함량을 확인해야 합니다</small><em>사진 확대 보기 ↗</em></span></button>
+</div></div>
+<div class="diet-photo-group" aria-label="식단 예시 · 영양보충음료 사진 안내">
+<h3>식단 예시 · 영양보충음료</h3><div class="diet-photo-grid">
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-13.webp" data-caption="저요오드 하루 식단 예시 · 사진 13/14" aria-label="저요오드 하루 식단 예시 · 사진 13/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-13.webp" alt="저요오드 하루 식단 예시에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>저요오드 하루 식단 예시</strong><small>아침·점심·저녁 및 간식 구성 예시</small><em>사진 확대 보기 ↗</em></span></button>
+<button type="button" class="diet-photo-item" data-image="assets/low-iodine-photo-14.webp" data-caption="영양보충음료 제품 예시 · 사진 14/14" aria-label="영양보충음료 제품 예시 · 사진 14/14 확대 보기"><img loading="lazy" decoding="async" src="assets/low-iodine-photo-14.webp" alt="영양보충음료 제품 예시에 관한 식품 안내 그림"/><span class="diet-photo-caption"><strong>영양보충음료 제품 예시</strong><small>제품별 요오드 함유 여부가 다르므로 영양팀에 확인 후 사용</small><em>사진 확대 보기 ↗</em></span></button>
+</div></div>
+</section>
   <section class="section">
     <h2>하루 식단 예시</h2>
     <p class="subtitle">식단 구성의 예시입니다. 개인별 영양 요구량과 병원 지침에 맞춰 조절하세요.</p>
