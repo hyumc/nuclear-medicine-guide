@@ -240,8 +240,12 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
   .nav a:not(.homebtn){display:none}
   .nav .homebtn,.nav .font-toggle{font-size:12px;padding:8px 12px;min-height:36px}
 }
+
+/* Whole-exam links go straight to the category cards, not reception/equipment. */
+#exam-category-start{scroll-margin-top:108px}
+@media(max-width:760px){#exam-category-start{scroll-margin-top:175px}}
 </style></head><body data-font-size="normal">
-<header class="top"><div class="wrap"><a aria-label="검사 안내 첫 화면으로 이동" class="brand" href="#home-menu"><img alt="한양대학교의료원" class="hospital-logo" src="assets/hyumc-logo-clear.png"/></a><nav aria-label="빠른 이동" class="nav"><button type="button" class="a11y-btn font-toggle" data-font-toggle aria-pressed="false" aria-label="글자 크게, 현재 기본 글자 크기" title="글자 크기를 25% 확대합니다">A+ 글자 크게</button><a class="homebtn" href="#home-menu">전체 검사 보기</a><a href="#gamma">감마카메라 검사</a><a href="#pet">PET-CT 검사</a><a href="#density">골밀도 검사</a><a href="#therapy">옥소치료</a></nav></div></header>
+<header class="top"><div class="wrap"><a aria-label="검사 안내 첫 화면으로 이동" class="brand" href="#home-menu"><img alt="한양대학교의료원" class="hospital-logo" src="assets/hyumc-logo-clear.png"/></a><nav aria-label="빠른 이동" class="nav"><button type="button" class="a11y-btn font-toggle" data-font-toggle aria-pressed="false" aria-label="글자 크게, 현재 기본 글자 크기" title="글자 크기를 25% 확대합니다">A+ 글자 크게</button><a class="homebtn" href="#exam-category-start">전체 검사 보기</a><a href="#gamma">감마카메라 검사</a><a href="#pet">PET-CT 검사</a><a href="#density">골밀도 검사</a><a href="#therapy">옥소치료</a></nav></div></header>
 <section class="hero" id="home"><div class="wrap"><div class="eyebrow">NUCLEAR MEDICINE · PATIENT GUIDE</div><h1>핵의학과 검사 및 치료 안내</h1><p>검사 종류를 선택하면 준비사항, 검사 과정, 소요시간과 주의사항을 한눈에 확인할 수 있습니다.</p></div></section>
 <main class="wrap main" id="ko-main"><div class="notice"><strong>환자 안내</strong> · 검사 소요시간과 준비사항은 환자의 상태와 예약 상황에 따라 달라질 수 있습니다. 담당 의료진의 개별 안내를 우선해 주세요.</div>
 <section aria-label="접수 및 검사 종류 선택" id="home-menu"><div class="support-heading"><h3>검사실·접수 안내</h3><p>검사 전에 외래·입원 접수 방법과 오시는 길을 먼저 확인하세요. 검사장비도 미리 살펴보실 수 있습니다.</p></div>
@@ -249,7 +253,7 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
 <a class="support-card" data-category="reception" href="#reception"><span aria-hidden="true" class="support-card-icon">📍</span><span><strong>접수·오시는 길</strong><small>외래: 수납 후 순번표 발급 · 입원: 바로 접수 · 오시는 길</small></span><span aria-hidden="true" class="support-arrow">→</span></a>
 <a class="support-card" data-category="equipment" href="#equipment"><span aria-hidden="true" class="support-card-icon">📷</span><span><strong>검사장비 소개</strong><small>감마카메라 · PET-CT · 골밀도 · 유방감마카메라</small></span><span aria-hidden="true" class="support-arrow">→</span></a>
 </div>
-<h2 class="collection-title">검사·치료 종류 선택</h2><p class="collection-subtitle">원하시는 항목을 누르면 상세 안내가 열립니다.</p>
+<h2 class="collection-title" id="exam-category-start">검사·치료 종류 선택</h2><p class="collection-subtitle">원하시는 항목을 누르면 상세 안내가 열립니다.</p>
 <div class="category-grid">
 <a class="cat" data-category="gamma" href="#gamma"><span aria-hidden="true" class="cat-icon">🩻</span><span><strong>감마카메라 검사</strong><small>뇌·갑상선·심장·폐·복부·신장·뼈·사지 검사</small><span class="pill">신체 부위별 검사 17종 보기</span></span></a>
 <a class="cat" data-category="pet" href="#pet"><span aria-hidden="true" class="cat-icon">🔬</span><span><strong>PET-CT 검사</strong><small>FDG · PSMA · 뇌 PET-CT 검사</small><span class="pill">5개 검사 안내 보기</span></span></a>
@@ -257,7 +261,7 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
 <a class="cat" data-category="therapy" href="#therapy"><span aria-hidden="true" class="cat-icon">🏥</span><span><strong>옥소치료</strong><small>기본 안내 · 저요오드 식이 · 입원생활 · 영상검사</small><span class="pill">4개 안내 보기</span></span></a></div>
 </section>
 
-<div class="panel" data-panel="density" hidden="" id="panel-density"><div class="panel-header"><h2>골밀도·체지방검사 안내</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
+<div class="panel" data-panel="density" hidden="" id="panel-density"><div class="panel-header"><h2>골밀도·체지방검사 안내</h2><a class="back-link" href="#exam-category-start">← 전체 검사 보기</a></div>
 <p class="density-intro">원하시는 검사를 선택하면 검사 목적, 준비사항, 검사 방법, 소요시간과 대표영상을 확인하실 수 있습니다.</p>
 <div aria-label="골밀도 및 체지방 검사 종류 선택" class="pet-choices density-choices">
 <a class="pet-choice" data-density-link="dexa-guide" href="#dexa-guide"><span class="pet-choice-tag">Bone Densitometry · DEXA</span><strong>골밀도 검사</strong><small>골다공증·골감소증 평가 · 금식 불필요 · 촬영 약 5~15분</small><span aria-hidden="true" class="pet-choice-arrow">→</span></a>
@@ -282,7 +286,7 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
 <h3>대표 검사 영상</h3><p class="subtitle">체성분 검사 영상 예시입니다. 이미지를 선택하면 확대됩니다.</p>
 <div class="gallery one"><button data-caption="체지방검사 결과 예시" data-image="assets/body-composition.jpg" type="button"><img alt="전신 체성분 분석 결과 예시" loading="lazy" src="assets/body-composition.jpg"/><span>전신 체지방·체성분 분석</span></button></div>
 </section></div>
-<div class="panel" data-panel="pet" hidden="" id="panel-pet"><div class="panel-header"><h2>PET-CT 검사 안내</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
+<div class="panel" data-panel="pet" hidden="" id="panel-pet"><div class="panel-header"><h2>PET-CT 검사 안내</h2><a class="back-link" href="#exam-category-start">← 전체 검사 보기</a></div>
 <div class="pet-panel-intro"><h3>검사 종류를 선택해 주세요</h3><p>PET-CT는 사용하는 방사성의약품과 검사 목적에 따라 금식, 대기 및 촬영 방법이 다릅니다. 예약하신 검사명을 확인한 뒤 안내를 선택해 주세요.</p></div>
 <div aria-label="PET-CT 검사 종류 목록" class="pet-choices"><a class="pet-choice" data-pet-link="fdg" href="#pet-fdg"><span class="pet-choice-tag">18F-FDG PET/CT</span><strong>FDG PET-CT</strong><small>전신·머리 촬영 범위는 예약 검사에 따라 다릅니다 · 약 1시간 30분~2시간</small><span aria-hidden="true" class="pet-choice-arrow">→</span></a><a class="pet-choice" data-pet-link="psma73" href="#pet-psma73"><span class="pet-choice-tag">18F-PSMA-7.3 PET/CT</span><strong>PSMA-7.3 PET-CT</strong><small>전립선암 표적 검사 · 약 2시간</small><span aria-hidden="true" class="pet-choice-arrow">→</span></a><a class="pet-choice" data-pet-link="psma1007" href="#pet-psma1007"><span class="pet-choice-tag">18F-PSMA-1007 PET/CT</span><strong>PSMA-1007 PET-CT</strong><small>전립선암 표적 검사 · 약 2~2시간 30분</small><span aria-hidden="true" class="pet-choice-arrow">→</span></a><a class="pet-choice" data-pet-link="fpcit" href="#pet-fpcit"><span class="pet-choice-tag">18F-FP-CIT Brain PET/CT</span><strong>FP-CIT Brain PET-CT</strong><small>파킨슨병 관련 검사 · 두 차례 촬영 · 세부 시간 별도 안내</small><span aria-hidden="true" class="pet-choice-arrow">→</span></a><a class="pet-choice" data-pet-link="florbetaben" href="#pet-florbetaben"><span class="pet-choice-tag">18F-Florbetaben (Neuraceq) Brain PET/CT</span><strong>Neuraceq Brain PET-CT</strong><small>알츠하이머병 관련 검사 · 약 90분 대기 + 10분 촬영</small><span aria-hidden="true" class="pet-choice-arrow">→</span></a></div><div class="pet-review"><strong>예약 검사명 확인</strong> 검사 예약 안내지에 기재된 약제명과 위 메뉴가 일치하는지 확인하세요. 금식·약물 관련 사항은 해당 검사실 안내를 우선해 주세요.</div><div class="pet-contact"><div><strong>검사 전 준비사항 문의</strong><p>금식, 당뇨약·인슐린, 복용약 및 예약 검사명을 확인하려면 핵의학과 접수로 문의해 주세요.</p></div><div class="pet-phone"><a href="tel:0222909260">02-2290-9260</a><a href="tel:0222909261">02-2290-9261</a></div></div><article aria-labelledby="pet-heading-fdg" class="pet-detail section" data-pet="fdg" hidden="" id="pet-fdg">
 <div class="pet-article-top"><span class="tag">PET-CT 검사 안내</span><a class="back-link" href="#pet">← PET-CT 목록</a></div>
@@ -346,7 +350,7 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
 <section class="pet-subsection"><h3>자주 묻는 질문</h3><div class="pet-faq"><details><summary>검사만으로 알츠하이머병을 확진할 수 있나요?</summary><p>아닙니다. 뇌 베타-아밀로이드 축적 여부를 확인하며 임상 증상과 다른 검사를 함께 종합하여 판단합니다.</p></details></div></section>
 </article></div>
 <div class="panel" data-panel="therapy" hidden="" id="panel-therapy">
-<div class="panel-header"><h2>방사성요오드(옥소)치료 안내</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
+<div class="panel-header"><h2>방사성요오드(옥소)치료 안내</h2><a class="back-link" href="#exam-category-start">← 전체 검사 보기</a></div>
 <p class="subtitle">옥소치료에 필요한 정보를 네 가지로 나누어 안내합니다. ‘옥소치료 기본 안내 → 저요오드 식이 안내 → 입원생활안내 → 치료 후 영상검사 안내’ 순서로 확인해 주세요.</p>
 <div class="therapy-alert"><strong>방문 전 꼭 확인하세요</strong><p>치료 약물과 식이 준비, 입원 일정 및 퇴원 후 주의사항은 개인별로 달라질 수 있습니다. 예약 및 입원 시 안내받은 내용을 우선해 주세요. <b>개인의 치료 용량과 퇴원 측정 결과에 따라 지침이 달라집니다. 처방약은 임의로 중단·조절하지 말고 담당 의료진의 최신 안내를 우선해 주세요.</b></p></div>
 <div aria-label="옥소치료 자료 선택" class="therapy-choices">
@@ -548,7 +552,7 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
 </div>
 
 <div class="panel" data-panel="gamma" hidden="" id="panel-gamma">
-<div class="panel-header"><h2>감마카메라 검사</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
+<div class="panel-header"><h2>감마카메라 검사</h2><a class="back-link" href="#exam-category-start">← 전체 검사 보기</a></div>
 <div class="gamma-intro"><span class="tag">GAMMA CAMERA · EXAMINATION GUIDE</span><h3>어느 부위를 검사하시나요?</h3><p>인체 그림의 표시 또는 아래 부위 버튼을 선택하면 해당 검사를 확인할 수 있습니다. 검사명을 누르면 준비사항, 검사 과정, 소요시간과 대표영상을 볼 수 있습니다.</p></div>
 <div class="gamma-layout">
 <div class="gamma-figure-card"><div class="gamma-figure gamma-figure-photo">
@@ -888,14 +892,14 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
 <section class="section faq" id="faq"><h2>자주 묻는 질문</h2><details><summary>Q. 방사성의약품 주사는 안전한가요?</summary><p>검사에 필요한 소량의 방사성의약품을 사용하며, 의료진은 검사 목적에 맞게 방사선 노출과 이익을 고려합니다. 이상반응은 드물지만 위험이 전혀 없는 것은 아닙니다. 임신·수유 여부나 우려사항은 검사 전에 알려주세요.</p></details><details><summary>Q. 주사 후 물을 충분히 마셔야 하나요?</summary><p>네. 수분 제한이 없다면 물을 마시고 자주 배뇨하면 불필요한 방사성의약품 배출에 도움이 됩니다. 심장·신장 질환 등으로 수분 제한이 있다면 의료진 지침을 우선하세요.</p></details><details><summary>Q. 촬영할 때 아픈가요?</summary><p>일반적으로 주사 시의 불편감 외에 촬영 자체로 통증이 발생하지는 않습니다. 다만 일정 시간 누워서 움직이지 않아야 하므로 통증이나 자세 유지가 어려우면 미리 알려주세요.</p></details><details><summary>Q. 추가로 SPECT 촬영을 하면 이상이 있다는 뜻인가요?</summary><p>반드시 그렇지는 않습니다. 병변 위치를 더 명확히 확인하기 위해 추가하는 경우도 있습니다.</p></details></section>
 </article></div>
 </div><div class="panel" data-panel="equipment" hidden="" id="panel-equipment">
-<div class="panel-header"><h2>핵의학과 검사장비 소개</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
+<div class="panel-header"><h2>핵의학과 검사장비 소개</h2><a class="back-link" href="#exam-category-start">← 전체 검사 보기</a></div>
 <section class="section equip-section"><p class="subtitle">검사 전 실제 검사장비와 검사실 환경을 미리 확인해 보세요. 장비 사진을 누르면 크게 볼 수 있습니다.</p>
 <div class="equip-grid"><button class="equip-card" data-caption="PET-CT 검사실 — Siemens Biograph Vision 600 · PET-CT 검사" data-image="assets/equipment-petct.webp" type="button"><img alt="PET-CT 검사실 실제 검사장비 사진" loading="lazy" src="assets/equipment-petct.webp"/><span class="equip-body"><strong>PET-CT 검사실</strong><small>Siemens Biograph Vision 600 · PET-CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="감마카메라 1 — GE NM/CT 870 DR · SPECT/CT 검사" data-image="assets/equipment-gamma1.webp" type="button"><img alt="감마카메라 1 실제 검사장비 사진" loading="lazy" src="assets/equipment-gamma1.webp"/><span class="equip-body"><strong>감마카메라 1</strong><small>GE NM/CT 870 DR · SPECT/CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="감마카메라 2 — Siemens Symbia Evo Excel · 감마카메라 검사" data-image="assets/equipment-gamma2.webp" type="button"><img alt="감마카메라 2 실제 검사장비 사진" loading="lazy" src="assets/equipment-gamma2.webp"/><span class="equip-body"><strong>감마카메라 2</strong><small>Siemens Symbia Evo Excel · 감마카메라 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="감마카메라 3 — Siemens Symbia T16 · SPECT/CT 검사" data-image="assets/equipment-gamma3.webp" type="button"><img alt="감마카메라 3 실제 검사장비 사진" loading="lazy" src="assets/equipment-gamma3.webp"/><span class="equip-body"><strong>감마카메라 3</strong><small>Siemens Symbia T16 · SPECT/CT 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="골밀도 1 (GE) — 골밀도 및 체성분 검사" data-image="assets/equipment-dexa1.webp" type="button"><img alt="골밀도 1 (GE) 실제 검사장비 사진" loading="lazy" src="assets/equipment-dexa1.webp"/><span class="equip-body"><strong>골밀도 1 (GE)</strong><small>골밀도 및 체성분 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="골밀도 2 (Hologic) — 골밀도 및 체성분 검사" data-image="assets/equipment-hologic.jpg" type="button"><img alt="골밀도 2 (Hologic) 장비 사진" loading="lazy" src="assets/equipment-hologic.jpg"/><span class="equip-body"><strong>골밀도 2 (Hologic)</strong><small>골밀도 및 체성분 검사</small><em>사진 크게 보기 ↗</em></span></button><button class="equip-card" data-caption="유방감마카메라 (Dilon) — 유방감마카메라 검사(BSGI)" data-image="assets/equipment-dilon.jpg" type="button"><img alt="유방감마카메라 (Dilon) 장비 사진" loading="lazy" src="assets/equipment-dilon.jpg"/><span class="equip-body"><strong>유방감마카메라 (Dilon)</strong><small>유방감마카메라 검사(BSGI)</small><em>사진 크게 보기 ↗</em></span></button></div>
 <p class="equip-footnote">검사 종류와 예약 상황에 따라 사용 장비와 검사실이 달라질 수 있습니다. 당일 접수 후 안내에 따라 이동해 주세요.</p>
 </section>
 </div>
 <div class="panel" data-panel="reception" id="panel-reception">
-<div class="panel-header"><h2>핵의학과 접수·오시는 길</h2><a class="back-link" href="#home-menu">← 전체 검사 보기</a></div>
+<div class="panel-header"><h2>핵의학과 접수·오시는 길</h2><a class="back-link" href="#exam-category-start">← 전체 검사 보기</a></div>
 <section aria-label="병원 오시는 길과 핵의학과 접수 안내" class="section reception-section">
 <div class="reception-topbox"><span aria-hidden="true" class="reception-pin">📍</span><div>
 <strong>한양대학교병원 · 본관 2층 핵의학과</strong>
