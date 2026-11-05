@@ -276,6 +276,12 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
 #other-dmsa .dmsa-image-grid span small{display:block;margin-top:5px;color:#60788a;font-size:12px;font-weight:500;line-height:1.5}
 #other-dmsa .dmsa-image-footnote{color:#526b82;font-size:13px;line-height:1.6;margin:10px 0 0}
 @media(max-width:760px){#other-dmsa .dmsa-image-grid img{height:215px}}
+
+/* Two distinct, consistent brain-flow sequences. */
+#other-brain .brain-workflow-title {margin:22px 0 11px;font-size:1.05rem;color:#123d6a;font-weight:800;}
+#other-brain .brain-diamox-steps {grid-template-columns:repeat(4,minmax(0,1fr));}
+#other-brain .brain-image-grid button > span {font-size:14px;line-height:1.55;}
+@media(max-width:760px){#other-brain .brain-diamox-steps{grid-template-columns:1fr}}
 </style><style>
 /* Safety notices for ionizing-radiation examinations; treatment note differs from diagnostic studies. */
 .pregnancy-note{margin:14px 0 22px;background:#fff8ec;border:1px solid #eccb91;border-left:4px solid #b8711b;border-radius:12px;padding:13px 16px;color:#4d3a20;line-height:1.65}
@@ -647,11 +653,32 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
 <div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>Brain DIAMOX SPECT (뇌혈류 다이아목스 검사)</strong><p>뇌혈관 확장제를 투여하여 뇌혈류의 변화를 확인하고, 뇌혈관이 혈액을 충분히 공급할 수 있는지 평가하는 검사입니다. 모야모야병이나 뇌혈관 협착 등의 질환에서 뇌혈류 상태를 확인하고 치료 방향을 결정하는 데 도움을 줍니다.</p></div></div>
 </div></section>
 <section class="pet-subsection"><h3>검사 전 준비사항</h3><div class="pet-info-grid"><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>임신 가능성·수유 여부</strong><p>임신 중이거나 임신 가능성이 있거나 수유 중인 경우, 방사성의약품 투여 전에 반드시 의료진에게 알려주세요. 검사 시행 여부와 수유 관련 주의사항은 의료진이 확인해 안내합니다.</p></div></div><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>카페인·음주·약물</strong><p>검사 전 카페인과 술 등 뇌혈류에 영향을 주는 물질을 피하도록 안내되어 있습니다. 복용 중인 약은 임의로 중단하지 말고 검사실 또는 처방 의료진에게 확인하세요.</p></div></div><div class="pet-info"><span aria-hidden="true" class="pet-info-dot">✓</span><div><strong>촬영 전 배뇨</strong><p>검사 전 소변을 보도록 안내되어 있습니다.</p></div></div></div></section>
-<section class="pet-subsection"><h3>검사 진행 과정</h3><p class="explain">아래는 일반 뇌혈류 검사의 기본적인 진행 예시입니다. DIAMOX 검사는 뇌혈관 확장제를 추가로 투여하며 검사 과정과 대기·촬영 시간은 검사실 안내에 따라 달라질 수 있습니다.</p><ol class="pet-steps"><li><span aria-hidden="true" class="pet-step-num">1</span><div><strong>접수</strong><small>환자 확인 및 검사 안내</small></div></li><li><span aria-hidden="true" class="pet-step-num">2</span><div><strong>정맥주사</strong><small>검사에 사용하는 방사성의약품 투여</small></div></li><li><span aria-hidden="true" class="pet-step-num">3</span><div><strong>대기</strong><small>주사 후 약 10분 대기</small></div></li><li><span aria-hidden="true" class="pet-step-num">4</span><div><strong>촬영</strong><small>뇌혈류 단층영상 촬영</small></div></li><li><span aria-hidden="true" class="pet-step-num">5</span><div><strong>귀가</strong><small>촬영 종료 후 안내받고 귀가</small></div></li></ol></section>
-<section class="pet-subsection"><h3>대표 검사 영상</h3><p class="explain">Brain Perfusion SPECT와 Brain DIAMOX SPECT의 영상 예시입니다. 선택하면 크게 볼 수 있습니다.</p>
-<div class="gallery two">
-<button data-caption="Brain Perfusion SPECT · 뇌혈류 단층영상" data-image="assets/brain-perfusion-spect-20261105.webp" type="button"><img alt="Brain Perfusion SPECT 뇌혈류 관류 단층영상" loading="lazy" src="assets/brain-perfusion-spect-20261105.webp"/><span>Brain Perfusion SPECT<small>뇌혈류 관류 단층영상</small></span></button>
-<button data-caption="Brain DIAMOX SPECT · 뇌혈류 분석 참고영상" data-image="assets/brain-diamox-spect-20261105.webp" type="button"><img alt="Brain DIAMOX SPECT 뇌혈류 변화 분석영상" loading="lazy" src="assets/brain-diamox-spect-20261105.webp"/><span>Brain DIAMOX SPECT<small>뇌혈류 변화 분석영상</small></span></button>
+<section class="pet-subsection" aria-label="뇌혈류 검사 종류별 검사 진행 과정">
+<h3>검사 진행 과정</h3>
+<p class="explain">예약하신 검사 종류에 따라 검사 진행 순서가 다릅니다. 아래 두 가지 검사 과정을 확인해 주세요.</p>
+<h4 class="brain-workflow-title">① 뇌혈류 관류 검사</h4>
+<ol class="pet-steps brain-perfusion-steps">
+<li><span aria-hidden="true" class="pet-step-num">1</span><div><strong>접수</strong><small>환자 확인 및 검사 안내</small></div></li>
+<li><span aria-hidden="true" class="pet-step-num">2</span><div><strong>정맥주사</strong><small>방사성의약품 정맥주사</small></div></li>
+<li><span aria-hidden="true" class="pet-step-num">3</span><div><strong>대기</strong><small>주사 후 안내에 따라 대기</small></div></li>
+<li><span aria-hidden="true" class="pet-step-num">4</span><div><strong>촬영</strong><small>뇌혈류 단층영상 촬영</small></div></li>
+<li><span aria-hidden="true" class="pet-step-num">5</span><div><strong>귀가</strong><small>검사 종료 후 안내받고 귀가</small></div></li>
+</ol>
+<h4 class="brain-workflow-title">② 뇌혈류 다이아목스 검사</h4>
+<ol class="pet-steps brain-diamox-steps">
+<li><span aria-hidden="true" class="pet-step-num">1</span><div><strong>접수</strong><small>환자 확인 및 검사 안내</small></div></li>
+<li><span aria-hidden="true" class="pet-step-num">2</span><div><strong>정맥주사</strong><small>1차 방사성의약품 정맥주사</small></div></li>
+<li><span aria-hidden="true" class="pet-step-num">3</span><div><strong>대기</strong><small>검사실 안내에 따라 대기</small></div></li>
+<li><span aria-hidden="true" class="pet-step-num">4</span><div><strong>촬영·다이아목스 투여</strong><small>촬영과 동시에 다이아목스 투여</small></div></li>
+<li><span aria-hidden="true" class="pet-step-num">5</span><div><strong>2차 방사성의약품 주사</strong><small>추가 방사성의약품 정맥주사</small></div></li>
+<li><span aria-hidden="true" class="pet-step-num">6</span><div><strong>촬영</strong><small>뇌혈류 단층영상 추가 촬영</small></div></li>
+<li><span aria-hidden="true" class="pet-step-num">7</span><div><strong>귀가</strong><small>검사 종료 후 안내받고 귀가</small></div></li>
+</ol>
+</section>
+<section class="pet-subsection"><h3>대표 검사 영상</h3><p class="explain">대표영상입니다. 이미지를 누르면 크게 볼 수 있습니다.</p>
+<div class="gallery two brain-image-grid">
+<button data-caption="뇌혈류 관류 단층영상" data-image="assets/brain-perfusion-spect-20261105.webp" type="button"><img alt="뇌혈류 관류 단층영상" loading="lazy" src="assets/brain-perfusion-spect-20261105.webp"/><span>뇌혈류 관류 단층영상</span></button>
+<button data-caption="뇌혈류 관류 분석영상" data-image="assets/brain-diamox-spect-20261105.webp" type="button"><img alt="뇌혈류 관류 분석영상" loading="lazy" src="assets/brain-diamox-spect-20261105.webp"/><span>뇌혈류 관류 분석영상</span></button>
 </div></section>
 <section class="pet-subsection"><h3>검사 후 안내 및 소요시간</h3><ul class="pet-notes"><li>일반 Brain SPECT 약 30분, Brain DIAMOX SPECT 약 1시간으로 안내되어 있습니다. 실제 시간은 검사 종류와 운영 상황에 따라 달라질 수 있습니다.</li><li>검사에 사용하는 방사성의약품은 시간이 지나면서 체내에서 감소합니다. 검사 후 의료진이 안내하는 생활수칙을 따르세요.</li></ul></section>
 <section class="pet-subsection"><h3>자주 묻는 질문</h3><div class="pet-faq"><details><summary>퍼퓨전 검사와 다이아목스 검사는 어떻게 다른가요?</summary><p>퍼퓨전 검사는 뇌혈류의 분포를 평가하며, 다이아목스 검사는 뇌혈관 확장제를 투여해 혈류 변화와 혈액 공급 예비능을 살펴봅니다.</p></details><details><summary>검사 시간은 얼마나 걸리나요?</summary><p>Brain Perfusion SPECT는 약 30분, Brain DIAMOX SPECT는 약 1시간으로 안내되어 있습니다. 환자 상태와 검사 방법에 따라 달라질 수 있습니다.</p></details></div></section>
