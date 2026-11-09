@@ -293,6 +293,28 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
 /* Menu labels are longer after patient-facing terminology improvements. */
 @media(min-width:1021px){.top .nav{gap:11px}.top .nav a{white-space:nowrap;font-size:12px}.top .nav .homebtn{padding:8px 9px}.top .hospital-logo{width:min(268px,34vw)}}
 @media(min-width:761px) and (max-width:1020px){.top .nav{gap:6px}.top .nav a{white-space:nowrap;font-size:11px}.top .hospital-logo{width:min(228px,27vw)}}
+
+/* 2026-11-09: 주요 메뉴 및 검사명 - 배경 강조 없이 오렌지 글자색만 적용 */
+.support-card strong, .cat strong, .gamma-exam-text > strong, .pet-choice > strong {
+  color: #B45309;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  -webkit-box-decoration-break: initial;
+  box-decoration-break: initial;
+}
+/* 두 번째 줄 영문 부연 설명은 기본 색상 유지 */
+.gamma-exam-text .gamma-brain-list-en {
+  color: #607388;
+  background: none;
+  padding: 0;
+}
+@media (prefers-contrast: more) {
+  .support-card strong, .cat strong, .gamma-exam-text > strong, .pet-choice > strong {
+    color: #953C06;
+    background: none;
+  }
+}
 </style><style>
 /* Safety notices for ionizing-radiation examinations; treatment note differs from diagnostic studies. */
 .pregnancy-note{margin:14px 0 22px;background:#fff8ec;border:1px solid #eccb91;border-left:4px solid #b8711b;border-radius:12px;padding:13px 16px;color:#4d3a20;line-height:1.65}
