@@ -424,11 +424,141 @@ body[data-font-size="large"] .back-link,body[data-font-size="large"] .pet-choice
 .pet-contact-unified-tels a{display:inline-block;text-decoration:none;white-space:nowrap;padding:8px 11px;border-radius:9px;background:#e9f5fc;color:#105c8b;font-size:13px;font-weight:750}
 .pet-contact-unified-tels a:hover,.pet-contact-unified-tels a:focus-visible{background:#d5edfb;outline-offset:2px}
 @media(max-width:760px){.pet-contact-unified{padding:15px}.pet-contact-unified-row{display:block}.pet-contact-unified-label{margin-bottom:9px}.pet-contact-unified-tels{justify-content:flex-start;gap:7px}.pet-contact-unified-tels a{font-size:12px;padding:8px 10px}}
+
+
+/* 2026-11-09 | Nuclear Medicine patient guide: consistent text hierarchy.
+   Keep clinical cautions, menu styles, imagery and the A+ font-toggle behavior intact. */
+:root {
+  --nm-page-heading: 24px;
+  --nm-detail-heading: 22px;
+  --nm-group-heading: 20px;
+  --nm-subheading: 17px;
+  --nm-body-text: 15px;
+  --nm-helper-text: 14px;
+  --nm-heading-line: 1.4;
+  --nm-body-line: 1.7;
+}
+body { font-size:var(--nm-body-text); line-height:var(--nm-body-line); }
+.hero h1 {font-weight:800;}
+
+/* All three main area titles: reception menu, exam menu, detail page. */
+#home-menu .support-heading h2,
+#home-menu .collection-title,
+.main .panel-header > h2 {
+  color:var(--navy);
+  font-size:var(--nm-page-heading);
+  font-weight:800;
+  line-height:var(--nm-heading-line);
+  letter-spacing:-.035em;
+}
+#home-menu .support-heading {margin:16px 0 13px;}
+#home-menu .support-heading h2 {margin:0;}
+#home-menu .collection-title {margin:25px 0 13px;}
+.main .panel-header {margin:26px 0 15px; padding:14px 1px 16px;}
+.main .panel-header > h2 {margin:0;}
+
+/* Exam/treatment headings and explanatory headings share a single scale. */
+.main .panel .section h2,
+.main .panel .pet-detail.section > h2 {
+  font-size:var(--nm-detail-heading) !important;
+  font-weight:800;
+  line-height:var(--nm-heading-line);
+  letter-spacing:-.03em;
+  margin:0 0 16px !important;
+}
+.main .panel .section > h3,
+.main .panel .pet-subsection h3 {
+  font-size:var(--nm-subheading) !important;
+  font-weight:750;
+  line-height:1.5;
+  letter-spacing:-.015em;
+  margin:20px 0 9px;
+}
+.main .panel .section > h3:first-child {margin-top:0;}
+.main .panel .section h4 {
+  font-size:16px;
+  font-weight:750;
+  line-height:1.5;
+}
+.main .panel .pet-subsection h3 {margin:0 0 10px;}
+.main .panel .pet-panel-intro h3,
+.main .panel .gamma-intro h3 {
+  font-size:var(--nm-group-heading);
+  font-weight:800;
+  line-height:1.45;
+  letter-spacing:-.025em;
+}
+.main .panel .gamma-list-card h3 {
+  font-size:var(--nm-detail-heading);
+  font-weight:800;
+  line-height:1.45;
+  letter-spacing:-.025em;
+}
+.main .panel .reception-section .reception-h3 {
+  font-size:var(--nm-group-heading);
+  font-weight:800;
+  line-height:1.45;
+  margin:26px 0 12px;
+}
+.main .panel .reception-section .reception-h4 {
+  font-size:var(--nm-subheading);
+  font-weight:750;
+  line-height:1.5;
+  margin:20px 0 11px;
+}
+.main .panel .diet-photo-group h3,
+.main .panel .diet-food-card h3 {
+  font-size:var(--nm-subheading) !important;
+  font-weight:750;
+  line-height:1.5;
+}
+
+/* Text blocks: predictable line lengths and paragraph/list spacing. */
+.main .panel .section :is(p, li),
+.main .panel .reception-section :is(p, li) {line-height:var(--nm-body-line);}
+.main .panel .section > p {margin-top:0;margin-bottom:12px;}
+.main .panel .section > p:last-child {margin-bottom:0;}
+.main .panel .section > :is(ul,ol) {margin:8px 0 15px;padding-left:1.45em;}
+.main .panel .section li + li {margin-top:4px;}
+.main .panel .collection-subtitle,
+.main .panel .subtitle,
+.main .panel .reception-text,
+.main .panel .reception-map-lead,
+.main .panel .equip-section .subtitle {
+  font-size:var(--nm-helper-text);
+  line-height:1.65;
+}
+.main .panel .faq summary,
+.main .panel .diet-faq summary,
+.main .panel .therapy-doc summary {
+  font-size:var(--nm-body-text);
+  font-weight:750;
+  line-height:1.6;
+}
+/* The patient-facing image and exam labels keep their established styles. */
+
+@media(max-width:760px) {
+  :root {
+    --nm-page-heading:21px;
+    --nm-detail-heading:20px;
+    --nm-group-heading:18px;
+    --nm-subheading:16px;
+  }
+  #home-menu .support-heading {margin:12px 0;}
+  #home-menu .collection-title {margin:20px 0 12px;}
+  .main .panel-header {gap:10px;flex-wrap:wrap;margin:22px 0 13px;padding-bottom:13px;}
+  .main .panel .section h2,
+  .main .panel .pet-detail.section > h2 {margin-bottom:13px !important;}
+  .main .panel .section > h3,
+  .main .panel .pet-subsection h3 {margin-top:18px;}
+  .main .panel .pet-subsection h3 {margin-top:0;}
+  .main .panel .section > p {margin-bottom:10px;}
+}
 </style></head><body data-font-size="normal">
 <header class="top"><div class="wrap"><a aria-label="검사 안내 첫 화면으로 이동" class="brand" href="#home"><img alt="한양대학교의료원" class="hospital-logo" src="assets/hyumc-logo-clear.png"/></a><nav aria-label="빠른 이동" class="nav"><button type="button" class="a11y-btn font-toggle" data-font-toggle aria-pressed="false" aria-label="글자 크게, 현재 기본 글자 크기" title="글자 크기를 25% 확대합니다">A+ 글자 크게</button><a class="homebtn" href="#exam-category-start">전체 검사 보기</a><a href="#gamma">핵의학 영상검사</a><a href="#pet">PET-CT 검사</a><a href="#density">골밀도·체지방 검사</a><a href="#therapy">방사성요오드 치료</a></nav></div></header>
 <section class="hero" id="home"><div class="wrap"><h1>핵의학과 검사 및 치료 안내</h1></div></section>
 <main class="wrap main" id="ko-main">
-<section aria-label="접수 및 검사 종류 선택" id="home-menu"><div class="support-heading"><h3>검사실·접수 안내</h3></div>
+<section aria-label="접수 및 검사 종류 선택" id="home-menu"><div class="support-heading"><h2>검사실·접수 안내</h2></div>
 <div aria-label="검사장비 및 접수 안내" class="support-cards">
 <a class="support-card" data-category="reception" href="#reception"><span aria-hidden="true" class="support-card-icon">📍</span><span><strong>접수·오시는 길</strong><small>외래: 수납 후 순번표 발급 · 입원: 바로 접수 · 오시는 길</small></span><span aria-hidden="true" class="support-arrow">→</span></a>
 <a class="support-card" data-category="equipment" href="#equipment"><span aria-hidden="true" class="support-card-icon">📷</span><span><strong>검사장비 소개</strong><small>감마카메라 · PET-CT · 골밀도 · 유방감마카메라</small></span><span aria-hidden="true" class="support-arrow">→</span></a>
