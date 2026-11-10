@@ -517,6 +517,8 @@ body { font-size:var(--nm-body-text); line-height:var(--nm-body-line); }
 .main .panel .section :is(p, li),
 .main .panel .reception-section :is(p, li) {line-height:var(--nm-body-line);}
 .main .panel .section > p {margin-top:0;margin-bottom:12px;}
+/* 오시는 길: 교통 카드 아래 지도 설명의 위·아래 여백을 균형 있게 표시. */
+.main .panel .reception-section > .reception-map-lead {margin:14px 0;}
 .main .panel .section > p:last-child {margin-bottom:0;}
 .main .panel .section > :is(ul,ol) {margin:8px 0 15px;padding-left:1.45em;}
 .main .panel .section li + li {margin-top:4px;}
@@ -1434,7 +1436,6 @@ body { font-size:var(--nm-body-text); line-height:var(--nm-body-line); }
 <div class="reception-patient-card inpatient"><span aria-hidden="true" class="patient-marker">🏥</span><div><strong>입원환자 접수 방법</strong><p class="patient-steps">키오스크 이용 없이 핵의학과 접수로 바로 방문</p></div></div>
 </div>
 <h4 class="reception-h4">본관 2층 핵의학과 접수 및 키오스크 배치도</h4>
-<p class="reception-text">빨간 표시: 핵의학과 입구 · 접수 · 키오스크</p>
 <button class="reception-map" data-caption="한양대학교병원 본관 2층 핵의학과 접수 및 키오스크 배치도" data-image="assets/nuclear-department-floorplan-20261102-final.png" type="button">
 <img alt="한양대학교병원 본관 2층 배치도. 빨간 표시로 접수, 핵의학과 입구와 키오스크 위치를 안내하고 PET센터, 감마카메라실 1·2·3, 영상의학과 접수 등이 표시되어 있습니다." loading="lazy" src="assets/nuclear-department-floorplan-20261102-final.png"/>
 <span>배치도를 누르면 크게 볼 수 있습니다 ↗</span>
