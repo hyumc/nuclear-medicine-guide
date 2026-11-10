@@ -173,6 +173,7 @@
 
 /* 2026-11 병원 공식 오시는 길과 본관 2층 핵의학과 안내 */
 .reception-topbox{display:flex;align-items:flex-start;gap:15px;border:1px solid #c7dfef;background:#eef7fd;padding:22px;border-radius:16px;margin:4px 0 27px}
+.reception-map + .reception-topbox{margin-top:18px;margin-bottom:0}
 .reception-topbox strong{display:block;font-size:20px;color:#0e466f;line-height:1.4}.reception-topbox p{margin:6px 0 12px;color:#456c85;font-size:15px}
 .reception-quicklinks{display:flex;flex-wrap:wrap;gap:9px;margin-top:13px}.reception-quicklinks a{display:inline-flex;align-items:center;justify-content:center;background:#fff;border:1px solid #bfdced;padding:9px 13px;border-radius:9px;color:#125a8c;font-size:13px;font-weight:750}
 .reception-quicklinks a:hover{background:#e1f3ff}
@@ -1419,6 +1420,16 @@ body { font-size:var(--nm-body-text); line-height:var(--nm-body-line); }
 <img alt="한양대학교병원 주차 안내도. 중앙 본관, 왼쪽 서관, 위쪽 신관, 오른쪽 동관, 우측 아래 타워주차장 및 차량 출입구 위치 표시" decoding="async" loading="lazy" src="assets/hyumc-hospital-parking-map-20261102.png"/>
 </button>
 </figure>
+<h3 class="reception-h3">2. 병원 도착 후 · 핵의학과 접수</h3>
+<div aria-label="외래환자와 입원환자 접수 방법" class="reception-patient-guide">
+<div class="reception-patient-card outpatient"><span aria-hidden="true" class="patient-marker">🎫</span><div><strong>외래환자 접수 방법</strong><p class="patient-steps">검사비 수납 → 키오스크 순번표 발급 → 접수</p></div></div>
+<div class="reception-patient-card inpatient"><span aria-hidden="true" class="patient-marker">🏥</span><div><strong>입원환자 접수 방법</strong><p class="patient-steps">키오스크 이용 없이 핵의학과 접수로 바로 방문</p></div></div>
+</div>
+<h4 class="reception-h4">본관 2층 핵의학과 접수 및 키오스크 배치도</h4>
+<button class="reception-map" data-caption="한양대학교병원 본관 2층 핵의학과 접수 및 키오스크 배치도" data-image="assets/nuclear-department-floorplan-20261102-final.png" type="button">
+<img alt="한양대학교병원 본관 2층 배치도. 빨간 표시로 접수, 핵의학과 입구와 키오스크 위치를 안내하고 PET센터, 감마카메라실 1·2·3, 영상의학과 접수 등이 표시되어 있습니다." loading="lazy" src="assets/nuclear-department-floorplan-20261102-final.png"/>
+<span>배치도를 누르면 크게 볼 수 있습니다 ↗</span>
+</button>
 <div class="reception-topbox"><span aria-hidden="true" class="reception-pin">📍</span><div>
 <strong>한양대학교병원 홈페이지 안내</strong>
  <p class="reception-location-note">핵의학과는 본관 2층에 있습니다.</p>
@@ -1430,16 +1441,6 @@ body { font-size:var(--nm-body-text); line-height:var(--nm-body-line); }
 </div>
 </div></div>
 
-<h3 class="reception-h3">2. 병원 도착 후 · 핵의학과 접수</h3>
-<div aria-label="외래환자와 입원환자 접수 방법" class="reception-patient-guide">
-<div class="reception-patient-card outpatient"><span aria-hidden="true" class="patient-marker">🎫</span><div><strong>외래환자 접수 방법</strong><p class="patient-steps">검사비 수납 → 키오스크 순번표 발급 → 접수</p></div></div>
-<div class="reception-patient-card inpatient"><span aria-hidden="true" class="patient-marker">🏥</span><div><strong>입원환자 접수 방법</strong><p class="patient-steps">키오스크 이용 없이 핵의학과 접수로 바로 방문</p></div></div>
-</div>
-<h4 class="reception-h4">본관 2층 핵의학과 접수 및 키오스크 배치도</h4>
-<button class="reception-map" data-caption="한양대학교병원 본관 2층 핵의학과 접수 및 키오스크 배치도" data-image="assets/nuclear-department-floorplan-20261102-final.png" type="button">
-<img alt="한양대학교병원 본관 2층 배치도. 빨간 표시로 접수, 핵의학과 입구와 키오스크 위치를 안내하고 PET센터, 감마카메라실 1·2·3, 영상의학과 접수 등이 표시되어 있습니다." loading="lazy" src="assets/nuclear-department-floorplan-20261102-final.png"/>
-<span>배치도를 누르면 크게 볼 수 있습니다 ↗</span>
-</button>
 
 </section>
 </div>
